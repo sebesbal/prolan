@@ -1,0 +1,68 @@
+/* --------------------------------------------
+	0^n 1^n nyelvet felismerõ
+		veremautomaták
+-----------------------------------------------
+
+Mindhárom alábbi függvény a 0^n 1^n nyelvet ismeri fel
+(ahol n > 0), csak a kód jellege különbözik:
+- sima(): szokásos vezérlési szerkezetek, operátorok...
+- explicit1(): a kód pontosan tükrözi a végsõ
+  automata állapotait és átmeneteit.
+- explicit2(): ugyanaz mint az explicit1, csak a 
+  state utasítás használatával egyszerûbben
+----------------------------------------------- */
+
+#pragma pushdown
+
+start Z;
+term 0, 1;
+
+void sima()
+{
+              (0);    Z = 0 Z;	
+	while (0)     0 = 0 0;
+	while (1)     0 = eps;
+	      (eps);  Z = Z;
+	if    (_)     accept;
+}
+
+void explicit1()
+{
+q0:	if      (_)   accept;
+	else if (0)   { Z = 0 Z; q1; }
+	else exit;
+
+q1:	if      (0)   { 0 = 0 0; q1; }
+	else if (1)   { 0 = eps; q2; }
+	else exit;
+
+q2:	if      (1)   { 0 = eps; q2; }
+	else if (eps) { Z = eps; q0; }
+	else exit;
+}
+
+void explicit2() 
+{
+q0: 	state { 
+		_:   accept; // elfogadó állapot
+		0:   { Z = 0 Z; q1; }
+	}
+
+q1: 	state {
+		0:   { 0 = 0 0; q1; }
+		1:   { 0 = eps; q2; }
+	}
+
+q2:	state {
+		1:   { 0 = eps; q2; }
+		eps: { Z = eps; q0; }	
+	}
+}
+
+void main() 
+{
+	input(0 0 1 1);
+	// sima();
+	explicit1();
+	//explicit2();	
+}

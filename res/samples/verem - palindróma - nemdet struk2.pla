@@ -1,0 +1,36 @@
+/* ----------------------------------------------
+		Veremautomata
+-------------------------------------------------*/
+#pragma epushdown
+
+start Z;
+term 0, 1;
+
+void push(term x)
+{
+	Z = x | 0 = x 0 | 1 = x 1;	
+}
+
+void skip() 
+{
+	Z = eps | 0 = 0 | 1 = 1;
+}
+
+void pop(term x)
+{
+	x = eps;
+}
+
+void main()
+{
+	input(0 1 1 0);
+	some state {
+		0: push(0);
+		1: push(1);
+	}
+	skip();
+	all state { 
+		0: pop(0);
+		1: pop(1);
+	}
+}

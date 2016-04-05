@@ -1,0 +1,55 @@
+/* ----------------------------------------------
+		Programozott nyelvtan
+-------------------------------------------------*/
+start S;
+term 1, 2, 3, 4, 5, 6;
+nterm X1, X2, X3, X4, X5, X6, XI;
+#pragma hide(determ)
+
+void S1()
+{
+	X1 = XI
+	|| X2 = 2 X3
+	|| X3 = 3 4 5 X6
+	|| X4 = 4 6 X3
+	|| X5 = 5 X3
+	|| X6 = 6 X2;
+}
+
+void S2()
+{
+	X1 = 1 X2
+	|| X2 = 2 4
+	|| X3 = XI
+	|| X4 = 4 3
+	|| X5 = X5
+	|| X6 = 6 X1; 
+}
+
+void S3()
+{
+	X1 = 1 2
+	|| X2 = XI
+	|| X3 = 3 X1
+	|| X4 = 4 3 X2
+	|| X5 = XI
+	|| X6 = XI;
+}
+
+bool pi1() { return X1 = X1 || X2 = X2 || X3 = X3 || X4 = X4; }
+
+bool pi2() { return X2 = X2 || X3 = X3 || X4 = X4; }
+
+bool pi3() { return X1 = X1 || X4 = X4 || X6 = X6; }
+
+void main()
+{
+	S = X1 | S = X2 | S = X3 | S = X4 | S = X5 | S = X6;
+	state {  
+		pi1(): S1();
+		pi2(): S2();
+		pi3(): S3();
+	}
+	try X1 = 1; try X2 = 2;	try X3 = 3;
+	try X4 = 4; try X5 = 5; try X6 = 6; 
+}

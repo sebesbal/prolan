@@ -1,0 +1,67 @@
+/* -----------------------------------------
+ 	u u alakú szavakat felismerõ
+	nemdeterminisztikus Turing-gép
+-------------------------------------------*/
+
+#pragma turing
+// elrejtjük a determinisztikus lépéseket,
+// így a Lista nézetben könnyebb megtalálni hol a szó közepe
+#pragma hide(determ)
+term 0, 1;
+nterm x, K;
+
+void vissza()
+{
+	while (!_) left;
+	right;
+	while (x) right;
+}
+
+// megsejti hol kezdõdik a második szó, és megjelöli K-val
+// <a; b;> jelentése: vagy a-t vagy b-t hajtja végre
+void f(term a)
+{
+	right(x);
+eleje:	if (_) exit;
+	else if (a)
+	({ right; eleje; }) | (vege;);
+	else { right; eleje; }
+vege:	left(K);
+	vissza();
+}
+
+// megkeresi és kitörli a-t K mindkét oldalán
+void g(term a)
+{
+	right(x);
+	while (0 || 1) right;
+	(K); right;
+	while (x) right;
+	(a);
+	left(x);
+}
+
+void main()
+{
+	// beállítja a bemenetet:
+	input(0 0 1 0 0 1);
+	// megjelöli a közepét:
+	if (0) f(0);
+	else if (1) f(1);
+	
+	while (0 || 1)
+	{
+		//kitörli mindkét oldalról ugyanazt a betût
+		if (0) g(0);
+		else if (1) g(1);
+		
+		// visszamegy az elejére
+		vissza();
+	}
+	
+	// ellenõrzi, hogy a végeredmény megfelelõ alakú	
+	(K); right;
+	while(x) right;
+	(_);
+	accept;
+}

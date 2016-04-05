@@ -1,0 +1,23 @@
+/* ----------------------------------------------
+		Reguláris kifejezés
+		Turing-géppel
+		
+& = konkatenáció
+x. = x-et olvas, majd jobbra lép a fejjel)	
+-------------------------------------------------*/
+#pragma turing
+
+term 0, 1, 2;
+
+void main()
+{
+	input(0 1 0 0);
+
+	// a reguláris kifejezés
+	(eps | 1.) & (0.1.)* & (eps | 0.);
+	
+	// másik példa:
+	//((0. | 1.) & 1.)* & (0. | eps);	
+
+	(_); accept; // "magic"
+}

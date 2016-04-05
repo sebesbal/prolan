@@ -1,0 +1,1949 @@
+
+ Start         Length     Name                   Class
+ 0001:00401000 0000DF90H .text                   CODE
+ 0002:0040F000 00000C04H .itext                  ICODE
+ 0003:00410000 00000C4CH .data                   DATA
+ 0004:00411000 00006A40H .bss                    BSS
+ 0005:00000000 00000008H .tls                    TLS
+
+
+Detailed map of segments
+
+ 0001:00000000 00004BF1 C=CODE     S=.text    G=(none)   M=System   ACBP=A9
+ 0001:00004BF4 00000105 C=CODE     S=.text    G=(none)   M=SysInit  ACBP=A9
+ 0001:00004CFC 00000280 C=CODE     S=.text    G=(none)   M=SysConst ACBP=A9
+ 0001:00004F7C 000000FC C=CODE     S=.text    G=(none)   M=Windows  ACBP=A9
+ 0001:00005078 000035A9 C=CODE     S=.text    G=(none)   M=SysUtils ACBP=A9
+ 0001:00008624 000002B6 C=CODE     S=.text    G=(none)   M=lexmsgs  ACBP=A9
+ 0001:000088DC 00001394 C=CODE     S=.text    G=(none)   M=lexbase  ACBP=A9
+ 0001:00009C70 000008CA C=CODE     S=.text    G=(none)   M=lextable ACBP=A9
+ 0001:0000A53C 000003CB C=CODE     S=.text    G=(none)   M=lexpos   ACBP=A9
+ 0001:0000A908 0000018C C=CODE     S=.text    G=(none)   M=lexdfa   ACBP=A9
+ 0001:0000AA94 0000052A C=CODE     S=.text    G=(none)   M=lexopt   ACBP=A9
+ 0001:0000AFC0 000001F4 C=CODE     S=.text    G=(none)   M=lexlist  ACBP=A9
+ 0001:0000B1B4 000010D8 C=CODE     S=.text    G=(none)   M=lexrules ACBP=A9
+ 0001:0000C28C 00001D04 C=CODE     S=.text    G=(none)   M=dlex     ACBP=A9
+ 0002:00000000 00000095 C=ICODE    S=.itext   G=(none)   M=System   ACBP=A9
+ 0002:00000098 00000011 C=ICODE    S=.itext   G=(none)   M=Windows  ACBP=A9
+ 0002:000000AC 00000088 C=ICODE    S=.itext   G=(none)   M=SysUtils ACBP=A9
+ 0002:00000134 00000018 C=ICODE    S=.itext   G=(none)   M=lexmsgs  ACBP=A9
+ 0002:0000014C 00000008 C=ICODE    S=.itext   G=(none)   M=lexbase  ACBP=A9
+ 0002:00000154 000000A8 C=ICODE    S=.itext   G=(none)   M=lextable ACBP=A9
+ 0002:000001FC 00000046 C=ICODE    S=.itext   G=(none)   M=lexopt   ACBP=A9
+ 0002:00000244 00000008 C=ICODE    S=.itext   G=(none)   M=lexrules ACBP=A9
+ 0002:0000024C 000009B8 C=ICODE    S=.itext   G=(none)   M=dlex     ACBP=A9
+ 0003:00000000 000007A0 C=DATA     S=.data    G=DGROUP   M=System   ACBP=A9
+ 0003:000007A0 00000020 C=DATA     S=.data    G=DGROUP   M=SysInit  ACBP=A9
+ 0003:000007C0 000001EC C=DATA     S=.data    G=DGROUP   M=SysUtils ACBP=A9
+ 0003:000009AC 00000084 C=DATA     S=.data    G=DGROUP   M=lexbase  ACBP=A9
+ 0003:00000A30 00000020 C=DATA     S=.data    G=DGROUP   M=lexrules ACBP=A9
+ 0004:00000000 000027EC C=BSS      S=.bss     G=DGROUP   M=System   ACBP=A9
+ 0004:000027EC 0000000C C=BSS      S=.bss     G=DGROUP   M=SysInit  ACBP=A9
+ 0004:000027F8 00000008 C=BSS      S=.bss     G=DGROUP   M=Windows  ACBP=A9
+ 0004:00002800 00002108 C=BSS      S=.bss     G=DGROUP   M=SysUtils ACBP=A9
+ 0004:00004908 0000000C C=BSS      S=.bss     G=DGROUP   M=lexmsgs  ACBP=A9
+ 0004:00004914 00000750 C=BSS      S=.bss     G=DGROUP   M=lexbase  ACBP=A9
+ 0004:00005064 00000030 C=BSS      S=.bss     G=DGROUP   M=lextable ACBP=A9
+ 0004:00005094 00000020 C=BSS      S=.bss     G=DGROUP   M=lexopt   ACBP=A9
+ 0004:000050B4 00001188 C=BSS      S=.bss     G=DGROUP   M=lexrules ACBP=A9
+ 0004:0000623C 00000804 C=BSS      S=.bss     G=DGROUP   M=dlex     ACBP=A9
+ 0005:00000000 00000008 C=TLS      S=.tls     G=(none)   M=System   ACBP=A9
+
+
+  Address             Publics by Name
+
+ 0001:0000C5B0       dlex.add_rule
+ 0001:0000DD64       dlex.auxiliary_procs
+ 0001:0000C7F0       dlex.charStr
+ 0001:0000D868       dlex.check_id
+ 0001:0000D7E0       dlex.code
+ 0001:0000C6A0       dlex.counters
+ 0001:0000C4A8       dlex.define_macro
+ 0001:0000C338       dlex.define_start_state
+ 0001:0000D900       dlex.definition
+ 0001:0000DA84       dlex.definitions
+ 0002:0000024C       dlex.dlex
+ 0001:0000DED4       dlex.Finalization
+ 0001:0000D5EC       dlex.generate_table
+ 0001:0000C28C       dlex.get_line
+ 0004:00006244       dlex.itemc
+ 0004:00006644       dlex.itemlen
+ 0004:00006248       dlex.itempos
+ 0004:00006240       dlex.itemstr
+ 0001:0000D794       dlex.itemv
+ 0001:0000C2B0       dlex.next_section
+ 0004:0000623C       dlex.n_rules
+ 0001:0000DDBC       dlex.openCodFile
+ 0001:0000DB20       dlex.rules
+ 0001:0000D61C       dlex.scan
+ 0001:0000D6C8       dlex.split
+ 0001:0000CABC       dlex.tables
+ 0001:0000C8D8       dlex.writecc
+ 0004:00005060       lexbase..1
+ 0001:0000946C       lexbase.addExt
+ 0003:000009EC       lexbase.alphanums
+ 0001:00008D50       lexbase.altExpr
+ 0001:00009294       lexbase.blankStr
+ 0001:00008D34       lexbase.catExpr
+ 0001:00008C54       lexbase.cclassExpr
+ 0001:00009B5C       lexbase.cclassOrCharStr
+ 0001:000098F4       lexbase.cclassStr
+ 0001:00008C2C       lexbase.charExpr
+ 0001:00009640       lexbase.charStr
+ 0004:00004920       lexbase.codfilename
+ 0004:00004924       lexbase.codfilepath
+ 0003:000009CC       lexbase.digits
+ 0001:00008954       lexbase.empty
+ 0003:00000A0C       lexbase.epsExpr
+ 0001:00008BC4       lexbase.equal
+ 0001:00009518       lexbase.file_size
+ 0001:00009C04       lexbase.Finalization
+ 0001:00008F70       lexbase.hash
+ 0001:00008968       lexbase.include
+ 0001:00009318       lexbase.intStr
+ 0001:00009384       lexbase.isInt
+ 0001:00008E8C       lexbase.is_altExpr
+ 0001:00008E64       lexbase.is_catExpr
+ 0001:00008DE4       lexbase.is_cclassExpr
+ 0001:00008DA0       lexbase.is_charExpr
+ 0001:00008D6C       lexbase.is_epsExpr
+ 0001:00008D78       lexbase.is_markExpr
+ 0001:00008E44       lexbase.is_optExpr
+ 0001:00008E24       lexbase.is_plusExpr
+ 0001:00008E04       lexbase.is_starExpr
+ 0001:00008DC4       lexbase.is_strExpr
+ 0001:00009010       lexbase.key
+ 0003:000009AC       lexbase.letters
+ 0002:0000014C       lexbase.lexbase
+ 0004:00004914       lexbase.lfilename
+ 0004:00005058       lexbase.line
+ 0004:0000505C       lexbase.lno
+ 0004:0000491C       lexbase.lstfilename
+ 0001:00008C10       lexbase.markExpr
+ 0001:00008CA4       lexbase.mnExpr
+ 0001:00009110       lexbase.nchars
+ 0001:00008928       lexbase.newCClass
+ 0001:00008C00       lexbase.newExpr
+ 0001:00008BF0       lexbase.newIntSet
+ 0001:00008FE4       lexbase.newPos
+ 0001:000088DC       lexbase.newStr
+ 0001:000095B4       lexbase.octStr
+ 0001:00008C90       lexbase.optExpr
+ 0004:00004918       lexbase.pasfilename
+ 0001:00008C7C       lexbase.plusExpr
+ 0001:00008F58       lexbase.quicksort
+ 0003:00000A10       lexbase.reserved
+ 0001:000093E0       lexbase.root
+ 0001:00008B54       lexbase.setminus
+ 0001:00008A2C       lexbase.setunion
+ 0001:0000980C       lexbase.singleQuoteStr
+ 0001:0000895C       lexbase.singleton
+ 0001:00008BC0       lexbase.size
+ 0001:00008EB4       lexbase.sort
+ 0001:00008C68       lexbase.starExpr
+ 0001:00008C40       lexbase.strExpr
+ 0001:000091C8       lexbase.strip
+ 0001:00009140       lexbase.upper
+ 0004:00004E8C       lexbase.yycod
+ 0004:00004928       lexbase.yyin
+ 0004:00004AF4       lexbase.yylst
+ 0004:00004CC0       lexbase.yyout
+ 0001:0000A908       lexdfa.makeDFATable
+ 0001:0000B044       lexlist.listDFATable
+ 0001:0000AFC0       lexlist.listTrans
+ 0004:00004910       lexmsgs..1
+ 0001:00008730       lexmsgs.error
+ 0004:00004908       lexmsgs.errors
+ 0001:00008800       lexmsgs.fatal
+ 0001:000088AC       lexmsgs.Finalization
+ 0002:00000134       lexmsgs.lexmsgs
+ 0001:00008624       lexmsgs.position
+ 0004:0000490C       lexmsgs.warnings
+ 0004:00005094       lexopt..1
+ 0001:0000AA94       lexopt.equivStates
+ 0001:0000AF90       lexopt.Finalization
+ 0002:000001FC       lexopt.lexopt
+ 0004:000050A4       lexopt.n_opt_states
+ 0004:000050A8       lexopt.n_opt_trans
+ 0004:00005098       lexopt.n_parts
+ 0001:0000AC64       lexopt.optimizeDFATable
+ 0004:000050AC       lexopt.opt_state_table
+ 0004:000050B0       lexopt.opt_trans_table
+ 0004:0000509C       lexopt.part_table
+ 0004:000050A0       lexopt.state_part
+ 0001:0000A8F0       lexpos.addExpr
+ 0001:0000A53C       lexpos.eval
+ 0004:00005A28       lexrules..1
+ 0001:0000B5D0       lexrules.act_char
+ 0004:00005A2C       lexrules.act_pos
+ 0001:0000B718       lexrules.add_start_state
+ 0004:00005A34       lexrules.buf
+ 0004:00005A30       lexrules.bufptr
+ 0001:0000B8FC       lexrules.caret
+ 0004:00006235       lexrules.cclass_state
+ 0004:000050BC       lexrules.cf
+ 0001:0000C008       lexrules.DoExpr
+ 0004:000050B4       lexrules.expr
+ 0001:0000BD74       lexrules.factor
+ 0001:0000C248       lexrules.Finalization
+ 0001:0000B62C       lexrules.get_char
+ 0001:0000B7DC       lexrules.ident
+ 0001:0000B314       lexrules.init_scanner
+ 0002:00000244       lexrules.lexrules
+ 0001:0000B1B4       lexrules.mark_error
+ 0004:00006238       lexrules.n_macros
+ 0004:000050C0       lexrules.n_st
+ 0001:0000C1AC       lexrules.parse_rule
+ 0001:0000B574       lexrules.pop_macro
+ 0001:0000B498       lexrules.push_macro
+ 0001:0000B25C       lexrules.put_str
+ 0004:00006236       lexrules.quote_state
+ 0004:00005A24       lexrules.r
+ 0001:0000C054       lexrules.rule
+ 0001:0000BABC       lexrules.scan_cclass
+ 0001:0000B91C       lexrules.scan_char
+ 0001:0000B350       lexrules.scan_macro
+ 0001:0000BCC4       lexrules.scan_num
+ 0001:0000BA1C       lexrules.scan_str
+ 0004:000050C4       lexrules.st
+ 0001:0000B888       lexrules.start_state_list
+ 0001:0000B8B8       lexrules.start_state_prefix
+ 0004:000050B8       lexrules.stmt
+ 0004:00006234       lexrules.str_state
+ 0001:0000BF98       lexrules.term
+ 0003:00000A30       lexrules.term_delim
+ 0004:00005090       lextable..4
+ 0004:0000508C       lextable.act_state
+ 0001:00009D98       lextable.addCClassPos
+ 0001:00009D14       lextable.addCharPos
+ 0001:00009E1C       lextable.addMarkPos
+ 0001:00009F0C       lextable.addState
+ 0001:00009F98       lextable.addTrans
+ 0001:00009F68       lextable.endStateTrans
+ 0001:00009CB4       lextable.entry
+ 0001:0000A50C       lextable.Finalization
+ 0004:00005080       lextable.first_pos_table
+ 0002:00000154       lextable.lextable
+ 0001:00009C70       lextable.lookup
+ 0001:0000A394       lextable.mergeTrans
+ 0001:00009EA8       lextable.newState
+ 0004:00005064       lextable.n_pos
+ 0004:00005070       lextable.n_start_states
+ 0004:00005068       lextable.n_states
+ 0001:00009F80       lextable.n_state_trans
+ 0004:0000506C       lextable.n_trans
+ 0004:00005075       lextable.optimize
+ 0004:0000507C       lextable.pos_table
+ 0004:00005076       lextable.readonlyflag
+ 0001:0000A4E4       lextable.sortTrans
+ 0001:00009F4C       lextable.startStateTrans
+ 0004:00005084       lextable.state_table
+ 0004:00005078       lextable.sym_table
+ 0001:0000A2C8       lextable.transLess
+ 0001:0000A2A8       lextable.transLessNextState
+ 0001:0000A324       lextable.transSwap
+ 0004:00005088       lextable.trans_table
+ 0004:00005074       lextable.verbose
+ 0001:00004C6C       SysInit.@GetTls
+ 0001:00004CB8       SysInit.@InitExe
+ 0001:00004C14       SysInit.AllocTlsBuffer
+ 0001:00004BF4       SysInit.GetModuleHandle
+ 0001:00004C20       SysInit.GetTlsSize
+ 0004:000027F0       SysInit.HInstance
+ 0001:00004CAC       SysInit.InitializeModule
+ 0001:00004C28       SysInit.InitThreadTLS
+ 0001:00004BFC       SysInit.LocalAlloc
+ 0003:000007A8       SysInit.Module
+ 0004:000027ED       SysInit.ModuleIsCpp
+ 0004:000027EC       SysInit.ModuleIsLib
+ 0003:000007A4       SysInit.PtrToNil
+ 0004:000027F4       SysInit.tlsBuffer
+ 0001:00004C04       SysInit.TlsGetValue
+ 0003:000007A0       SysInit.TlsIndex
+ 0005:00000008       SysInit.TlsLast
+ 0001:00004C0C       SysInit.TlsSetValue
+ 0004:000005B0       System..6
+ 0001:0000000C       System..TObject
+ 0001:00003334       System.@AfterConstruction
+ 0001:000023D0       System.@Assign
+ 0001:00003384       System.@BeforeDestruction
+ 0001:000032DC       System.@ClassCreate
+ 0001:0000332C       System.@ClassDestroy
+ 0001:00002498       System.@Close
+ 0001:00002870       System.@CloseFile
+ 0001:00004470       System.@DispCallByIDError
+ 0001:00004460       System.@Dispose
+ 0001:0000370C       System.@DoneExcept
+ 0001:000044AC       System.@DynArrayClear
+ 0001:000044A4       System.@DynArrayHigh
+ 0001:0000449C       System.@DynArrayLength
+ 0001:00002548       System.@EofText
+ 0001:00002580       System.@Erase
+ 0001:000037DC       System.@ExceptionHandler
+ 0001:000025B8       System.@FileSize
+ 0001:00002604       System.@FillChar
+ 0001:00004440       System.@Finalize
+ 0001:00004354       System.@FinalizeArray
+ 0001:00004308       System.@FinalizeRecord
+ 0001:0000248C       System.@Flush
+ 0001:00003144       System.@FpuInit
+ 0001:00003080       System.@FpuMaskInit
+ 0001:00001CD8       System.@FreeMem
+ 0001:00001CBC       System.@GetMem
+ 0001:00003C18       System.@Halt
+ 0001:00003B3C       System.@Halt0
+ 0001:00003484       System.@HandleAnyException
+ 0001:000035B0       System.@HandleFinally
+ 0001:00003658       System.@HandleFinallyInternal
+ 0001:000042FC       System.@Initialize
+ 0001:00004268       System.@InitializeArray
+ 0001:00004238       System.@InitializeRecord
+ 0001:000039F8       System.@InitImports
+ 0001:000039D0       System.@InitResStringImports
+ 0001:00004B1C       System.@IntfClear
+ 0001:00003150       System.@IntOver
+ 0001:00003238       System.@IsClass
+ 0001:00003050       System.@isNECWindows
+ 0001:00004070       System.@LStrAddRef
+ 0001:00003C54       System.@LStrArrayClr
+ 0001:00003C84       System.@LStrAsg
+ 0001:00003EBC       System.@LStrCat
+ 0001:00003F08       System.@LStrCat3
+ 0001:00003F84       System.@LStrCatN
+ 0001:00003C30       System.@LStrClr
+ 0001:00004018       System.@LStrCmp
+ 0001:000040E8       System.@LStrCopy
+ 0001:00004128       System.@LStrDelete
+ 0001:00003E84       System.@LStrFromArray
+ 0001:00003DFC       System.@LStrFromChar
+ 0001:00003E0C       System.@LStrFromPChar
+ 0001:00003D20       System.@LStrFromPCharLen
+ 0001:00003E3C       System.@LStrFromPWChar
+ 0001:00003D70       System.@LStrFromPWCharLen
+ 0001:00003E78       System.@LStrFromString
+ 0001:00003E9C       System.@LStrFromWStr
+ 0001:00003CC8       System.@LStrLAsg
+ 0001:00003EB0       System.@LStrLen
+ 0001:00004170       System.@LStrSetLength
+ 0001:00004080       System.@LStrToPChar
+ 0001:0000444C       System.@New
+ 0001:00003CF4       System.@NewAnsiString
+ 0001:00002D64       System.@Pow10
+ 0001:00002520       System.@PStrCpy
+ 0001:000024F0       System.@PStrNCat
+ 0001:0000252C       System.@PStrNCpy
+ 0001:000036B8       System.@RaiseAgain
+ 0001:00003690       System.@RaiseExcept
+ 0001:000026DC       System.@ReadChar
+ 0001:00002840       System.@ReadLn
+ 0001:000027D4       System.@ReadLString
+ 0001:000027C8       System.@ReadString
+ 0001:00001CF0       System.@ReallocMem
+ 0001:00002978       System.@ResetFile
+ 0001:00002160       System.@ResetText
+ 0001:0000216C       System.@RewritText
+ 0001:00003C24       System.@RunError
+ 0001:00002CFC       System.@SetElem
+ 0001:00002D20       System.@SetEq
+ 0001:00002D34       System.@SetIntersect
+ 0001:00002D4C       System.@SetSub
+ 0001:00002D40       System.@SetUnion
+ 0001:00003990       System.@StartExe
+ 0001:000029F4       System.@Str0Long
+ 0001:00000150       System.@strlen
+ 0001:00002994       System.@StrLong
+ 0001:000040E0       System.@UniqueStringA
+ 0001:00002A00       System.@ValLong
+ 0001:0000433C       System.@VarClr
+ 0001:00002BE8       System.@Write0Char
+ 0001:00002C88       System.@Write0Long
+ 0001:000041D4       System.@Write0LString
+ 0001:00002B18       System.@WriteBytes
+ 0001:00002C24       System.@WriteChar
+ 0001:00002CB4       System.@WriteLn
+ 0001:00002C48       System.@WriteLong
+ 0001:000041DC       System.@WriteLString
+ 0001:00002B6C       System.@WriteSpaces
+ 0001:00002C90       System.@WriteString
+ 0001:00004214       System.@WStrArrayClr
+ 0001:000041FC       System.@WStrClr
+ 0001:00001DE4       System.@_IOTest
+ 0001:00004478       System.@_llmul
+ 0004:00000028       System.AbstractErrorProc
+ 0001:000049BC       System.AddModuleUnloadProc
+ 0001:0000058C       System.AllocateLargeBlock
+ 0001:000004CC       System.AllocNewSequentialFeedMediumPool
+ 0004:000005B8       System.AllocSize2SmallBlockTypeIndX4
+ 0001:00001260       System.AppendStringToBuffer
+ 0004:00000020       System.AssertErrorProc
+ 0001:00000460       System.BinMediumSequentialFeedRemainder
+ 0001:00001A6C       System.BuildBlockTypeLookupTable
+ 0001:00001144       System.CardinalToStrBuf
+ 0001:00003D50       System.CharFromWChar
+ 0001:000000C8       System.CharNext
+ 0001:00003400       System.CheckJmp
+ 0001:000014A8       System.CheckSmallBlockPoolForLeaks
+ 0001:00000060       System.CloseHandle
+ 0004:0000003C       System.CmdLine
+ 0004:00000038       System.CmdShow
+ 0003:00000030       System.Copyright
+ 0001:00000068       System.CreateFileA
+ 0003:00000018       System.DebugHook
+ 0003:00000014       System.Default8087CW
+ 0004:000005B4       System.DefaultSystemCodePage
+ 0003:00000024       System.DefaultTextLineBreakStyle
+ 0001:000044E8       System.DelayLoadResourceModule
+ 0001:00000070       System.DeleteFileA
+ 0001:000001CC       System.DestroyWindow
+ 0003:00000790       System.dig
+ 0004:00000000       System.DispCallByIDProc
+ 0003:00000768       System.errCaption
+ 0001:00001DD8       System.Error
+ 0003:00000004       System.ErrorAddr
+ 0001:00001D8C       System.ErrorAt
+ 0004:00000008       System.ErrorProc
+ 0004:000003E0       System.ErrOutput
+ 0001:00001D60       System.ExceptAddr
+ 0004:0000000C       System.ExceptClsProc
+ 0004:0000001C       System.ExceptionClass
+ 0001:00001D40       System.ExceptObject
+ 0004:00000010       System.ExceptObjProc
+ 0004:00000004       System.ExceptProc
+ 0003:00000000       System.ExitCode
+ 0001:00003A80       System.ExitDll
+ 0004:00000040       System.ExitProc
+ 0001:000000D0       System.ExitProcess
+ 0004:00000024       System.ExitProcessProc
+ 0004:000027B4       System.ExpectedMemoryLeaks
+ 0004:000027B8       System.ExpectedMemoryLeaksListLocked
+ 0003:00000008       System.FileMode
+ 0001:000021B4       System.FileNOPProc
+ 0001:00004B94       System.Finalization
+ 0001:00001C68       System.FinalizeMemoryManager
+ 0001:000038C4       System.FinalizeUnits
+ 0001:00004568       System.FindBS
+ 0001:000000E0       System.FindClose
+ 0001:000000E8       System.FindFirstFile
+ 0001:00004530       System.FindResourceHInstance
+ 0001:00002480       System.Flush
+ 0001:00002D5C       System.FPower10
+ 0001:00001BD8       System.FreeAllMemory
+ 0001:000005F0       System.FreeLargeBlock
+ 0001:000000F0       System.FreeLibrary
+ 0001:00004B8C       System.GetACP
+ 0001:00000190       System.GetCmdShow
+ 0001:000000F8       System.GetCommandLine
+ 0001:00000188       System.GetCurrentThreadId
+ 0001:0000325C       System.GetDynaMethod
+ 0001:00000080       System.GetFileSize
+ 0001:00000078       System.GetFileType
+ 0001:00001108       System.GetFirstAndLastSmallBlockInPool
+ 0001:000010C8       System.GetFirstMediumBlockInPool
+ 0001:00003048       System.GetKeyboardType
+ 0001:00000100       System.GetLastError
+ 0001:00000108       System.GetLocaleInfo
+ 0001:00000110       System.GetModuleFileName
+ 0001:00000118       System.GetModuleHandle
+ 0001:00001374       System.GetObjectClass
+ 0001:00001F40       System.GetParamStr
+ 0001:00000120       System.GetProcAddress
+ 0001:00000128       System.GetStartupInfo
+ 0001:00000088       System.GetStdHandle
+ 0001:00000130       System.GetThreadLocale
+ 0004:000027C0       System.InitContext
+ 0001:00001AB0       System.InitializeMemoryManager
+ 0001:00003928       System.InitUnits
+ 0001:00001E14       System.InOutError
+ 0005:00000004       System.InOutRes
+ 0004:00000048       System.Input
+ 0001:00000400       System.InsertMediumBlockIntoBin
+ 0001:000021F4       System.InternalClose
+ 0001:00002438       System.InternalFlush
+ 0001:000012F4       System.InternalIsValidClass
+ 0001:00004094       System.InternalUniqueString
+ 0001:00001E20       System.IOResult
+ 0004:00000044       System.IsConsole
+ 0004:00000034       System.IsLibrary
+ 0004:00000045       System.IsMultiThread
+ 0001:00001278       System.IsValidVMTAddress
+ 0003:0000001C       System.JITEnable
+ 0004:000027A4       System.LargeBlocksCircularList
+ 0004:000027A0       System.LargeBlocksLocked
+ 0004:00000714       System.LastSequentiallyFedMediumBlock
+ 0003:00000028       System.LibModuleList
+ 0001:00000138       System.LoadLibraryEx
+ 0001:0000474C       System.LoadResourceModule
+ 0001:00004B34       System.LoadResString
+ 0001:00000140       System.LoadString
+ 0001:00000234       System.LockCmpxchg
+ 0001:0000139C       System.LockExpectedMemoryLeaksList
+ 0001:00000544       System.LockLargeBlocks
+ 0001:00000148       System.lstrcpyn
+ 0004:0000002C       System.MainInstance
+ 0004:00000030       System.MainThreadID
+ 0001:00003A1C       System.MakeErrorMessage
+ 0001:0000373C       System.MapToRunError
+ 0004:00000720       System.MediumBlockBinBitmaps
+ 0004:0000071C       System.MediumBlockBinGroupBitmap
+ 0004:000007A0       System.MediumBlockBins
+ 0004:00000700       System.MediumBlockPoolsCircularList
+ 0004:00000710       System.MediumBlocksLocked
+ 0004:00000718       System.MediumSequentialFeedBytesLeft
+ 0003:00000714       System.MemoryManager
+ 0001:000000D8       System.MessageBox
+ 0004:000006FE       System.MinimumBlockAlignment
+ 0004:000027BC       System.MMSharingWindow
+ 0003:0000002C       System.ModuleUnloadList
+ 0001:00001E40       System.Move
+ 0001:0000023C       System.Move12
+ 0001:00000250       System.Move20
+ 0001:00000270       System.Move28
+ 0001:0000029C       System.Move36
+ 0001:000002BC       System.Move44
+ 0001:000002E0       System.Move52
+ 0001:0000030C       System.Move60
+ 0001:0000033C       System.Move68
+ 0001:00000374       System.MoveX16L4
+ 0001:000003A4       System.MoveX8L4
+ 0004:000005AD       System.NeverSleepOnMMThreadContention
+ 0001:000010A4       System.NextMediumBlock
+ 0003:00000020       System.NoErrMsg
+ 0001:000033EC       System.NotifyAnyExcept
+ 0001:000033D4       System.NotifyExcept
+ 0001:00003420       System.NotifyExceptFinally
+ 0001:00004A40       System.NotifyModuleUnload
+ 0001:000033B0       System.NotifyNonDelphiException
+ 0001:00003394       System.NotifyReRaise
+ 0001:00003448       System.NotifyTerminate
+ 0001:00003464       System.NotifyUnhandled
+ 0001:00002898       System.OpenFile
+ 0001:00002108       System.OpenText
+ 0004:00000214       System.Output
+ 0001:0000203C       System.ParamCount
+ 0001:0000209C       System.ParamStr
+ 0001:00000090       System.RaiseException
+ 0004:00000014       System.RaiseExceptionProc
+ 0005:00000000       System.RaiseListPtr
+ 0001:00000098       System.ReadFile
+ 0001:00002748       System.ReadLine
+ 0001:00000694       System.ReallocateLargeBlock
+ 0001:00000158       System.RegCloseKey
+ 0001:00004A9C       System.RegisterModule
+ 0001:00000160       System.RegOpenKeyEx
+ 0001:00000168       System.RegQueryValueEx
+ 0003:0000072C       System.reMap
+ 0001:000003C0       System.RemoveMediumFreeBlock
+ 0001:000049DC       System.RemoveModuleUnloadProc
+ 0004:000005AC       System.ReportMemoryLeaksOnShutdown
+ 0001:000000A0       System.RtlUnwind
+ 0004:00000018       System.RTLUnwindProc
+ 0003:00000770       System.runErrMsg
+ 0001:00001D80       System.RunErrorAt
+ 0001:000015F4       System.ScanForMemoryLeaks
+ 0001:000000A8       System.SetEndOfFile
+ 0001:0000387C       System.SetExceptionHandler
+ 0001:000000B0       System.SetFilePointer
+ 0001:00001E04       System.SetInOutRes
+ 0003:00000748       System.ShareTab
+ 0001:000001C4       System.Sleep
+ 0003:00000034       System.SmallBlockTypes
+ 0001:00001074       System.SysAllocMem
+ 0001:00000B64       System.SysFreeMem
+ 0001:00000180       System.SysFreeString
+ 0001:000007E0       System.SysGetMem
+ 0001:00000D5C       System.SysReallocMem
+ 0001:00001410       System.SysRegisterExpectedMemoryLeak
+ 0002:00000000       System.System
+ 0001:00001450       System.SysUnregisterExpectedMemoryLeak
+ 0004:00000046       System.Test8086
+ 0001:00002204       System.TextClose
+ 0001:00002178       System.TextIn
+ 0001:00002224       System.TextOpen
+ 0001:000021B8       System.TextOut
+ 0001:000032AC       System.TObject.AfterConstruction
+ 0001:000032B0       System.TObject.BeforeDestruction
+ 0001:00003158       System.TObject.ClassName
+ 0001:00003218       System.TObject.CleanupInstance
+ 0001:000032A8       System.TObject.DefaultHandler
+ 0001:000031A4       System.TObject.Destroy
+ 0001:000032B4       System.TObject.Dispatch
+ 0001:000031B4       System.TObject.Free
+ 0001:00003188       System.TObject.FreeInstance
+ 0001:0000328C       System.TObject.InheritsFrom
+ 0001:000031C0       System.TObject.InitInstance
+ 0001:0000319C       System.TObject.InstanceSize
+ 0001:0000316C       System.TObject.NewInstance
+ 0001:000032A0       System.TObject.SafeCallException
+ 0001:00004588       System.ToLongPath
+ 0001:000026A0       System.TryOpenForInput
+ 0001:00002AD4       System.TryOpenForOutput
+ 0001:000000B8       System.UnhandledExceptionFilter
+ 0001:000040D8       System.UniqueString
+ 0001:00004AAC       System.UnregisterModule
+ 0001:0000389C       System.UnsetExceptionHandler
+ 0001:000020FC       System.UpCase
+ 0003:0000000C       System.VarClearProc
+ 0003:00000010       System.VarToLStrProc
+ 0001:000001B4       System.VirtualAlloc
+ 0001:000001BC       System.VirtualFree
+ 0001:00000178       System.VirtualQuery
+ 0001:00000170       System.WideCharToMultiByte
+ 0001:00003AB0       System.WriteErrorMessage
+ 0001:000000C0       System.WriteFile
+ 0004:00002910       SysUtils..35
+ 0001:00005900       SysUtils..EAbstractError
+ 0001:000056D8       SysUtils..EAccessViolation
+ 0001:000058A0       SysUtils..EAssertionFailed
+ 0001:000057EC       SysUtils..EControlC
+ 0001:0000567C       SysUtils..EConvertError
+ 0001:00005300       SysUtils..EDivByZero
+ 0001:000051F0       SysUtils..EExternal
+ 0001:00005248       SysUtils..EExternalException
+ 0001:000050E0       SysUtils..EHeapException
+ 0001:00005198       SysUtils..EInOutError
+ 0001:000052A8       SysUtils..EIntError
+ 0001:0000595C       SysUtils..EIntfCastError
+ 0001:000053B0       SysUtils..EIntOverflow
+ 0001:00005620       SysUtils..EInvalidCast
+ 0001:00005464       SysUtils..EInvalidOp
+ 0001:000055C4       SysUtils..EInvalidPointer
+ 0001:0000540C       SysUtils..EMathError
+ 0001:0000513C       SysUtils..EOutOfMemory
+ 0001:00005514       SysUtils..EOverflow
+ 0001:00005738       SysUtils..EPrivilege
+ 0001:00005358       SysUtils..ERangeError
+ 0001:000059B8       SysUtils..ESafecallException
+ 0001:00005790       SysUtils..EStackOverflow
+ 0001:0000556C       SysUtils..EUnderflow
+ 0001:00005844       SysUtils..EVariantError
+ 0001:00005078       SysUtils..Exception
+ 0001:000054BC       SysUtils..EZeroDivide
+ 0001:00007468       SysUtils.AbstractErrorHandler
+ 0001:00007A64       SysUtils.AnsiStrRScan
+ 0001:00007A98       SysUtils.AnsiStrScan
+ 0001:0000744C       SysUtils.AssertErrorHandler
+ 0001:00005D8C       SysUtils.BackfillGetDiskFreeSpaceEx
+ 0001:000079D0       SysUtils.ByteType
+ 0001:0000795C       SysUtils.ByteTypeTest
+ 0001:00007A2C       SysUtils.CharLength
+ 0001:00008194       SysUtils.ClearHashTables
+ 0001:00006EAC       SysUtils.ConvertAddr
+ 0001:00005A6C       SysUtils.ConvertErrorFmt
+ 0001:00007390       SysUtils.CreateAssertException
+ 0001:00007518       SysUtils.CreateAVObject
+ 0001:000072C0       SysUtils.CreateInOutError
+ 0003:00000808       SysUtils.cSimpleBoolStrs
+ 0004:00002808       SysUtils.CurrencyDecimals
+ 0004:00002804       SysUtils.CurrencyFormat
+ 0004:00002800       SysUtils.CurrencyString
+ 0001:00005AC0       SysUtils.CvtInt
+ 0001:00005B0C       SysUtils.CvtInt64
+ 0004:00002809       SysUtils.DateSeparator
+ 0003:00000824       SysUtils.DCon10
+ 0004:00002807       SysUtils.DecimalSeparator
+ 0003:000008A4       SysUtils.DefLongDayNames
+ 0003:00000858       SysUtils.DefLongMonthNames
+ 0003:00000888       SysUtils.DefShortDayNames
+ 0003:00000828       SysUtils.DefShortMonthNames
+ 0001:00007840       SysUtils.DoneExceptions
+ 0001:00007294       SysUtils.EHeapException.FreeInstance
+ 0003:000007C0       SysUtils.EmptyStr
+ 0003:000007C8       SysUtils.EmptyWideStr
+ 0001:00006B18       SysUtils.EnumEraNames
+ 0001:00006B54       SysUtils.EnumEraYearOffsets
+ 0004:000028D0       SysUtils.EraNames
+ 0004:000028EC       SysUtils.EraYearOffsets
+ 0001:00007340       SysUtils.ErrorHandler
+ 0003:000008C0       SysUtils.ErrorMap
+ 0001:000077AC       SysUtils.ExceptHandler
+ 0001:00007108       SysUtils.Exception.Create
+ 0001:00007144       SysUtils.Exception.CreateFmt
+ 0001:000071C4       SysUtils.Exception.CreateRes
+ 0001:00007200       SysUtils.Exception.CreateResFmt
+ 0001:00006EB8       SysUtils.ExceptionErrorMessage
+ 0003:000008F8       SysUtils.ExceptMap
+ 0001:00005C08       SysUtils.ExistsLockedOrShared
+ 0001:00005D54       SysUtils.ExtractFileName
+ 0001:00005D20       SysUtils.ExtractFilePath
+ 0004:0000290C       SysUtils.FalseBoolStrs
+ 0003:00000818       SysUtils.FCon1E18
+ 0001:00005C48       SysUtils.FileExists
+ 0001:00005C90       SysUtils.FileGetAttr
+ 0001:00005CA4       SysUtils.FileSetAttr
+ 0001:00008494       SysUtils.Finalization
+ 0004:00004904       SysUtils.FLanguages
+ 0001:00006714       SysUtils.FloatToDecimal
+ 0001:00006440       SysUtils.FloatToText
+ 0001:00006320       SysUtils.FmtStr
+ 0001:0000630C       SysUtils.Format
+ 0001:00005F54       SysUtils.FormatBuf
+ 0001:00005F48       SysUtils.FormatClearStr
+ 0001:00005ECC       SysUtils.FormatError
+ 0003:00000810       SysUtils.FormatErrorStrs
+ 0001:00005F24       SysUtils.FormatVarToStr
+ 0001:00008184       SysUtils.FreeAndNil
+ 0001:00008104       SysUtils.FreeTerminateProcs
+ 0003:00000804       SysUtils.GetDiskFreeSpaceEx
+ 0001:00006BCC       SysUtils.GetEraNamesAndYearOffsets
+ 0001:00007500       SysUtils.GetExceptionClass
+ 0001:000076E4       SysUtils.GetExceptionObject
+ 0001:00007BF8       SysUtils.GetFormatSettings
+ 0001:0000698C       SysUtils.GetLocaleChar
+ 0001:00006940       SysUtils.GetLocaleStr
+ 0001:000069F4       SysUtils.GetMonthDayNames
+ 0001:00007FC4       SysUtils.HashName
+ 0003:00000800       SysUtils.HexDisplayPrefix
+ 0001:00008128       SysUtils.InitDriveSpacePtr
+ 0001:000077BC       SysUtils.InitExceptions
+ 0001:00007AD8       SysUtils.InitLeadBytes
+ 0001:000078EC       SysUtils.InitPlatformId
+ 0001:00007B34       SysUtils.InitSysLocale
+ 0004:00002918       SysUtils.InvalidPointer
+ 0001:00005CCC       SysUtils.LastDelimiter
+ 0003:000007E0       SysUtils.LeadBytes
+ 0004:000028CE       SysUtils.ListSeparator
+ 0001:000069B8       SysUtils.LocalGetLocaleStr
+ 0004:00002810       SysUtils.LongDateFormat
+ 0004:000028A4       SysUtils.LongDayNames
+ 0004:00002858       SysUtils.LongMonthNames
+ 0004:00002824       SysUtils.LongTimeFormat
+ 0001:00007480       SysUtils.MapException
+ 0001:00007FEC       SysUtils.ModuleUnloaded
+ 0004:00002805       SysUtils.NegCurrFormat
+ 0001:00005A90       SysUtils.NewStr
+ 0003:000007C4       SysUtils.NullStr
+ 0004:00002914       SysUtils.OutOfMemory
+ 0001:000063FC       SysUtils.PutExponent
+ 0001:0000743C       SysUtils.RaiseAssertException
+ 0004:0000280C       SysUtils.ShortDateFormat
+ 0004:00002888       SysUtils.ShortDayNames
+ 0004:00002828       SysUtils.ShortMonthNames
+ 0004:00002820       SysUtils.ShortTimeFormat
+ 0001:00007040       SysUtils.ShowException
+ 0001:000079F4       SysUtils.StrByteType
+ 0001:00007A0C       SysUtils.StrCharLength
+ 0001:00005E40       SysUtils.StrLCopy
+ 0001:00005E00       SysUtils.StrLen
+ 0001:000062CC       SysUtils.StrLFmt
+ 0001:00005E74       SysUtils.StrLIComp
+ 0001:00005E30       SysUtils.StrMove
+ 0001:00005EB8       SysUtils.StrScan
+ 0001:00005BD8       SysUtils.StrToIntDef
+ 0004:000028C0       SysUtils.SysLocale
+ 0002:000000AC       SysUtils.SysUtils
+ 0003:000009A8       SysUtils.TerminateProcList
+ 0004:00002806       SysUtils.ThousandSeparator
+ 0004:00002818       SysUtils.TimeAMString
+ 0004:0000281C       SysUtils.TimePMString
+ 0004:00002814       SysUtils.TimeSeparator
+ 0001:00006C7C       SysUtils.TranslateDateFormat
+ 0004:00002908       SysUtils.TrueBoolStrs
+ 0004:00003910       SysUtils.UnitHashBuckets
+ 0004:0000291C       SysUtils.ValidatedUnitHashBuckets
+ 0003:000007D8       SysUtils.Win32BuildNumber
+ 0003:000007DC       SysUtils.Win32CSDVersion
+ 0003:000007D0       SysUtils.Win32MajorVersion
+ 0003:000007D4       SysUtils.Win32MinorVersion
+ 0003:000007CC       SysUtils.Win32Platform
+ 0004:000027F8       Windows..3
+ 0001:0000500C       Windows.CharNext
+ 0001:00005014       Windows.CharToOemA
+ 0001:00004F7C       Windows.EnumCalendarInfoA
+ 0001:00005034       Windows.Finalization
+ 0001:00004F84       Windows.FindClose
+ 0001:00004F8C       Windows.FindFirstFile
+ 0001:00004F94       Windows.FreeLibrary
+ 0001:00004F9C       Windows.GetCPInfo
+ 0001:00004FA4       Windows.GetDiskFreeSpaceA
+ 0001:00004FAC       Windows.GetFileAttributes
+ 0001:00004FB4       Windows.GetLastError
+ 0001:00004FBC       Windows.GetLocaleInfo
+ 0001:00004FC4       Windows.GetModuleFileName
+ 0001:00004FCC       Windows.GetModuleHandle
+ 0001:00004FD4       Windows.GetProcAddress
+ 0001:00004FDC       Windows.GetStdHandle
+ 0001:0000501C       Windows.GetSystemMetrics
+ 0001:00004FE4       Windows.GetThreadLocale
+ 0001:00004FEC       Windows.GetVersionEx
+ 0004:000027FC       Windows.HtmlHelpModule
+ 0001:00005024       Windows.LoadString
+ 0001:0000502C       Windows.MessageBox
+ 0001:00004FF4       Windows.SetFileAttributes
+ 0001:00004FFC       Windows.VirtualQuery
+ 0002:00000098       Windows.Windows
+ 0001:00005004       Windows.WriteFile
+
+
+  Address             Publics by Value
+
+ 0001:0000000C       System..TObject
+ 0001:00000060       System.CloseHandle
+ 0001:00000068       System.CreateFileA
+ 0001:00000070       System.DeleteFileA
+ 0001:00000078       System.GetFileType
+ 0001:00000080       System.GetFileSize
+ 0001:00000088       System.GetStdHandle
+ 0001:00000090       System.RaiseException
+ 0001:00000098       System.ReadFile
+ 0001:000000A0       System.RtlUnwind
+ 0001:000000A8       System.SetEndOfFile
+ 0001:000000B0       System.SetFilePointer
+ 0001:000000B8       System.UnhandledExceptionFilter
+ 0001:000000C0       System.WriteFile
+ 0001:000000C8       System.CharNext
+ 0001:000000D0       System.ExitProcess
+ 0001:000000D8       System.MessageBox
+ 0001:000000E0       System.FindClose
+ 0001:000000E8       System.FindFirstFile
+ 0001:000000F0       System.FreeLibrary
+ 0001:000000F8       System.GetCommandLine
+ 0001:00000100       System.GetLastError
+ 0001:00000108       System.GetLocaleInfo
+ 0001:00000110       System.GetModuleFileName
+ 0001:00000118       System.GetModuleHandle
+ 0001:00000120       System.GetProcAddress
+ 0001:00000128       System.GetStartupInfo
+ 0001:00000130       System.GetThreadLocale
+ 0001:00000138       System.LoadLibraryEx
+ 0001:00000140       System.LoadString
+ 0001:00000148       System.lstrcpyn
+ 0001:00000150       System.@strlen
+ 0001:00000158       System.RegCloseKey
+ 0001:00000160       System.RegOpenKeyEx
+ 0001:00000168       System.RegQueryValueEx
+ 0001:00000170       System.WideCharToMultiByte
+ 0001:00000178       System.VirtualQuery
+ 0001:00000180       System.SysFreeString
+ 0001:00000188       System.GetCurrentThreadId
+ 0001:00000190       System.GetCmdShow
+ 0001:000001B4       System.VirtualAlloc
+ 0001:000001BC       System.VirtualFree
+ 0001:000001C4       System.Sleep
+ 0001:000001CC       System.DestroyWindow
+ 0001:00000234       System.LockCmpxchg
+ 0001:0000023C       System.Move12
+ 0001:00000250       System.Move20
+ 0001:00000270       System.Move28
+ 0001:0000029C       System.Move36
+ 0001:000002BC       System.Move44
+ 0001:000002E0       System.Move52
+ 0001:0000030C       System.Move60
+ 0001:0000033C       System.Move68
+ 0001:00000374       System.MoveX16L4
+ 0001:000003A4       System.MoveX8L4
+ 0001:000003C0       System.RemoveMediumFreeBlock
+ 0001:00000400       System.InsertMediumBlockIntoBin
+ 0001:00000460       System.BinMediumSequentialFeedRemainder
+ 0001:000004CC       System.AllocNewSequentialFeedMediumPool
+ 0001:00000544       System.LockLargeBlocks
+ 0001:0000058C       System.AllocateLargeBlock
+ 0001:000005F0       System.FreeLargeBlock
+ 0001:00000694       System.ReallocateLargeBlock
+ 0001:000007E0       System.SysGetMem
+ 0001:00000B64       System.SysFreeMem
+ 0001:00000D5C       System.SysReallocMem
+ 0001:00001074       System.SysAllocMem
+ 0001:000010A4       System.NextMediumBlock
+ 0001:000010C8       System.GetFirstMediumBlockInPool
+ 0001:00001108       System.GetFirstAndLastSmallBlockInPool
+ 0001:00001144       System.CardinalToStrBuf
+ 0001:00001260       System.AppendStringToBuffer
+ 0001:00001278       System.IsValidVMTAddress
+ 0001:000012F4       System.InternalIsValidClass
+ 0001:00001374       System.GetObjectClass
+ 0001:0000139C       System.LockExpectedMemoryLeaksList
+ 0001:00001410       System.SysRegisterExpectedMemoryLeak
+ 0001:00001450       System.SysUnregisterExpectedMemoryLeak
+ 0001:000014A8       System.CheckSmallBlockPoolForLeaks
+ 0001:000015F4       System.ScanForMemoryLeaks
+ 0001:00001A6C       System.BuildBlockTypeLookupTable
+ 0001:00001AB0       System.InitializeMemoryManager
+ 0001:00001BD8       System.FreeAllMemory
+ 0001:00001C68       System.FinalizeMemoryManager
+ 0001:00001CBC       System.@GetMem
+ 0001:00001CD8       System.@FreeMem
+ 0001:00001CF0       System.@ReallocMem
+ 0001:00001D40       System.ExceptObject
+ 0001:00001D60       System.ExceptAddr
+ 0001:00001D80       System.RunErrorAt
+ 0001:00001D8C       System.ErrorAt
+ 0001:00001DD8       System.Error
+ 0001:00001DE4       System.@_IOTest
+ 0001:00001E04       System.SetInOutRes
+ 0001:00001E14       System.InOutError
+ 0001:00001E20       System.IOResult
+ 0001:00001E40       System.Move
+ 0001:00001F40       System.GetParamStr
+ 0001:0000203C       System.ParamCount
+ 0001:0000209C       System.ParamStr
+ 0001:000020FC       System.UpCase
+ 0001:00002108       System.OpenText
+ 0001:00002160       System.@ResetText
+ 0001:0000216C       System.@RewritText
+ 0001:00002178       System.TextIn
+ 0001:000021B4       System.FileNOPProc
+ 0001:000021B8       System.TextOut
+ 0001:000021F4       System.InternalClose
+ 0001:00002204       System.TextClose
+ 0001:00002224       System.TextOpen
+ 0001:000023D0       System.@Assign
+ 0001:00002438       System.InternalFlush
+ 0001:00002480       System.Flush
+ 0001:0000248C       System.@Flush
+ 0001:00002498       System.@Close
+ 0001:000024F0       System.@PStrNCat
+ 0001:00002520       System.@PStrCpy
+ 0001:0000252C       System.@PStrNCpy
+ 0001:00002548       System.@EofText
+ 0001:00002580       System.@Erase
+ 0001:000025B8       System.@FileSize
+ 0001:00002604       System.@FillChar
+ 0001:000026A0       System.TryOpenForInput
+ 0001:000026DC       System.@ReadChar
+ 0001:00002748       System.ReadLine
+ 0001:000027C8       System.@ReadString
+ 0001:000027D4       System.@ReadLString
+ 0001:00002840       System.@ReadLn
+ 0001:00002870       System.@CloseFile
+ 0001:00002898       System.OpenFile
+ 0001:00002978       System.@ResetFile
+ 0001:00002994       System.@StrLong
+ 0001:000029F4       System.@Str0Long
+ 0001:00002A00       System.@ValLong
+ 0001:00002AD4       System.TryOpenForOutput
+ 0001:00002B18       System.@WriteBytes
+ 0001:00002B6C       System.@WriteSpaces
+ 0001:00002BE8       System.@Write0Char
+ 0001:00002C24       System.@WriteChar
+ 0001:00002C48       System.@WriteLong
+ 0001:00002C88       System.@Write0Long
+ 0001:00002C90       System.@WriteString
+ 0001:00002CB4       System.@WriteLn
+ 0001:00002CFC       System.@SetElem
+ 0001:00002D20       System.@SetEq
+ 0001:00002D34       System.@SetIntersect
+ 0001:00002D40       System.@SetUnion
+ 0001:00002D4C       System.@SetSub
+ 0001:00002D5C       System.FPower10
+ 0001:00002D64       System.@Pow10
+ 0001:00003048       System.GetKeyboardType
+ 0001:00003050       System.@isNECWindows
+ 0001:00003080       System.@FpuMaskInit
+ 0001:00003144       System.@FpuInit
+ 0001:00003150       System.@IntOver
+ 0001:00003158       System.TObject.ClassName
+ 0001:0000316C       System.TObject.NewInstance
+ 0001:00003188       System.TObject.FreeInstance
+ 0001:0000319C       System.TObject.InstanceSize
+ 0001:000031A4       System.TObject.Destroy
+ 0001:000031B4       System.TObject.Free
+ 0001:000031C0       System.TObject.InitInstance
+ 0001:00003218       System.TObject.CleanupInstance
+ 0001:00003238       System.@IsClass
+ 0001:0000325C       System.GetDynaMethod
+ 0001:0000328C       System.TObject.InheritsFrom
+ 0001:000032A0       System.TObject.SafeCallException
+ 0001:000032A8       System.TObject.DefaultHandler
+ 0001:000032AC       System.TObject.AfterConstruction
+ 0001:000032B0       System.TObject.BeforeDestruction
+ 0001:000032B4       System.TObject.Dispatch
+ 0001:000032DC       System.@ClassCreate
+ 0001:0000332C       System.@ClassDestroy
+ 0001:00003334       System.@AfterConstruction
+ 0001:00003384       System.@BeforeDestruction
+ 0001:00003394       System.NotifyReRaise
+ 0001:000033B0       System.NotifyNonDelphiException
+ 0001:000033D4       System.NotifyExcept
+ 0001:000033EC       System.NotifyAnyExcept
+ 0001:00003400       System.CheckJmp
+ 0001:00003420       System.NotifyExceptFinally
+ 0001:00003448       System.NotifyTerminate
+ 0001:00003464       System.NotifyUnhandled
+ 0001:00003484       System.@HandleAnyException
+ 0001:000035B0       System.@HandleFinally
+ 0001:00003658       System.@HandleFinallyInternal
+ 0001:00003690       System.@RaiseExcept
+ 0001:000036B8       System.@RaiseAgain
+ 0001:0000370C       System.@DoneExcept
+ 0001:0000373C       System.MapToRunError
+ 0001:000037DC       System.@ExceptionHandler
+ 0001:0000387C       System.SetExceptionHandler
+ 0001:0000389C       System.UnsetExceptionHandler
+ 0001:000038C4       System.FinalizeUnits
+ 0001:00003928       System.InitUnits
+ 0001:00003990       System.@StartExe
+ 0001:000039D0       System.@InitResStringImports
+ 0001:000039F8       System.@InitImports
+ 0001:00003A1C       System.MakeErrorMessage
+ 0001:00003A80       System.ExitDll
+ 0001:00003AB0       System.WriteErrorMessage
+ 0001:00003B3C       System.@Halt0
+ 0001:00003C18       System.@Halt
+ 0001:00003C24       System.@RunError
+ 0001:00003C30       System.@LStrClr
+ 0001:00003C54       System.@LStrArrayClr
+ 0001:00003C84       System.@LStrAsg
+ 0001:00003CC8       System.@LStrLAsg
+ 0001:00003CF4       System.@NewAnsiString
+ 0001:00003D20       System.@LStrFromPCharLen
+ 0001:00003D50       System.CharFromWChar
+ 0001:00003D70       System.@LStrFromPWCharLen
+ 0001:00003DFC       System.@LStrFromChar
+ 0001:00003E0C       System.@LStrFromPChar
+ 0001:00003E3C       System.@LStrFromPWChar
+ 0001:00003E78       System.@LStrFromString
+ 0001:00003E84       System.@LStrFromArray
+ 0001:00003E9C       System.@LStrFromWStr
+ 0001:00003EB0       System.@LStrLen
+ 0001:00003EBC       System.@LStrCat
+ 0001:00003F08       System.@LStrCat3
+ 0001:00003F84       System.@LStrCatN
+ 0001:00004018       System.@LStrCmp
+ 0001:00004070       System.@LStrAddRef
+ 0001:00004080       System.@LStrToPChar
+ 0001:00004094       System.InternalUniqueString
+ 0001:000040D8       System.UniqueString
+ 0001:000040E0       System.@UniqueStringA
+ 0001:000040E8       System.@LStrCopy
+ 0001:00004128       System.@LStrDelete
+ 0001:00004170       System.@LStrSetLength
+ 0001:000041D4       System.@Write0LString
+ 0001:000041DC       System.@WriteLString
+ 0001:000041FC       System.@WStrClr
+ 0001:00004214       System.@WStrArrayClr
+ 0001:00004238       System.@InitializeRecord
+ 0001:00004268       System.@InitializeArray
+ 0001:000042FC       System.@Initialize
+ 0001:00004308       System.@FinalizeRecord
+ 0001:0000433C       System.@VarClr
+ 0001:00004354       System.@FinalizeArray
+ 0001:00004440       System.@Finalize
+ 0001:0000444C       System.@New
+ 0001:00004460       System.@Dispose
+ 0001:00004470       System.@DispCallByIDError
+ 0001:00004478       System.@_llmul
+ 0001:0000449C       System.@DynArrayLength
+ 0001:000044A4       System.@DynArrayHigh
+ 0001:000044AC       System.@DynArrayClear
+ 0001:000044E8       System.DelayLoadResourceModule
+ 0001:00004530       System.FindResourceHInstance
+ 0001:00004568       System.FindBS
+ 0001:00004588       System.ToLongPath
+ 0001:0000474C       System.LoadResourceModule
+ 0001:000049BC       System.AddModuleUnloadProc
+ 0001:000049DC       System.RemoveModuleUnloadProc
+ 0001:00004A40       System.NotifyModuleUnload
+ 0001:00004A9C       System.RegisterModule
+ 0001:00004AAC       System.UnregisterModule
+ 0001:00004B1C       System.@IntfClear
+ 0001:00004B34       System.LoadResString
+ 0001:00004B8C       System.GetACP
+ 0001:00004B94       System.Finalization
+ 0001:00004BF4       SysInit.GetModuleHandle
+ 0001:00004BFC       SysInit.LocalAlloc
+ 0001:00004C04       SysInit.TlsGetValue
+ 0001:00004C0C       SysInit.TlsSetValue
+ 0001:00004C14       SysInit.AllocTlsBuffer
+ 0001:00004C20       SysInit.GetTlsSize
+ 0001:00004C28       SysInit.InitThreadTLS
+ 0001:00004C6C       SysInit.@GetTls
+ 0001:00004CAC       SysInit.InitializeModule
+ 0001:00004CB8       SysInit.@InitExe
+ 0001:00004F7C       Windows.EnumCalendarInfoA
+ 0001:00004F84       Windows.FindClose
+ 0001:00004F8C       Windows.FindFirstFile
+ 0001:00004F94       Windows.FreeLibrary
+ 0001:00004F9C       Windows.GetCPInfo
+ 0001:00004FA4       Windows.GetDiskFreeSpaceA
+ 0001:00004FAC       Windows.GetFileAttributes
+ 0001:00004FB4       Windows.GetLastError
+ 0001:00004FBC       Windows.GetLocaleInfo
+ 0001:00004FC4       Windows.GetModuleFileName
+ 0001:00004FCC       Windows.GetModuleHandle
+ 0001:00004FD4       Windows.GetProcAddress
+ 0001:00004FDC       Windows.GetStdHandle
+ 0001:00004FE4       Windows.GetThreadLocale
+ 0001:00004FEC       Windows.GetVersionEx
+ 0001:00004FF4       Windows.SetFileAttributes
+ 0001:00004FFC       Windows.VirtualQuery
+ 0001:00005004       Windows.WriteFile
+ 0001:0000500C       Windows.CharNext
+ 0001:00005014       Windows.CharToOemA
+ 0001:0000501C       Windows.GetSystemMetrics
+ 0001:00005024       Windows.LoadString
+ 0001:0000502C       Windows.MessageBox
+ 0001:00005034       Windows.Finalization
+ 0001:00005078       SysUtils..Exception
+ 0001:000050E0       SysUtils..EHeapException
+ 0001:0000513C       SysUtils..EOutOfMemory
+ 0001:00005198       SysUtils..EInOutError
+ 0001:000051F0       SysUtils..EExternal
+ 0001:00005248       SysUtils..EExternalException
+ 0001:000052A8       SysUtils..EIntError
+ 0001:00005300       SysUtils..EDivByZero
+ 0001:00005358       SysUtils..ERangeError
+ 0001:000053B0       SysUtils..EIntOverflow
+ 0001:0000540C       SysUtils..EMathError
+ 0001:00005464       SysUtils..EInvalidOp
+ 0001:000054BC       SysUtils..EZeroDivide
+ 0001:00005514       SysUtils..EOverflow
+ 0001:0000556C       SysUtils..EUnderflow
+ 0001:000055C4       SysUtils..EInvalidPointer
+ 0001:00005620       SysUtils..EInvalidCast
+ 0001:0000567C       SysUtils..EConvertError
+ 0001:000056D8       SysUtils..EAccessViolation
+ 0001:00005738       SysUtils..EPrivilege
+ 0001:00005790       SysUtils..EStackOverflow
+ 0001:000057EC       SysUtils..EControlC
+ 0001:00005844       SysUtils..EVariantError
+ 0001:000058A0       SysUtils..EAssertionFailed
+ 0001:00005900       SysUtils..EAbstractError
+ 0001:0000595C       SysUtils..EIntfCastError
+ 0001:000059B8       SysUtils..ESafecallException
+ 0001:00005A6C       SysUtils.ConvertErrorFmt
+ 0001:00005A90       SysUtils.NewStr
+ 0001:00005AC0       SysUtils.CvtInt
+ 0001:00005B0C       SysUtils.CvtInt64
+ 0001:00005BD8       SysUtils.StrToIntDef
+ 0001:00005C08       SysUtils.ExistsLockedOrShared
+ 0001:00005C48       SysUtils.FileExists
+ 0001:00005C90       SysUtils.FileGetAttr
+ 0001:00005CA4       SysUtils.FileSetAttr
+ 0001:00005CCC       SysUtils.LastDelimiter
+ 0001:00005D20       SysUtils.ExtractFilePath
+ 0001:00005D54       SysUtils.ExtractFileName
+ 0001:00005D8C       SysUtils.BackfillGetDiskFreeSpaceEx
+ 0001:00005E00       SysUtils.StrLen
+ 0001:00005E30       SysUtils.StrMove
+ 0001:00005E40       SysUtils.StrLCopy
+ 0001:00005E74       SysUtils.StrLIComp
+ 0001:00005EB8       SysUtils.StrScan
+ 0001:00005ECC       SysUtils.FormatError
+ 0001:00005F24       SysUtils.FormatVarToStr
+ 0001:00005F48       SysUtils.FormatClearStr
+ 0001:00005F54       SysUtils.FormatBuf
+ 0001:000062CC       SysUtils.StrLFmt
+ 0001:0000630C       SysUtils.Format
+ 0001:00006320       SysUtils.FmtStr
+ 0001:000063FC       SysUtils.PutExponent
+ 0001:00006440       SysUtils.FloatToText
+ 0001:00006714       SysUtils.FloatToDecimal
+ 0001:00006940       SysUtils.GetLocaleStr
+ 0001:0000698C       SysUtils.GetLocaleChar
+ 0001:000069B8       SysUtils.LocalGetLocaleStr
+ 0001:000069F4       SysUtils.GetMonthDayNames
+ 0001:00006B18       SysUtils.EnumEraNames
+ 0001:00006B54       SysUtils.EnumEraYearOffsets
+ 0001:00006BCC       SysUtils.GetEraNamesAndYearOffsets
+ 0001:00006C7C       SysUtils.TranslateDateFormat
+ 0001:00006EAC       SysUtils.ConvertAddr
+ 0001:00006EB8       SysUtils.ExceptionErrorMessage
+ 0001:00007040       SysUtils.ShowException
+ 0001:00007108       SysUtils.Exception.Create
+ 0001:00007144       SysUtils.Exception.CreateFmt
+ 0001:000071C4       SysUtils.Exception.CreateRes
+ 0001:00007200       SysUtils.Exception.CreateResFmt
+ 0001:00007294       SysUtils.EHeapException.FreeInstance
+ 0001:000072C0       SysUtils.CreateInOutError
+ 0001:00007340       SysUtils.ErrorHandler
+ 0001:00007390       SysUtils.CreateAssertException
+ 0001:0000743C       SysUtils.RaiseAssertException
+ 0001:0000744C       SysUtils.AssertErrorHandler
+ 0001:00007468       SysUtils.AbstractErrorHandler
+ 0001:00007480       SysUtils.MapException
+ 0001:00007500       SysUtils.GetExceptionClass
+ 0001:00007518       SysUtils.CreateAVObject
+ 0001:000076E4       SysUtils.GetExceptionObject
+ 0001:000077AC       SysUtils.ExceptHandler
+ 0001:000077BC       SysUtils.InitExceptions
+ 0001:00007840       SysUtils.DoneExceptions
+ 0001:000078EC       SysUtils.InitPlatformId
+ 0001:0000795C       SysUtils.ByteTypeTest
+ 0001:000079D0       SysUtils.ByteType
+ 0001:000079F4       SysUtils.StrByteType
+ 0001:00007A0C       SysUtils.StrCharLength
+ 0001:00007A2C       SysUtils.CharLength
+ 0001:00007A64       SysUtils.AnsiStrRScan
+ 0001:00007A98       SysUtils.AnsiStrScan
+ 0001:00007AD8       SysUtils.InitLeadBytes
+ 0001:00007B34       SysUtils.InitSysLocale
+ 0001:00007BF8       SysUtils.GetFormatSettings
+ 0001:00007FC4       SysUtils.HashName
+ 0001:00007FEC       SysUtils.ModuleUnloaded
+ 0001:00008104       SysUtils.FreeTerminateProcs
+ 0001:00008128       SysUtils.InitDriveSpacePtr
+ 0001:00008184       SysUtils.FreeAndNil
+ 0001:00008194       SysUtils.ClearHashTables
+ 0001:00008494       SysUtils.Finalization
+ 0001:00008624       lexmsgs.position
+ 0001:00008730       lexmsgs.error
+ 0001:00008800       lexmsgs.fatal
+ 0001:000088AC       lexmsgs.Finalization
+ 0001:000088DC       lexbase.newStr
+ 0001:00008928       lexbase.newCClass
+ 0001:00008954       lexbase.empty
+ 0001:0000895C       lexbase.singleton
+ 0001:00008968       lexbase.include
+ 0001:00008A2C       lexbase.setunion
+ 0001:00008B54       lexbase.setminus
+ 0001:00008BC0       lexbase.size
+ 0001:00008BC4       lexbase.equal
+ 0001:00008BF0       lexbase.newIntSet
+ 0001:00008C00       lexbase.newExpr
+ 0001:00008C10       lexbase.markExpr
+ 0001:00008C2C       lexbase.charExpr
+ 0001:00008C40       lexbase.strExpr
+ 0001:00008C54       lexbase.cclassExpr
+ 0001:00008C68       lexbase.starExpr
+ 0001:00008C7C       lexbase.plusExpr
+ 0001:00008C90       lexbase.optExpr
+ 0001:00008CA4       lexbase.mnExpr
+ 0001:00008D34       lexbase.catExpr
+ 0001:00008D50       lexbase.altExpr
+ 0001:00008D6C       lexbase.is_epsExpr
+ 0001:00008D78       lexbase.is_markExpr
+ 0001:00008DA0       lexbase.is_charExpr
+ 0001:00008DC4       lexbase.is_strExpr
+ 0001:00008DE4       lexbase.is_cclassExpr
+ 0001:00008E04       lexbase.is_starExpr
+ 0001:00008E24       lexbase.is_plusExpr
+ 0001:00008E44       lexbase.is_optExpr
+ 0001:00008E64       lexbase.is_catExpr
+ 0001:00008E8C       lexbase.is_altExpr
+ 0001:00008EB4       lexbase.sort
+ 0001:00008F58       lexbase.quicksort
+ 0001:00008F70       lexbase.hash
+ 0001:00008FE4       lexbase.newPos
+ 0001:00009010       lexbase.key
+ 0001:00009110       lexbase.nchars
+ 0001:00009140       lexbase.upper
+ 0001:000091C8       lexbase.strip
+ 0001:00009294       lexbase.blankStr
+ 0001:00009318       lexbase.intStr
+ 0001:00009384       lexbase.isInt
+ 0001:000093E0       lexbase.root
+ 0001:0000946C       lexbase.addExt
+ 0001:00009518       lexbase.file_size
+ 0001:000095B4       lexbase.octStr
+ 0001:00009640       lexbase.charStr
+ 0001:0000980C       lexbase.singleQuoteStr
+ 0001:000098F4       lexbase.cclassStr
+ 0001:00009B5C       lexbase.cclassOrCharStr
+ 0001:00009C04       lexbase.Finalization
+ 0001:00009C70       lextable.lookup
+ 0001:00009CB4       lextable.entry
+ 0001:00009D14       lextable.addCharPos
+ 0001:00009D98       lextable.addCClassPos
+ 0001:00009E1C       lextable.addMarkPos
+ 0001:00009EA8       lextable.newState
+ 0001:00009F0C       lextable.addState
+ 0001:00009F4C       lextable.startStateTrans
+ 0001:00009F68       lextable.endStateTrans
+ 0001:00009F80       lextable.n_state_trans
+ 0001:00009F98       lextable.addTrans
+ 0001:0000A2A8       lextable.transLessNextState
+ 0001:0000A2C8       lextable.transLess
+ 0001:0000A324       lextable.transSwap
+ 0001:0000A394       lextable.mergeTrans
+ 0001:0000A4E4       lextable.sortTrans
+ 0001:0000A50C       lextable.Finalization
+ 0001:0000A53C       lexpos.eval
+ 0001:0000A8F0       lexpos.addExpr
+ 0001:0000A908       lexdfa.makeDFATable
+ 0001:0000AA94       lexopt.equivStates
+ 0001:0000AC64       lexopt.optimizeDFATable
+ 0001:0000AF90       lexopt.Finalization
+ 0001:0000AFC0       lexlist.listTrans
+ 0001:0000B044       lexlist.listDFATable
+ 0001:0000B1B4       lexrules.mark_error
+ 0001:0000B25C       lexrules.put_str
+ 0001:0000B314       lexrules.init_scanner
+ 0001:0000B350       lexrules.scan_macro
+ 0001:0000B498       lexrules.push_macro
+ 0001:0000B574       lexrules.pop_macro
+ 0001:0000B5D0       lexrules.act_char
+ 0001:0000B62C       lexrules.get_char
+ 0001:0000B718       lexrules.add_start_state
+ 0001:0000B7DC       lexrules.ident
+ 0001:0000B888       lexrules.start_state_list
+ 0001:0000B8B8       lexrules.start_state_prefix
+ 0001:0000B8FC       lexrules.caret
+ 0001:0000B91C       lexrules.scan_char
+ 0001:0000BA1C       lexrules.scan_str
+ 0001:0000BABC       lexrules.scan_cclass
+ 0001:0000BCC4       lexrules.scan_num
+ 0001:0000BD74       lexrules.factor
+ 0001:0000BF98       lexrules.term
+ 0001:0000C008       lexrules.DoExpr
+ 0001:0000C054       lexrules.rule
+ 0001:0000C1AC       lexrules.parse_rule
+ 0001:0000C248       lexrules.Finalization
+ 0001:0000C28C       dlex.get_line
+ 0001:0000C2B0       dlex.next_section
+ 0001:0000C338       dlex.define_start_state
+ 0001:0000C4A8       dlex.define_macro
+ 0001:0000C5B0       dlex.add_rule
+ 0001:0000C6A0       dlex.counters
+ 0001:0000C7F0       dlex.charStr
+ 0001:0000C8D8       dlex.writecc
+ 0001:0000CABC       dlex.tables
+ 0001:0000D5EC       dlex.generate_table
+ 0001:0000D61C       dlex.scan
+ 0001:0000D6C8       dlex.split
+ 0001:0000D794       dlex.itemv
+ 0001:0000D7E0       dlex.code
+ 0001:0000D868       dlex.check_id
+ 0001:0000D900       dlex.definition
+ 0001:0000DA84       dlex.definitions
+ 0001:0000DB20       dlex.rules
+ 0001:0000DD64       dlex.auxiliary_procs
+ 0001:0000DDBC       dlex.openCodFile
+ 0001:0000DED4       dlex.Finalization
+ 0002:00000000       System.System
+ 0002:00000098       Windows.Windows
+ 0002:000000AC       SysUtils.SysUtils
+ 0002:00000134       lexmsgs.lexmsgs
+ 0002:0000014C       lexbase.lexbase
+ 0002:00000154       lextable.lextable
+ 0002:000001FC       lexopt.lexopt
+ 0002:00000244       lexrules.lexrules
+ 0002:0000024C       dlex.dlex
+ 0003:00000000       System.ExitCode
+ 0003:00000004       System.ErrorAddr
+ 0003:00000008       System.FileMode
+ 0003:0000000C       System.VarClearProc
+ 0003:00000010       System.VarToLStrProc
+ 0003:00000014       System.Default8087CW
+ 0003:00000018       System.DebugHook
+ 0003:0000001C       System.JITEnable
+ 0003:00000020       System.NoErrMsg
+ 0003:00000024       System.DefaultTextLineBreakStyle
+ 0003:00000028       System.LibModuleList
+ 0003:0000002C       System.ModuleUnloadList
+ 0003:00000030       System.Copyright
+ 0003:00000034       System.SmallBlockTypes
+ 0003:00000714       System.MemoryManager
+ 0003:0000072C       System.reMap
+ 0003:00000748       System.ShareTab
+ 0003:00000768       System.errCaption
+ 0003:00000770       System.runErrMsg
+ 0003:00000790       System.dig
+ 0003:000007A0       SysInit.TlsIndex
+ 0003:000007A4       SysInit.PtrToNil
+ 0003:000007A8       SysInit.Module
+ 0003:000007C0       SysUtils.EmptyStr
+ 0003:000007C4       SysUtils.NullStr
+ 0003:000007C8       SysUtils.EmptyWideStr
+ 0003:000007CC       SysUtils.Win32Platform
+ 0003:000007D0       SysUtils.Win32MajorVersion
+ 0003:000007D4       SysUtils.Win32MinorVersion
+ 0003:000007D8       SysUtils.Win32BuildNumber
+ 0003:000007DC       SysUtils.Win32CSDVersion
+ 0003:000007E0       SysUtils.LeadBytes
+ 0003:00000800       SysUtils.HexDisplayPrefix
+ 0003:00000804       SysUtils.GetDiskFreeSpaceEx
+ 0003:00000808       SysUtils.cSimpleBoolStrs
+ 0003:00000810       SysUtils.FormatErrorStrs
+ 0003:00000818       SysUtils.FCon1E18
+ 0003:00000824       SysUtils.DCon10
+ 0003:00000828       SysUtils.DefShortMonthNames
+ 0003:00000858       SysUtils.DefLongMonthNames
+ 0003:00000888       SysUtils.DefShortDayNames
+ 0003:000008A4       SysUtils.DefLongDayNames
+ 0003:000008C0       SysUtils.ErrorMap
+ 0003:000008F8       SysUtils.ExceptMap
+ 0003:000009A8       SysUtils.TerminateProcList
+ 0003:000009AC       lexbase.letters
+ 0003:000009CC       lexbase.digits
+ 0003:000009EC       lexbase.alphanums
+ 0003:00000A0C       lexbase.epsExpr
+ 0003:00000A10       lexbase.reserved
+ 0003:00000A30       lexrules.term_delim
+ 0004:00000000       System.DispCallByIDProc
+ 0004:00000004       System.ExceptProc
+ 0004:00000008       System.ErrorProc
+ 0004:0000000C       System.ExceptClsProc
+ 0004:00000010       System.ExceptObjProc
+ 0004:00000014       System.RaiseExceptionProc
+ 0004:00000018       System.RTLUnwindProc
+ 0004:0000001C       System.ExceptionClass
+ 0004:00000020       System.AssertErrorProc
+ 0004:00000024       System.ExitProcessProc
+ 0004:00000028       System.AbstractErrorProc
+ 0004:0000002C       System.MainInstance
+ 0004:00000030       System.MainThreadID
+ 0004:00000034       System.IsLibrary
+ 0004:00000038       System.CmdShow
+ 0004:0000003C       System.CmdLine
+ 0004:00000040       System.ExitProc
+ 0004:00000044       System.IsConsole
+ 0004:00000045       System.IsMultiThread
+ 0004:00000046       System.Test8086
+ 0004:00000048       System.Input
+ 0004:00000214       System.Output
+ 0004:000003E0       System.ErrOutput
+ 0004:000005AC       System.ReportMemoryLeaksOnShutdown
+ 0004:000005AD       System.NeverSleepOnMMThreadContention
+ 0004:000005B0       System..6
+ 0004:000005B4       System.DefaultSystemCodePage
+ 0004:000005B8       System.AllocSize2SmallBlockTypeIndX4
+ 0004:000006FE       System.MinimumBlockAlignment
+ 0004:00000700       System.MediumBlockPoolsCircularList
+ 0004:00000710       System.MediumBlocksLocked
+ 0004:00000714       System.LastSequentiallyFedMediumBlock
+ 0004:00000718       System.MediumSequentialFeedBytesLeft
+ 0004:0000071C       System.MediumBlockBinGroupBitmap
+ 0004:00000720       System.MediumBlockBinBitmaps
+ 0004:000007A0       System.MediumBlockBins
+ 0004:000027A0       System.LargeBlocksLocked
+ 0004:000027A4       System.LargeBlocksCircularList
+ 0004:000027B4       System.ExpectedMemoryLeaks
+ 0004:000027B8       System.ExpectedMemoryLeaksListLocked
+ 0004:000027BC       System.MMSharingWindow
+ 0004:000027C0       System.InitContext
+ 0004:000027EC       SysInit.ModuleIsLib
+ 0004:000027ED       SysInit.ModuleIsCpp
+ 0004:000027F0       SysInit.HInstance
+ 0004:000027F4       SysInit.tlsBuffer
+ 0004:000027F8       Windows..3
+ 0004:000027FC       Windows.HtmlHelpModule
+ 0004:00002800       SysUtils.CurrencyString
+ 0004:00002804       SysUtils.CurrencyFormat
+ 0004:00002805       SysUtils.NegCurrFormat
+ 0004:00002806       SysUtils.ThousandSeparator
+ 0004:00002807       SysUtils.DecimalSeparator
+ 0004:00002808       SysUtils.CurrencyDecimals
+ 0004:00002809       SysUtils.DateSeparator
+ 0004:0000280C       SysUtils.ShortDateFormat
+ 0004:00002810       SysUtils.LongDateFormat
+ 0004:00002814       SysUtils.TimeSeparator
+ 0004:00002818       SysUtils.TimeAMString
+ 0004:0000281C       SysUtils.TimePMString
+ 0004:00002820       SysUtils.ShortTimeFormat
+ 0004:00002824       SysUtils.LongTimeFormat
+ 0004:00002828       SysUtils.ShortMonthNames
+ 0004:00002858       SysUtils.LongMonthNames
+ 0004:00002888       SysUtils.ShortDayNames
+ 0004:000028A4       SysUtils.LongDayNames
+ 0004:000028C0       SysUtils.SysLocale
+ 0004:000028CE       SysUtils.ListSeparator
+ 0004:000028D0       SysUtils.EraNames
+ 0004:000028EC       SysUtils.EraYearOffsets
+ 0004:00002908       SysUtils.TrueBoolStrs
+ 0004:0000290C       SysUtils.FalseBoolStrs
+ 0004:00002910       SysUtils..35
+ 0004:00002914       SysUtils.OutOfMemory
+ 0004:00002918       SysUtils.InvalidPointer
+ 0004:0000291C       SysUtils.ValidatedUnitHashBuckets
+ 0004:00003910       SysUtils.UnitHashBuckets
+ 0004:00004904       SysUtils.FLanguages
+ 0004:00004908       lexmsgs.errors
+ 0004:0000490C       lexmsgs.warnings
+ 0004:00004910       lexmsgs..1
+ 0004:00004914       lexbase.lfilename
+ 0004:00004918       lexbase.pasfilename
+ 0004:0000491C       lexbase.lstfilename
+ 0004:00004920       lexbase.codfilename
+ 0004:00004924       lexbase.codfilepath
+ 0004:00004928       lexbase.yyin
+ 0004:00004AF4       lexbase.yylst
+ 0004:00004CC0       lexbase.yyout
+ 0004:00004E8C       lexbase.yycod
+ 0004:00005058       lexbase.line
+ 0004:0000505C       lexbase.lno
+ 0004:00005060       lexbase..1
+ 0004:00005064       lextable.n_pos
+ 0004:00005068       lextable.n_states
+ 0004:0000506C       lextable.n_trans
+ 0004:00005070       lextable.n_start_states
+ 0004:00005074       lextable.verbose
+ 0004:00005075       lextable.optimize
+ 0004:00005076       lextable.readonlyflag
+ 0004:00005078       lextable.sym_table
+ 0004:0000507C       lextable.pos_table
+ 0004:00005080       lextable.first_pos_table
+ 0004:00005084       lextable.state_table
+ 0004:00005088       lextable.trans_table
+ 0004:0000508C       lextable.act_state
+ 0004:00005090       lextable..4
+ 0004:00005094       lexopt..1
+ 0004:00005098       lexopt.n_parts
+ 0004:0000509C       lexopt.part_table
+ 0004:000050A0       lexopt.state_part
+ 0004:000050A4       lexopt.n_opt_states
+ 0004:000050A8       lexopt.n_opt_trans
+ 0004:000050AC       lexopt.opt_state_table
+ 0004:000050B0       lexopt.opt_trans_table
+ 0004:000050B4       lexrules.expr
+ 0004:000050B8       lexrules.stmt
+ 0004:000050BC       lexrules.cf
+ 0004:000050C0       lexrules.n_st
+ 0004:000050C4       lexrules.st
+ 0004:00005A24       lexrules.r
+ 0004:00005A28       lexrules..1
+ 0004:00005A2C       lexrules.act_pos
+ 0004:00005A30       lexrules.bufptr
+ 0004:00005A34       lexrules.buf
+ 0004:00006234       lexrules.str_state
+ 0004:00006235       lexrules.cclass_state
+ 0004:00006236       lexrules.quote_state
+ 0004:00006238       lexrules.n_macros
+ 0004:0000623C       dlex.n_rules
+ 0004:00006240       dlex.itemstr
+ 0004:00006244       dlex.itemc
+ 0004:00006248       dlex.itempos
+ 0004:00006644       dlex.itemlen
+ 0005:00000000       System.RaiseListPtr
+ 0005:00000004       System.InOutRes
+ 0005:00000008       SysInit.TlsLast
+
+
+Line numbers for lexmsgs(lexmsgs.pas) segment .text
+
+    97 0001:00008624    99 0001:00008654   100 0001:00008676   101 0001:000086B8
+   102 0001:000086CC   103 0001:000086E7   104 0001:000086FA   107 0001:00008730
+   108 0001:00008750   109 0001:00008756   110 0001:00008765   111 0001:00008780
+   112 0001:00008797   113 0001:000087A6   114 0001:000087C1   115 0001:000087D8
+   117 0001:000087DF   133 0001:00008800   134 0001:0000881D   135 0001:0000882C
+   136 0001:00008843   137 0001:00008852   138 0001:00008861   139 0001:00008870
+   140 0001:0000887F   141 0001:00008889
+
+Line numbers for lexmsgs(lexmsgs.pas) segment .itext
+
+   143 0002:00000134   144 0002:0000013D   145 0002:00000144   146 0002:0000014B
+
+Line numbers for lexbase(lexbase.pas) segment .text
+
+   302 0001:000088DC   303 0001:000088FA   304 0001:00008904   309 0001:00008928
+   310 0001:00008939   311 0001:00008943   313 0001:0000894E   319 0001:00008954
+   320 0001:00008958   324 0001:0000895C   325 0001:00008962   326 0001:00008965
+   331 0001:00008968   333 0001:0000896F   334 0001:00008974   335 0001:00008976
+   338 0001:00008985   339 0001:0000898A   341 0001:0000898F   342 0001:00008992
+   336 0001:0000899F   344 0001:000089A8   346 0001:000089B3   347 0001:000089B8
+   348 0001:000089C2   350 0001:000089CD   351 0001:000089E2   354 0001:000089E8
+   355 0001:000089FD   357 0001:00008A00   359 0001:00008A02   388 0001:00008A2C
+   390 0001:00008A3B   391 0001:00008A3D   392 0001:00008A42   395 0001:00008A4C
+   396 0001:00008A4D   397 0001:00008A52   398 0001:00008A5C   400 0001:00008A6B
+   401 0001:00008A72   403 0001:00008A75   405 0001:00008A84   406 0001:00008A92
+   409 0001:00008A98   410 0001:00008A9F   411 0001:00008AA0   393 0001:00008AA4
+   414 0001:00008AB3   416 0001:00008ABF   417 0001:00008AC0   418 0001:00008AC5
+   419 0001:00008ACF   420 0001:00008AD6   414 0001:00008AD9   421 0001:00008ADC
+   423 0001:00008AF0   424 0001:00008AF1   425 0001:00008AF6   426 0001:00008B00
+   427 0001:00008B07   421 0001:00008B0A   428 0001:00008B0D   429 0001:00008B11
+   430 0001:00008B23   436 0001:00008B54   437 0001:00008B60   438 0001:00008B62
+   439 0001:00008B67   442 0001:00008B78   441 0001:00008B79   443 0001:00008B84
+   445 0001:00008B8F   446 0001:00008B90   449 0001:00008B98   450 0001:00008B99
+   439 0001:00008B9C   451 0001:00008B9F   452 0001:00008BA3   453 0001:00008BB6
+   479 0001:00008BC0   480 0001:00008BC2   509 0001:00008BC4   510 0001:00008BC5
+   511 0001:00008BCB   513 0001:00008BCF   514 0001:00008BD9   516 0001:00008BDF
+   517 0001:00008BE1   518 0001:00008BE3   513 0001:00008BE9   519 0001:00008BEC
+   521 0001:00008BEE   551 0001:00008BF0   552 0001:00008BFA   554 0001:00008BFE
+   562 0001:00008C00   563 0001:00008C03   564 0001:00008C0B   566 0001:00008C0D
+   571 0001:00008C10   572 0001:00008C16   573 0001:00008C22   574 0001:00008C25
+   576 0001:00008C28   581 0001:00008C2C   582 0001:00008C2F   583 0001:00008C3B
+   585 0001:00008C3E   590 0001:00008C40   591 0001:00008C43   592 0001:00008C4F
+   594 0001:00008C52   599 0001:00008C54   600 0001:00008C57   601 0001:00008C63
+   603 0001:00008C66   608 0001:00008C68   609 0001:00008C6B   610 0001:00008C77
+   612 0001:00008C7A   617 0001:00008C7C   618 0001:00008C7F   619 0001:00008C8B
+   621 0001:00008C8E   626 0001:00008C90   627 0001:00008C93   628 0001:00008C9F
+   630 0001:00008CA2   636 0001:00008CA4   637 0001:00008CB4   638 0001:00008CC4
+   641 0001:00008CCB   642 0001:00008CD1   644 0001:00008CD9   645 0001:00008CDB
+   646 0001:00008CE4   645 0001:00008CEF   649 0001:00008CF2   650 0001:00008CF4
+   652 0001:00008D01   653 0001:00008D0C   655 0001:00008D10   656 0001:00008D1B
+   650 0001:00008D26   659 0001:00008D29   661 0001:00008D2B   666 0001:00008D34
+   667 0001:00008D3A   668 0001:00008D46   669 0001:00008D49   671 0001:00008D4C
+   676 0001:00008D50   677 0001:00008D56   678 0001:00008D62   679 0001:00008D65
+   681 0001:00008D68   687 0001:00008D6C   688 0001:00008D75   691 0001:00008D78
+   692 0001:00008D7A   693 0001:00008D82   694 0001:00008D86   696 0001:00008D8B
+   697 0001:00008D8D   698 0001:00008D92   701 0001:00008D99   702 0001:00008D9B
+   706 0001:00008DA0   707 0001:00008DA8   708 0001:00008DAD   710 0001:00008DB2
+   711 0001:00008DB4   714 0001:00008DBC   715 0001:00008DBE   719 0001:00008DC4
+   720 0001:00008DCC   721 0001:00008DD1   723 0001:00008DD6   724 0001:00008DD8
+   727 0001:00008DDF   728 0001:00008DE1   732 0001:00008DE4   733 0001:00008DEC
+   734 0001:00008DF1   736 0001:00008DF6   737 0001:00008DF8   740 0001:00008DFF
+   741 0001:00008E01   745 0001:00008E04   746 0001:00008E0C   747 0001:00008E11
+   749 0001:00008E16   750 0001:00008E18   753 0001:00008E1F   754 0001:00008E21
+   758 0001:00008E24   759 0001:00008E2C   760 0001:00008E31   762 0001:00008E36
+   763 0001:00008E38   766 0001:00008E3F   767 0001:00008E41   771 0001:00008E44
+   772 0001:00008E4C   773 0001:00008E51   775 0001:00008E56   776 0001:00008E58
+   779 0001:00008E5F   780 0001:00008E61   783 0001:00008E64   784 0001:00008E66
+   785 0001:00008E6E   786 0001:00008E72   788 0001:00008E77   789 0001:00008E79
+   790 0001:00008E7E   793 0001:00008E85   794 0001:00008E87   797 0001:00008E8C
+   798 0001:00008E8E   799 0001:00008E96   800 0001:00008E9A   802 0001:00008E9F
+   803 0001:00008EA1   804 0001:00008EA6   807 0001:00008EAD   808 0001:00008EAF
+   819 0001:00008EB4   820 0001:00008EC3   821 0001:00008EC6   822 0001:00008EC9
+   825 0001:00008EDB   824 0001:00008EDC   827 0001:00008EEF   826 0001:00008EF0
+   828 0001:00008F01   830 0001:00008F05   831 0001:00008F11   832 0001:00008F16
+   833 0001:00008F1B   834 0001:00008F20   835 0001:00008F23   836 0001:00008F24
+   838 0001:00008F25   839 0001:00008F29   840 0001:00008F2E   841 0001:00008F3D
+   842 0001:00008F42   843 0001:00008F51   844 0001:00008F58   845 0001:00008F5F
+   846 0001:00008F63   847 0001:00008F6A   855 0001:00008F70   856 0001:00008F91
+   857 0001:00008F93   858 0001:00008FA8   857 0001:00008FB3   859 0001:00008FB6
+   860 0001:00008FBE   871 0001:00008FE4   872 0001:00008FF1   873 0001:00008FF3
+   874 0001:00008FF7   875 0001:00008FFB   876 0001:00009003   877 0001:00009006
+   883 0001:00009010   884 0001:0000903E   885 0001:0000904B   886 0001:00009052
+   887 0001:00009057   888 0001:0000905C   890 0001:0000906A   891 0001:00009073
+   892 0001:00009076   894 0001:00009078   896 0001:0000908D   897 0001:00009090
+   900 0001:00009092   887 0001:000090A1   901 0001:000090A6   902 0001:000090B0
+   950 0001:00009110   951 0001:00009121   952 0001:00009123   953 0001:00009125
+   954 0001:00009130   952 0001:00009132   955 0001:00009136   956 0001:00009138
+   961 0001:00009140   962 0001:00009162   963 0001:00009179   962 0001:00009195
+   964 0001:00009198   965 0001:000091A2   968 0001:000091C8   970 0001:000091EB
+   969 0001:000091FD   974 0001:0000921B   971 0001:00009236   975 0001:00009266
+   976 0001:00009270   981 0001:00009294   982 0001:000092B6   983 0001:000092CD
+   984 0001:000092D7   982 0001:000092E5   985 0001:000092E8   986 0001:000092F2
+   991 0001:00009318   992 0001:0000933A   993 0001:00009355   994 0001:0000935F
+   999 0001:00009384  1000 0001:000093A6  1001 0001:000093B3  1002 0001:000093BA
+  1017 0001:000093E0  1018 0001:00009401  1019 0001:0000940B  1020 0001:0000941E
+  1023 0001:00009430  1024 0001:00009441  1028 0001:00009443  1019 0001:00009444
+  1029 0001:00009448  1037 0001:0000946C  1038 0001:00009499  1039 0001:000094A3
+  1040 0001:000094B6  1044 0001:000094C8  1039 0001:000094C9  1046 0001:000094CD
+  1047 0001:000094E4  1052 0001:00009518  1053 0001:0000953B  1054 0001:00009549
+  1055 0001:0000955E  1056 0001:00009567  1058 0001:0000957B  1059 0001:0000957D
+  1060 0001:0000958D  1068 0001:000095B4  1069 0001:000095D2  1071 0001:00009614
+  1072 0001:00009640  1073 0001:0000966E  1076 0001:000096D6  1077 0001:000096F4
+  1078 0001:00009705  1079 0001:00009713  1080 0001:00009721  1081 0001:0000972F
+  1082 0001:0000973D  1083 0001:0000974B  1084 0001:00009756  1086 0001:00009787
+  1088 0001:00009790  1094 0001:0000980C  1095 0001:00009838  1096 0001:00009840
+  1097 0001:00009857  1096 0001:00009878  1098 0001:0000987B  1099 0001:00009895
+  1120 0001:000098F4  1121 0001:0000992D  1122 0001:0000993E  1124 0001:0000994F
+  1125 0001:00009957  1127 0001:00009966  1128 0001:00009973  1130 0001:000099A0
+  1131 0001:000099A4  1134 0001:000099AD  1136 0001:000099BE  1138 0001:000099C4
+  1137 0001:000099C5  1139 0001:000099D6  1140 0001:000099DB  1141 0001:000099F9
+  1142 0001:00009A02  1144 0001:00009A3A  1145 0001:00009A75  1147 0001:00009A78
+  1148 0001:00009A80  1149 0001:00009A86  1132 0001:00009A89  1151 0001:00009A93
+  1153 0001:00009AAC  1159 0001:00009B5C  1160 0001:00009B86  1161 0001:00009B88
+  1162 0001:00009B8A  1164 0001:00009B95  1165 0001:00009B97  1166 0001:00009B98
+  1168 0001:00009B9D  1169 0001:00009BA7  1171 0001:00009BA9  1161 0001:00009BAA
+  1172 0001:00009BAE  1173 0001:00009BB1  1175 0001:00009BC7  1176 0001:00009BD3
+
+Line numbers for lexbase(lexbase.pas) segment .itext
+
+  1216 0002:0000014C
+
+Line numbers for lextable(lextable.pas) segment .text
+
+   194 0001:00009C70   195 0001:00009C75   196 0001:00009C82   197 0001:00009C88
+   199 0001:00009C91   200 0001:00009CAD   202 0001:00009CB4   203 0001:00009CD4
+   205 0001:00009CE3   206 0001:00009CED   208 0001:00009CF1   213 0001:00009D14
+   214 0001:00009D17   215 0001:00009D1D   216 0001:00009D33   217 0001:00009D4A
+   218 0001:00009D5C   219 0001:00009D6D   222 0001:00009D98   223 0001:00009D9B
+   224 0001:00009DA1   225 0001:00009DB7   226 0001:00009DCE   227 0001:00009DE0
+   228 0001:00009DF1   231 0001:00009E1C   232 0001:00009E28   233 0001:00009E2A
+   234 0001:00009E3C   235 0001:00009E4F   236 0001:00009E5E   237 0001:00009E6C
+   238 0001:00009E7A   243 0001:00009EA8   244 0001:00009EAB   245 0001:00009EC1
+   246 0001:00009EC7   248 0001:00009ED7   249 0001:00009ED9   251 0001:00009EDD
+   252 0001:00009EE3   256 0001:00009F0C   257 0001:00009F11   258 0001:00009F1F
+   260 0001:00009F37   261 0001:00009F39   262 0001:00009F3B   257 0001:00009F3C
+   263 0001:00009F3F   264 0001:00009F46   268 0001:00009F4C   269 0001:00009F64
+   273 0001:00009F68   274 0001:00009F7F   278 0001:00009F80   279 0001:00009F8B
+   280 0001:00009F94   307 0001:00009F98   308 0001:00009FB7   309 0001:00009FD7
+   311 0001:00009FED   312 0001:00009FFB   316 0001:0000A000   317 0001:0000A043
+   319 0001:0000A059   320 0001:0000A09E   321 0001:0000A0E1   323 0001:0000A0F7
+   324 0001:0000A111   325 0001:0000A117   326 0001:0000A12D   327 0001:0000A145
+   328 0001:0000A159   330 0001:0000A17D   334 0001:0000A195   335 0001:0000A1AF
+   337 0001:0000A1BD   338 0001:0000A1D0   340 0001:0000A1E2   308 0001:0000A1E3
+   341 0001:0000A1EA   342 0001:0000A1F0   343 0001:0000A206   344 0001:0000A21E
+   345 0001:0000A232   346 0001:0000A24E   354 0001:0000A2A8   356 0001:0000A2C5
+   362 0001:0000A2C8   363 0001:0000A2D6   365 0001:0000A2D8   366 0001:0000A2ED
+   367 0001:0000A305   369 0001:0000A30A   370 0001:0000A313   372 0001:0000A315
+   363 0001:0000A316   373 0001:0000A31A   374 0001:0000A31C   380 0001:0000A324
+   381 0001:0000A32A   382 0001:0000A34A   383 0001:0000A370   384 0001:0000A38C
+   389 0001:0000A394   391 0001:0000A3A0   396 0001:0000A3C6   397 0001:0000A3CB
+   398 0001:0000A3EB   400 0001:0000A3F7   407 0001:0000A3FC   409 0001:0000A444
+   410 0001:0000A44F   411 0001:0000A452   401 0001:0000A453   413 0001:0000A46F
+   397 0001:0000A470   415 0001:0000A477   416 0001:0000A48A   417 0001:0000A497
+   418 0001:0000A4A3   420 0001:0000A4A7   421 0001:0000A4C9   424 0001:0000A4CC
+   416 0001:0000A4CE   426 0001:0000A4D1   427 0001:0000A4DA   431 0001:0000A4E4
+   435 0001:0000A50A
+
+Line numbers for lextable(lextable.pas) segment .itext
+
+   439 0002:00000154   441 0002:00000162   442 0002:00000169   443 0002:00000170
+   445 0002:00000177   446 0002:0000017E   447 0002:00000185   448 0002:0000018C
+   452 0002:00000193   453 0002:000001A2   454 0002:000001B1   455 0002:000001C0
+   456 0002:000001CF   460 0002:000001DE   462 0002:000001FA
+
+Line numbers for lexpos(lexpos.pas) segment .text
+
+    61 0001:0000A53C    62 0001:0000A54E    64 0001:0000A559    65 0001:0000A560
+    66 0001:0000A567    68 0001:0000A572    70 0001:0000A583    71 0001:0000A58E
+    72 0001:0000A59D    73 0001:0000A5AC    75 0001:0000A5B7    77 0001:0000A5C5
+    78 0001:0000A5CE    79 0001:0000A5DD    80 0001:0000A5EC    82 0001:0000A5F7
+    83 0001:0000A609    86 0001:0000A61B    87 0001:0000A622    88 0001:0000A629
+    91 0001:0000A634    92 0001:0000A641    93 0001:0000A650    95 0001:0000A66B
+    96 0001:0000A67A    97 0001:0000A69C    93 0001:0000A69D    98 0001:0000A6A0
+    99 0001:0000A6AF   101 0001:0000A6BA   103 0001:0000A6C8   104 0001:0000A6D0
+   105 0001:0000A6DF   106 0001:0000A6EE   108 0001:0000A6F9   110 0001:0000A707
+   111 0001:0000A717   112 0001:0000A729   111 0001:0000A743   113 0001:0000A746
+   115 0001:0000A751   117 0001:0000A75F   118 0001:0000A76F   119 0001:0000A785
+   118 0001:0000A79F   121 0001:0000A7A7   123 0001:0000A7B5   124 0001:0000A7C5
+   126 0001:0000A7D0   128 0001:0000A7E5   129 0001:0000A7F9   130 0001:0000A80D
+   131 0001:0000A827   130 0001:0000A849   132 0001:0000A84C   133 0001:0000A854
+   134 0001:0000A861   135 0001:0000A867   136 0001:0000A874   138 0001:0000A884
+   140 0001:0000A895   141 0001:0000A8A5   142 0001:0000A8BD   143 0001:0000A8CA
+   144 0001:0000A8D7   146 0001:0000A8E5   152 0001:0000A8F0   153 0001:0000A8F6
+   154 0001:0000A900   156 0001:0000A935
+
+Line numbers for lexdfa(lexdfa.pas) segment .text
+
+    45 0001:0000A908    47 0001:0000A915    48 0001:0000A92A    47 0001:0000A948
+    49 0001:0000A94B    50 0001:0000A95C    49 0001:0000A96F    51 0001:0000A972
+    54 0001:0000A982    56 0001:0000A989    57 0001:0000A98E    58 0001:0000A9B2
+    59 0001:0000A9D7    60 0001:0000A9DD    61 0001:0000A9F5    62 0001:0000A9FB
+    63 0001:0000AA07    64 0001:0000AA0D    57 0001:0000AA24    66 0001:0000AA27
+    67 0001:0000AA49    68 0001:0000AA58    66 0001:0000AA64    70 0001:0000AA67
+    72 0001:0000AA6C    73 0001:0000AA71    52 0001:0000AA76    75 0001:0000AA8C
+    77 0001:0000AAC2
+
+Line numbers for lexopt(lexopt.pas) segment .text
+
+    86 0001:0000AA94    88 0001:0000AAA3    91 0001:0000AAC1    92 0001:0000AAC3
+    95 0001:0000AAC8    96 0001:0000AAD1    97 0001:0000AAE0    98 0001:0000AAF2
+    99 0001:0000AB0A    97 0001:0000AB16   100 0001:0000AB19   101 0001:0000AB25
+   102 0001:0000AB35   103 0001:0000AB47   104 0001:0000AB5F   102 0001:0000AB6E
+   105 0001:0000AB71   107 0001:0000AB85   108 0001:0000AB87   111 0001:0000AB8C
+   112 0001:0000ABA1   114 0001:0000ABA8   115 0001:0000ABB8   116 0001:0000ABCD
+   117 0001:0000ABDE   119 0001:0000AC0E   120 0001:0000AC10   122 0001:0000AC12
+   125 0001:0000AC4D   126 0001:0000AC4F   127 0001:0000AC51   116 0001:0000AC52
+   128 0001:0000AC55   130 0001:0000AC57   138 0001:0000AC64   140 0001:0000AC70
+   144 0001:0000AC77   145 0001:0000AC81   146 0001:0000AC8B   148 0001:0000AC9B
+   149 0001:0000ACA7   150 0001:0000ACB1   146 0001:0000ACB2   157 0001:0000ACB5
+   158 0001:0000ACBB   159 0001:0000ACBD   160 0001:0000ACC6   163 0001:0000ACDA
+   164 0001:0000ACF2   167 0001:0000AD0D   163 0001:0000AD26   168 0001:0000AD29
+   171 0001:0000AD3C   172 0001:0000AD42   174 0001:0000AD46   176 0001:0000AD5B
+   177 0001:0000AD75   176 0001:0000AD90   178 0001:0000AD93   179 0001:0000AD97
+   181 0001:0000ADA6   161 0001:0000ADA7   183 0001:0000ADC2   187 0001:0000ADCD
+   188 0001:0000ADD7   189 0001:0000ADDE   191 0001:0000ADF0   192 0001:0000ADFC
+   193 0001:0000AE1F   195 0001:0000AE30   196 0001:0000AE3E   198 0001:0000AE66
+   199 0001:0000AE81   200 0001:0000AEA6   198 0001:0000AEAA   202 0001:0000AEAD
+   204 0001:0000AED3   205 0001:0000AED9   206 0001:0000AF0E   207 0001:0000AF20
+   208 0001:0000AF2F   202 0001:0000AF33   209 0001:0000AF36   189 0001:0000AF37
+   213 0001:0000AF3E   214 0001:0000AF4B   215 0001:0000AF58   216 0001:0000AF70
+   218 0001:0000AF88
+
+Line numbers for lexopt(lexopt.pas) segment .itext
+
+   220 0002:000001FC   221 0002:00000205   222 0002:00000214   223 0002:00000223
+   224 0002:00000232   225 0002:00000241
+
+Line numbers for lexlist(lexlist.pas) segment .text
+
+    45 0001:0000AFC0    46 0001:0000AFD9    47 0001:0000B015    84 0001:0000B044
+    94 0001:0000B04B    95 0001:0000B05A    97 0001:0000B076    98 0001:0000B085
+    99 0001:0000B09C   101 0001:0000B0AC   102 0001:0000B0B2   104 0001:0000B0CD
+   109 0001:0000B0E6   110 0001:0000B0F9   111 0001:0000B10D   112 0001:0000B119
+   109 0001:0000B13D   114 0001:0000B140   115 0001:0000B14F   116 0001:0000B15A
+   118 0001:0000B169   119 0001:0000B173   120 0001:0000B182   115 0001:0000B183
+   122 0001:0000B186    95 0001:0000B189   123 0001:0000B193   125 0001:0000B1E2
+
+Line numbers for lexrules(lexrules.pas) segment .text
+
+    98 0001:0000B1B4    99 0001:0000B1DB   100 0001:0000B1E4   102 0001:0000B1F6
+   103 0001:0000B214   109 0001:0000B25C   110 0001:0000B280   111 0001:0000B290
+   112 0001:0000B298   113 0001:0000B2A2   114 0001:0000B2B8   113 0001:0000B2CB
+   115 0001:0000B2CE   120 0001:0000B314   121 0001:0000B31E   122 0001:0000B325
+   123 0001:0000B32C   124 0001:0000B333   125 0001:0000B33A   126 0001:0000B341
+   127 0001:0000B34D   136 0001:0000B350   137 0001:0000B373   140 0001:0000B3AC
+   141 0001:0000B3B8   144 0001:0000B3C1   145 0001:0000B3D8   142 0001:0000B3D9
+   147 0001:0000B3F0   149 0001:0000B3FB   150 0001:0000B3FD   151 0001:0000B409
+   154 0001:0000B412   155 0001:0000B414   156 0001:0000B433   160 0001:0000B43B
+   161 0001:0000B43D   164 0001:0000B498   165 0001:0000B4AF   167 0001:0000B4BB
+   171 0001:0000B4BD   173 0001:0000B4E3   175 0001:0000B4E9   176 0001:0000B503
+   179 0001:0000B50B   182 0001:0000B51A   183 0001:0000B51C   187 0001:0000B574
+   188 0001:0000B578   190 0001:0000B58F   191 0001:0000B595   192 0001:0000B59B
+   193 0001:0000B5A4   194 0001:0000B5C6   197 0001:0000B5CB   198 0001:0000B5CD
+   200 0001:0000B5D0   202 0001:0000B5EA   201 0001:0000B5F3   203 0001:0000B5FC
+   204 0001:0000B605   206 0001:0000B608   207 0001:0000B611   208 0001:0000B61A
+   210 0001:0000B628   212 0001:0000B62A   216 0001:0000B62C   217 0001:0000B62D
+   219 0001:0000B63A   220 0001:0000B65B   221 0001:0000B66B   222 0001:0000B674
+   223 0001:0000B67D   224 0001:0000B686   225 0001:0000B696   226 0001:0000B69F
+   227 0001:0000B6A8   228 0001:0000B6B1   229 0001:0000B6BA   230 0001:0000B6C3
+   231 0001:0000B6CC   232 0001:0000B6D5   233 0001:0000B6DE   235 0001:0000B6E5
+   236 0001:0000B6EB   237 0001:0000B6F4   239 0001:0000B716   245 0001:0000B718
+   249 0001:0000B735   251 0001:0000B75B   253 0001:0000B761   255 0001:0000B76A
+   256 0001:0000B770   259 0001:0000B782   260 0001:0000B79A   310 0001:0000B7DC
+   311 0001:0000B7F4   312 0001:0000B80A   314 0001:0000B80F   315 0001:0000B81E
+   318 0001:0000B825   319 0001:0000B83F   316 0001:0000B844   321 0001:0000B857
+   322 0001:0000B85F   323 0001:0000B888   324 0001:0000B88B   325 0001:0000B892
+   326 0001:0000B897   329 0001:0000B899   330 0001:0000B89E   331 0001:0000B8A5
+   327 0001:0000B8AA   334 0001:0000B8B3   335 0001:0000B8B8   336 0001:0000B8BB
+   337 0001:0000B8C2   339 0001:0000B8CB   340 0001:0000B8D0   341 0001:0000B8D7
+   343 0001:0000B8DC   345 0001:0000B8E5   346 0001:0000B8E8   349 0001:0000B8EF
+   352 0001:0000B8F4   353 0001:0000B8F7   357 0001:0000B8FC   358 0001:0000B8FF
+   359 0001:0000B90D   360 0001:0000B916   361 0001:0000B91B   367 0001:0000B91C
+   368 0001:0000B923   369 0001:0000B926   371 0001:0000B933   372 0001:0000B938
+   373 0001:0000B972   376 0001:0000B97A   377 0001:0000B97D   381 0001:0000B987
+   382 0001:0000B98A   386 0001:0000B994   387 0001:0000B997   391 0001:0000B99E
+   392 0001:0000B9A1   396 0001:0000B9A8   397 0001:0000B9AB   401 0001:0000B9B2
+   402 0001:0000B9BC   403 0001:0000B9C1   408 0001:0000B9C8   409 0001:0000B9C9
+   410 0001:0000B9DC   404 0001:0000B9E1   412 0001:0000B9F8   416 0001:0000B9FC
+   417 0001:0000BA03   422 0001:0000BA0A   423 0001:0000BA11   425 0001:0000BA16
+   430 0001:0000BA1C   431 0001:0000BA3B   432 0001:0000BA42   435 0001:0000BA49
+   436 0001:0000BA53   438 0001:0000BA58   433 0001:0000BA6E   440 0001:0000BA80
+   441 0001:0000BA89   443 0001:0000BA8E   444 0001:0000BA93   446 0001:0000BA96
+   453 0001:0000BABC   454 0001:0000BAC9   455 0001:0000BAD9   456 0001:0000BADE
+   458 0001:0000BAE7   459 0001:0000BAEB   462 0001:0000BAF5   465 0001:0000BAFE
+   466 0001:0000BB08   468 0001:0000BB11   470 0001:0000BB1E   471 0001:0000BB23
+   473 0001:0000BB35   474 0001:0000BB3F   476 0001:0000BB48   477 0001:0000BB5C
+   476 0001:0000BB88   481 0001:0000BB8E   484 0001:0000BBD9   463 0001:0000BC02
+   486 0001:0000BC18   487 0001:0000BC21   489 0001:0000BC26   490 0001:0000BC2B
+   492 0001:0000BC2E   493 0001:0000BC34   494 0001:0000BC5B   499 0001:0000BCC4
+   500 0001:0000BCDF   502 0001:0000BCF2   503 0001:0000BD01   506 0001:0000BD08
+   507 0001:0000BD22   504 0001:0000BD27   509 0001:0000BD3A   512 0001:0000BD48
+   513 0001:0000BD4B   525 0001:0000BD74   526 0001:0000BD93   529 0001:0000BDAD
+   530 0001:0000BDB7   532 0001:0000BDC0   536 0001:0000BDD4   537 0001:0000BDDE
+   539 0001:0000BDE7   543 0001:0000BDFB   544 0001:0000BE00   545 0001:0000BE11
+   549 0001:0000BE19   550 0001:0000BE1E   551 0001:0000BE32   553 0001:0000BE3B
+   555 0001:0000BE44   556 0001:0000BE49   559 0001:0000BE51   563 0001:0000BE59
+   564 0001:0000BE63   566 0001:0000BE6C   570 0001:0000BE7C   573 0001:0000BE96
+   574 0001:0000BE9B   578 0001:0000BEA9   579 0001:0000BEAE   583 0001:0000BEB9
+   584 0001:0000BEBE   588 0001:0000BEC9   589 0001:0000BECE   590 0001:0000BED8
+   592 0001:0000BEDD   594 0001:0000BEE6   595 0001:0000BEEB   596 0001:0000BEF5
+   598 0001:0000BEFA   601 0001:0000BF0B   602 0001:0000BF1A   604 0001:0000BF23
+   605 0001:0000BF28   608 0001:0000BF2D   569 0001:0000BF30   611 0001:0000BF54
+   616 0001:0000BF98   617 0001:0000BFA2   619 0001:0000BFB3   620 0001:0000BFBE
+   621 0001:0000BFC3   624 0001:0000BFC5   625 0001:0000BFD1   627 0001:0000BFD6
+   622 0001:0000BFE2   631 0001:0000BFF5   632 0001:0000BFFE   634 0001:0000C001
+   637 0001:0000C008   638 0001:0000C012   639 0001:0000C01D   640 0001:0000C022
+   643 0001:0000C024   644 0001:0000C029   645 0001:0000C035   647 0001:0000C03A
+   641 0001:0000C046   649 0001:0000C04F   654 0001:0000C054   655 0001:0000C05D
+   656 0001:0000C064   658 0001:0000C06D   659 0001:0000C074   661 0001:0000C07D
+   662 0001:0000C089   664 0001:0000C092   666 0001:0000C09B   669 0001:0000C0D2
+   671 0001:0000C0D9   673 0001:0000C0E2   674 0001:0000C0E7   675 0001:0000C0F3
+   677 0001:0000C0FC   681 0001:0000C125   682 0001:0000C144   683 0001:0000C162
+   684 0001:0000C185   689 0001:0000C1AC   690 0001:0000C1B6   691 0001:0000C1BB
+   692 0001:0000C1C5   694 0001:0000C1CB   695 0001:0000C1E8   698 0001:0000C219
+   699 0001:0000C225
+
+Line numbers for lexrules(lexrules.pas) segment .itext
+
+   701 0002:00000244
+
+Line numbers for dlex(dlex.dpr) segment .text
+
+    48 0001:0000C28C    49 0001:0000C2A6    50 0001:0000C2AD    56 0001:0000C2B0
+    59 0001:0000C2CC    60 0001:0000C2DD    62 0001:0000C2EC    57 0001:0000C2FE
+    64 0001:0000C309    73 0001:0000C338    77 0001:0000C359    79 0001:0000C37F
+    81 0001:0000C389    82 0001:0000C390    83 0001:0000C39A    84 0001:0000C3A4
+    85 0001:0000C3A8    86 0001:0000C3B2    87 0001:0000C3E9    88 0001:0000C3FE
+    91 0001:0000C416    92 0001:0000C422    96 0001:0000C4A8   100 0001:0000C4DB
+   102 0001:0000C51B   104 0001:0000C521   105 0001:0000C525   108 0001:0000C53D
+   109 0001:0000C54C   116 0001:0000C5B0   117 0001:0000C5B8   118 0001:0000C5C6
+   119 0001:0000C5D0   120 0001:0000C5DA   122 0001:0000C5F0   123 0001:0000C600
+   125 0001:0000C616   126 0001:0000C620   127 0001:0000C632   128 0001:0000C649
+   126 0001:0000C64C   129 0001:0000C651   131 0001:0000C663   132 0001:0000C679
+   134 0001:0000C690   129 0001:0000C693   134 0001:0000C696   184 0001:0000C6A0
+   185 0001:0000C6A8   186 0001:0000C6B5   187 0001:0000C6C2   188 0001:0000C6CA
+   189 0001:0000C6D2   190 0001:0000C72F   192 0001:0000C73F   193 0001:0000C747
+   194 0001:0000C74F   195 0001:0000C75B   196 0001:0000C767   197 0001:0000C779
+   198 0001:0000C78C   199 0001:0000C792   200 0001:0000C799   201 0001:0000C7A1
+   202 0001:0000C7A4   196 0001:0000C7AB   203 0001:0000C7AE   204 0001:0000C7B9
+   205 0001:0000C7C4   189 0001:0000C7DF   206 0001:0000C7E8   211 0001:0000C7F0
+   212 0001:0000C80F   214 0001:0000C81F   215 0001:0000C83B   216 0001:0000C849
+   218 0001:0000C892   226 0001:0000C8D8   227 0001:0000C90F   228 0001:0000C921
+   229 0001:0000C923   230 0001:0000C927   233 0001:0000C930   235 0001:0000C941
+   237 0001:0000C945   238 0001:0000C954   240 0001:0000C955   243 0001:0000C95A
+   244 0001:0000C962   245 0001:0000C976   247 0001:0000C978   249 0001:0000C97E
+   248 0001:0000C97F   250 0001:0000C990   251 0001:0000C995   252 0001:0000C9A3
+   253 0001:0000C9AC   255 0001:0000C9DC   256 0001:0000CA0A   257 0001:0000CA1A
+   258 0001:0000CA28   260 0001:0000CA2B   261 0001:0000CA33   262 0001:0000CA39
+   231 0001:0000CA3C   264 0001:0000CA46   265 0001:0000CA58   271 0001:0000CABC
+   272 0001:0000CACB   273 0001:0000CAD2   274 0001:0000CAE3   275 0001:0000CAF4
+   276 0001:0000CB05   277 0001:0000CB16   278 0001:0000CB1D   280 0001:0000CB2E
+   281 0001:0000CB35   282 0001:0000CB58   283 0001:0000CB7B   284 0001:0000CB9E
+   286 0001:0000CBC1   287 0001:0000CBC8   288 0001:0000CBD9   289 0001:0000CBDE
+   290 0001:0000CBF4   292 0001:0000CC06   293 0001:0000CC28   294 0001:0000CC3F
+   295 0001:0000CC5B   297 0001:0000CC6D   298 0001:0000CC89   299 0001:0000CC8C
+   300 0001:0000CC97   301 0001:0000CCA5   302 0001:0000CCAC   293 0001:0000CCAF
+   303 0001:0000CCB2   289 0001:0000CCB3   304 0001:0000CCBC   306 0001:0000CCCD
+   307 0001:0000CCD4   308 0001:0000CCE5   309 0001:0000CCEA   310 0001:0000CD00
+   312 0001:0000CD12   313 0001:0000CD34   314 0001:0000CD4B   315 0001:0000CD67
+   317 0001:0000CD79   318 0001:0000CD95   319 0001:0000CD98   320 0001:0000CDA3
+   321 0001:0000CDB1   322 0001:0000CDB8   313 0001:0000CDBB   323 0001:0000CDBE
+   309 0001:0000CDBF   324 0001:0000CDC8   326 0001:0000CDD9   327 0001:0000CDE0
+   328 0001:0000CDF1   329 0001:0000CDF6   330 0001:0000CE0C   332 0001:0000CE1B
+   333 0001:0000CE3D   334 0001:0000CE51   336 0001:0000CE66   337 0001:0000CE77
+   338 0001:0000CE85   339 0001:0000CE96   340 0001:0000CEAF   341 0001:0000CEB2
+   342 0001:0000CEBD   343 0001:0000CECB   344 0001:0000CED2   333 0001:0000CED5
+   345 0001:0000CEDC   329 0001:0000CEDD   346 0001:0000CEE6   348 0001:0000CEF7
+   349 0001:0000CEFE   350 0001:0000CF0F   352 0001:0000CF2A   353 0001:0000CF53
+   354 0001:0000CF5F   355 0001:0000CF6D   356 0001:0000CF74   350 0001:0000CF78
+   357 0001:0000CF7D   358 0001:0000CF8E   359 0001:0000CF95   360 0001:0000CFA6
+   362 0001:0000CFC1   363 0001:0000CFEA   364 0001:0000CFF6   365 0001:0000D004
+   366 0001:0000D00B   360 0001:0000D00F   367 0001:0000D014   368 0001:0000D025
+   369 0001:0000D02C   370 0001:0000D03D   372 0001:0000D058   373 0001:0000D081
+   374 0001:0000D08D   375 0001:0000D09B   376 0001:0000D0A2   370 0001:0000D0A6
+   377 0001:0000D0AB   378 0001:0000D0BC   379 0001:0000D0C3   380 0001:0000D0D4
+   382 0001:0000D0EF   383 0001:0000D118   384 0001:0000D124   385 0001:0000D132
+   386 0001:0000D139   380 0001:0000D13D   387 0001:0000D142   388 0001:0000D153
+   389 0001:0000D15A   390 0001:0000D16B   392 0001:0000D186   393 0001:0000D1AF
+   394 0001:0000D1BB   395 0001:0000D1C9   396 0001:0000D1D0   390 0001:0000D1D4
+   397 0001:0000D1D9   398 0001:0000D1EA   399 0001:0000D1F1   400 0001:0000D202
+   402 0001:0000D21D   403 0001:0000D246   404 0001:0000D252   405 0001:0000D260
+   406 0001:0000D267   400 0001:0000D26B   407 0001:0000D270   408 0001:0000D281
+   409 0001:0000D288   411 0001:0000D5EC   412 0001:0000D608   413 0001:0000D60F
+   414 0001:0000D616   435 0001:0000D61C   438 0001:0000D628   436 0001:0000D62A
+   439 0001:0000D64B   442 0001:0000D64F   440 0001:0000D650   443 0001:0000D679
+   444 0001:0000D67F   445 0001:0000D68E   446 0001:0000D69A   449 0001:0000D69F
+   447 0001:0000D6A1   450 0001:0000D6C2   453 0001:0000D6C8   454 0001:0000D6F0
+   455 0001:0000D6FD   456 0001:0000D704   458 0001:0000D70A   457 0001:0000D712
+   459 0001:0000D728   461 0001:0000D744   462 0001:0000D746   463 0001:0000D752
+   465 0001:0000D770   469 0001:0000D794   470 0001:0000D79A   471 0001:0000D79E
+   472 0001:0000D7AE   473 0001:0000D7BA   475 0001:0000D7C3   476 0001:0000D7DC
+   479 0001:0000D7E0   482 0001:0000D7EA   483 0001:0000D7EF   486 0001:0000D7FD
+   480 0001:0000D80E   488 0001:0000D81C   489 0001:0000D83A   498 0001:0000D868
+   499 0001:0000D886   500 0001:0000D8A0   502 0001:0000D8A4   503 0001:0000D8BB
+   505 0001:0000D8D1   506 0001:0000D8D3   507 0001:0000D8D5   502 0001:0000D8D6
+   508 0001:0000D8D9   510 0001:0000D8DB   514 0001:0000D900   515 0001:0000D91D
+   516 0001:0000D92E   517 0001:0000D946   519 0001:0000D964   520 0001:0000D975
+   521 0001:0000D98F   522 0001:0000D9A5   524 0001:0000D9BB   520 0001:0000D9CB
+   526 0001:0000D9D0   527 0001:0000D9E9   529 0001:0000DA12   530 0001:0000DA21
+   531 0001:0000DA84   534 0001:0000DA8E   535 0001:0000DA93   536 0001:0000DA98
+   537 0001:0000DAA4   539 0001:0000DAB2   540 0001:0000DAC0   541 0001:0000DAC7
+   542 0001:0000DADE   544 0001:0000DAE5   532 0001:0000DAF6   546 0001:0000DB04
+   549 0001:0000DB20   550 0001:0000DB38   551 0001:0000DB3D   554 0001:0000DB59
+   555 0001:0000DB5E   556 0001:0000DB68   557 0001:0000DB77   559 0001:0000DB8A
+   560 0001:0000DB8F   562 0001:0000DB94   563 0001:0000DBA7   564 0001:0000DBB1
+   566 0001:0000DBD2   567 0001:0000DBDB   568 0001:0000DBE0   569 0001:0000DBE6
+   570 0001:0000DBF0   572 0001:0000DBFE   573 0001:0000DC03   574 0001:0000DC22
+   575 0001:0000DC40   577 0001:0000DC53   578 0001:0000DC64   583 0001:0000DC94
+   552 0001:0000DCAB   586 0001:0000DCBF   587 0001:0000DCE2   588 0001:0000DCE7
+   592 0001:0000DD64   594 0001:0000DD77   597 0001:0000DD83   598 0001:0000DD88
+   595 0001:0000DD9F   601 0001:0000DDAD   610 0001:0000DDBC   615 0001:0000DDD1
+   626 0001:0000DDF3   627 0001:0000DE02   628 0001:0000DE14   630 0001:0000DE1E
+   633 0001:0000DE27   634 0001:0000DE3E   635 0001:0000DE50   637 0001:0000DE5A
+   640 0001:0000DE63   641 0001:0000DE6D
+
+Line numbers for dlex(dlex.dpr) segment .itext
+
+   643 0002:0000024C   646 0002:00000285   650 0002:00000299   652 0002:000002A2
+   653 0002:000002B6   654 0002:000002CA   657 0002:000002D1   658 0002:000002D8
+   660 0002:000002E2   661 0002:000002F6   662 0002:00000329   663 0002:0000034D
+   664 0002:0000035A   665 0002:0000037E   666 0002:0000038B   667 0002:000003AF
+   669 0002:000003BC   670 0002:000003E4   672 0002:000003F0   673 0002:000003F5
+   674 0002:0000041B   675 0002:00000425   677 0002:0000044E   678 0002:00000462
+   679 0002:0000046C   660 0002:0000046D   681 0002:00000474   683 0002:00000479
+   684 0002:0000048D   687 0002:00000497   688 0002:000004A1   689 0002:000004BD
+   695 0002:000004D9   697 0002:000004E3   699 0002:000004F3   700 0002:000004FF
+   706 0002:00000510   707 0002:0000051C   708 0002:0000052E   710 0002:00000540
+   711 0002:0000054A   712 0002:00000553   713 0002:0000056A   714 0002:00000574
+   715 0002:0000057D   716 0002:0000059A   717 0002:000005A4   718 0002:000005AD
+   720 0002:000005CA   724 0002:000005CF   725 0002:000005E3   726 0002:000005EC
+   727 0002:000005F3   728 0002:000005F8   729 0002:00000607   730 0002:00000617
+   731 0002:0000061C   732 0002:00000621   733 0002:0000062A   734 0002:0000064D
+   737 0002:00000657   738 0002:0000066B   739 0002:00000670   741 0002:0000067A
+   742 0002:0000068E   744 0002:00000693   745 0002:000006A7   746 0002:000006B1
+   747 0002:000006B6   748 0002:000006BB   750 0002:000006C0   751 0002:000006C5
+   752 0002:000006CF   756 0002:000006E3   757 0002:000006ED   758 0002:000006F7
+   759 0002:00000701   763 0002:0000070B   765 0002:00000715   766 0002:00000721
+   773 0002:00000732   774 0002:0000073C   777 0002:00000779   783 0002:00000827
+   784 0002:00000831   788 0002:00000852   789 0002:0000085C   790 0002:00000866
+   791 0002:00000876   793 0002:00000882   795 0002:000008AD   797 0002:000008B9
+
+Bound resource files
+
+C:\Users\Gazda\AppData\Local\Temp\dtf956E.tmp
+
+
+Program entry point at 0002:0000024C

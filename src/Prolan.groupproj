@@ -1,0 +1,44 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{797e45c4-bc9a-4324-82e0-5a62570b08e1}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Projects Include="LanAniPack.dproj" />
+    <Projects Include="ProLan.dproj" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Default.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject xmlns=""><Default.Personality></Default.Personality></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Target Name="LanAniPack">
+    <MSBuild Projects="LanAniPack.dproj" Targets="" />
+  </Target>
+  <Target Name="LanAniPack:Clean">
+    <MSBuild Projects="LanAniPack.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="LanAniPack:Make">
+    <MSBuild Projects="LanAniPack.dproj" Targets="Make" />
+  </Target>
+  <Target Name="ProLan">
+    <MSBuild Projects="ProLan.dproj" Targets="" />
+  </Target>
+  <Target Name="ProLan:Clean">
+    <MSBuild Projects="ProLan.dproj" Targets="Clean" />
+  </Target>
+  <Target Name="ProLan:Make">
+    <MSBuild Projects="ProLan.dproj" Targets="Make" />
+  </Target>
+  <Target Name="Build">
+    <CallTarget Targets="LanAniPack;ProLan" />
+  </Target>
+  <Target Name="Clean">
+    <CallTarget Targets="LanAniPack:Clean;ProLan:Clean" />
+  </Target>
+  <Target Name="Make">
+    <CallTarget Targets="LanAniPack:Make;ProLan:Make" />
+  </Target>
+  <Import Condition="Exists('$(MSBuildBinPath)\Borland.Group.Targets')" Project="$(MSBuildBinPath)\Borland.Group.Targets" />
+</Project>

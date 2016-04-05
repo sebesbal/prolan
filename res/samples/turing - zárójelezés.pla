@@ -1,0 +1,31 @@
+/* -----------------------------------------
+	helyes zárójelezések nyelvét eldöntõ
+		Turing-gép
+-------------------------------------------*/
+
+#pragma turing
+term 0, 1;
+nterm x;
+
+void main()
+{
+	input(0 1 0 0 1 0 1 1);
+
+	while (!_)
+	{
+		while (0 || x) right;
+		if (1)
+		{
+			left(x);
+			while (x) left;
+			(0);
+			right(x);
+		}
+	}
+	
+	// leellenõrizzuk, hogy nem maradt 0
+	left;
+	while (x) left;
+	(_);
+	accept;
+}

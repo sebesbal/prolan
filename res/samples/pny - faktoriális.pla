@@ -1,0 +1,22 @@
+#pragma leftmost
+#include "matek.pla"
+start S;
+
+// Jelölés: X = "X darabszáma a mondatformában"
+// X := N!,   N := 0
+// Elõfeltétel: X > 0,   N >= 0
+
+void fact(nterm X, nterm N)
+{
+	X = N;
+	all X = eps;
+	N = X;
+	while (N = eps) Szor(X, N);
+}
+
+void main()
+{
+	nterm X, N;
+	S = X N N N;
+	fact(X, N);
+}

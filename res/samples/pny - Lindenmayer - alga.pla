@@ -1,0 +1,47 @@
+/* ----------------------------------------------
+		algás Lindemayer-rendszer
+				
+ábécé: {1, 2, 3, 4, 5, 6, 7, 8, 9, [, ]}	
+helyettesítések: 
+o(1)=23, o(2)=2, o(3)=24, o(4)=24, o(5)=65,
+o(6)=7, o(7)=8, o(8)=o[3], o(9)=9, o([)=[, o(])=]
+-------------------------------------------------*/
+
+#pragma lindenmayer
+
+term 1, 2, 3, 4, 5, 6, 7, 8, 9, o, c;
+
+// 1. kollekció
+start X1;
+    nterm X2, X3, X4, X5, X6, X7, X8, X9, Xo, Xc; 
+// 2. kollekció
+nterm Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, Y9, Yo, Yc;
+
+void main()
+[
+	{
+		// átírások:
+		all X1 = Y2 Y3;
+		all X2 = Y2;
+		all X3 = Y2 Y4;
+		all X4 = Y2 Y5;
+		all X5 = Y6 Y5;
+		all X6 = Y7;
+		all X7 = Y8;
+		all X8 = Y9 Yo Y3 Yc;
+		all X9 = Y9;
+		all Xo = Yo;
+		all Xc = Yc;
+	
+		// visszaírás 1. kollekcióra:
+		all Y1=X1; all Y2=X2; all Y3=X3; all Y4=X4;
+		all Y5=X5; all Y6=X6; all Y7=X7; all Y8=X8;
+		all Y9=X9; all Yo=Xo; all Yc=Xc;	
+	}
+	{
+		// terminálás:
+		all X1=1; all X2=2; all X3=3; all X4=4; 
+		all X5=5; all X6=6; all X7=7; all X8=8;
+		all X9=9; all Xo=o; all Xc=c;
+	}
+]

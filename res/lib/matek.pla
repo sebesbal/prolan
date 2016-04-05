@@ -1,0 +1,72 @@
+// **************** Matematikai függvények ****************
+// X := Y; Y változatlan marad
+void Legyen(nterm X, nterm Y)
+{
+	nterm Z;
+	all X = eps;
+	all Y = Z X;
+	all Z = Y;
+}
+
+// X := X - Y; Y := Y - X;
+void Minus(nterm X, nterm Y)
+{
+	all (X = X) && (Y = eps) && (X = eps);
+}
+
+// X = Max(X, Y); Y = Min(X, Y);
+void Rendez(nterm X, nterm Y)
+{
+	nterm Z;
+	all (X = X) && (Y = eps) && (X = Z);
+	if (! X = X) all (Y = X);
+	all Z = X Y;
+}
+
+// X := [X/Y];	Y := {X/Y}
+void Oszt(nterm X, nterm Y)
+{
+	nterm Q, Z;
+	Y = eps;
+	while (X = Q)
+	{
+		Legyen(Z, Y);
+		Minus(X, Z);
+	}
+	if (Z = eps) {
+		Q = eps;
+		all (Z = eps) && (Y = eps);
+	} else all Y = eps;
+	all Q = X;
+}
+
+// X := X*Y, Y := Y
+void Szor(nterm X, nterm Y)
+{
+	nterm Z, V, A, B;
+	all Y = A B;
+	while (A = eps) 
+	{
+		all X = Z V;	
+		all V = X;
+	}
+	all Z = X;
+	all B = Y;
+}
+
+// X = LNKO(X, Y)
+void LNKO(nterm X, nterm Y)
+{
+	nterm Z;
+	Rendez(X, Y);
+	Legyen(Z, Y);
+	while (Y = Y)
+	{
+		Oszt(X, Y);
+		Legyen(X, Z);
+		Legyen(Z, Y);
+	}
+	all Z = eps;
+}
+
+

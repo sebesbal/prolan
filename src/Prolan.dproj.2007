@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2ad738ca-ecba-4b15-b315-60b7e90d0ca8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>ProLan.exe</DCC_DependencyCheckOutputName>
+    <MainSource>ProLan.dpr</MainSource>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_UnitSearchPath>C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\test;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\yacc;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\lex;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src</DCC_UnitSearchPath>
+    <DCC_ResourcePath>C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\test;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\yacc;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\lex;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src</DCC_ResourcePath>
+    <DCC_ObjPath>C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\test;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\yacc;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\lex;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src</DCC_ObjPath>
+    <DCC_IncludePath>C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\test;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\yacc;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src\lex;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4;C:\Users\Gazda\Documents\RAD Studio\Projects\szakdoli\dyacclex-1.4\src</DCC_IncludePath>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">False</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName"></VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">ProLan.dpr</Source></Source><Excluded_Packages>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <Excluded_Packages Name="$(BDS)\bin\bcboffice2k100.bpl">CodeGear C++Builder Office 2000 Servers Package</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\bcbofficexp100.bpl">CodeGear C++Builder Office XP Servers Package</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dcloffice2k100.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+      <Excluded_Packages Name="$(BDS)\bin\dclofficexp100.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+    </Excluded_Packages></Delphi.Personality><ModelSupport>False</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="ProLan.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="dyacclex-1.4\test\prolangyacc.pas" />
+    <DCCReference Include="PMemo.pas" />
+    <DCCReference Include="UAdvFrm.pas">
+      <Form>AdvFrame</Form>
+      <DesignClass>TExeFrm</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UAniFrm.pas">
+      <Form>AniFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UBase.pas" />
+    <DCCReference Include="UBasFrm.pas">
+      <Form>BasFrame</Form>
+      <DesignClass>TExeFrm</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UBasPLFrm.pas">
+      <Form>BasPLFrame</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UCodeFrm.pas">
+      <Form>CodeFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UExeFrm.pas">
+      <Form>ExeFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="ULang.pas" />
+    <DCCReference Include="UMainForm.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="UPageFrm.pas">
+      <Form>PageFrame</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UPlFrm.pas">
+      <Form>PlFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UPrefDlg.pas">
+      <Form>PrefDlg</Form>
+    </DCCReference>
+    <DCCReference Include="URunFrm.pas">
+      <Form>RunFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UStack.pas" />
+    <DCCReference Include="UTuring.pas" />
+    <DCCReference Include="UWorkDlg.pas">
+      <Form>WorkDlg</Form>
+    </DCCReference>
+  </ItemGroup>
+</Project>

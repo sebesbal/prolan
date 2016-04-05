@@ -1,0 +1,53 @@
+/* -----------------------------------------
+ 	u # u alakú szavakat felismerõ
+		Turing-gép
+-------------------------------------------*/
+
+
+term 0, 1, K; // K megfelel a "#"-nak
+nterm x;
+
+#pragma turing
+
+// megkeresi és kitörli a-t K mindkét oldalán
+void f(term a)
+{
+	right(x);
+	while (0 || 1) right;
+	(K); right;
+	while (x) right;
+	(a);
+	left(x);
+}
+
+void main()
+{
+	// beállítja a bemenetet:
+	input(0 1 K 0 1);
+
+	// ellenõrzi, hogy pontosan 1db K van:
+	while (0 || 1) right;
+	(K); right;
+	while (0 || 1) right;
+	(_); left;
+	while (0 || 1 || K) left;
+	right;
+	
+	while (0 || 1)
+	{
+		//kitörli mindkét oldalról ugyanazt a betût
+		if (0) f(0);
+		else if (1) f(1);
+		
+		// visszamegy az elejére
+		while (! _) left;
+		right;
+		while (x) right;
+	}
+	
+	// ellenõrzi, hogy a végeredmény megfelelõ alakú	
+	(K); right;
+	while(x) right;
+	(_); 
+	accept;
+}

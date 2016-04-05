@@ -1,0 +1,11 @@
+/* ----------------------------------------------
+		Programozott nyelvtan
+-------------------------------------------------*/
+start S;
+term a, b;
+nterm A, B;
+
+void main()
+{
+	// Írja ide az utasításokat
+}

@@ -1,0 +1,22 @@
+/* -----------------------------------------
+   páros db 1-est tartalmazó szavak nyelve
+	Turing-gép, Véges automata szim.
+-------------------------------------------*/
+
+#pragma turing
+term 0, 1;
+void main()
+{
+	input(0 0 1 1 0);
+q0:	state
+	{
+		0: { right; q0; }
+		1: { right; q1; }
+		_: accept;
+	}
+q1:	state
+	{
+		0: { right; q1; }
+		1: { right; q0; }
+	}
+}

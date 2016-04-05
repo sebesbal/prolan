@@ -1,0 +1,40 @@
+/* ----------------------------------------------
+	u u alakú szavak mátrixnyelvtannal
+-------------------------------------------------*/
+
+start S;
+void pelda1()
+{
+	term a, b, c;
+	nterm X, Y;
+	[
+		{ S = X Y; }
+		{ X = a X; Y = a Y; }
+		{ X = b X; Y = b Y; }
+		{ X = c X; Y = c Y; }
+		{ X = eps; Y = eps; }
+	]
+}
+
+/* ----------------------------------------------
+	a^(2^n) nyelv mátrixnyelvtannal
+*/
+void pelda2()
+{
+	term a;
+	nterm A, U, Y, Z;
+	// try = pontozott szabály
+	[
+		{ try A = U; try Y = U; S = Z Z; }
+		{ try A = U; try S = U; Z = Y; }
+		{ try A = U; try Z = U; Y = S; }
+		{ try Z = U; try Y = U; S = A; }
+		{ try Z = U; try Y = U; try S = U; A = a; }
+	]
+}
+
+void main()
+{
+	pelda1();
+	//pelda2();
+}

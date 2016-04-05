@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{2ad738ca-ecba-4b15-b315-60b7e90d0ca8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+    <DCC_DependencyCheckOutputName>..\bin\ProLan.exe</DCC_DependencyCheckOutputName>
+    <MainSource>ProLan.dpr</MainSource>
+    <DCC_UsePackage>vcl;rtl;vclx;vclactnband;dbrtl;vcldb;vcldbx;bdertl;dsnap;dsnapcon;teeUI;teedb;tee;adortl;vclib;ibxpress;dbxcds;dbexpress;DbxCommonDriver;IndyCore;IndySystem;IndyProtocols;xmlrtl;inet;IntrawebDB_90_100;Intraweb_90_100;VclSmp;vclie;websnap;webdsnap;inetdbbde;inetdbxpress;soaprtl;xf40_unr_d2007;TntUnicodeVcl;PngComponentsD9;VirtualTreesD10;VirtualTreesD10D</DCC_UsePackage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_DebugInformation>False</DCC_DebugInformation>
+    <DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+    <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    <DCC_Define>RELEASE</DCC_Define>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Version>7.0</Version>
+    <DCC_Define>DEBUG</DCC_Define>
+    <DCC_UnitSearchPath>dyacclex-1.4\src\yacc;dyacclex-1.4\src\lex;dyacclex-1.4;dyacclex-1.4\src;dyacclex-1.4\prolan;lib\Delphi Unicode Controls\Source;lib</DCC_UnitSearchPath>
+    <DCC_ResourcePath>dyacclex-1.4\src\yacc;dyacclex-1.4\src\lex;dyacclex-1.4;dyacclex-1.4\src;dyacclex-1.4\prolan;lib\Delphi Unicode Controls\Source;lib</DCC_ResourcePath>
+    <DCC_ObjPath>dyacclex-1.4\src\yacc;dyacclex-1.4\src\lex;dyacclex-1.4;dyacclex-1.4\src;dyacclex-1.4\prolan;lib\Delphi Unicode Controls\Source;lib</DCC_ObjPath>
+    <DCC_IncludePath>dyacclex-1.4\src\yacc;dyacclex-1.4\src\lex;dyacclex-1.4;dyacclex-1.4\src;dyacclex-1.4\prolan;lib\Delphi Unicode Controls\Source;lib</DCC_IncludePath>
+    <DCC_ExeOutput>../bin</DCC_ExeOutput>
+    <DCC_DcuOutput>dcu</DCC_DcuOutput>
+    <DCC_ObjOutput>dcu</DCC_ObjOutput>
+    <DCC_HppOutput>dcu</DCC_HppOutput>
+    <DCC_BplOutput>pck</DCC_BplOutput>
+    <DCC_DcpOutput>dcp</DCC_DcpOutput>
+  </PropertyGroup>
+  <ProjectExtensions>
+    <Borland.Personality>Delphi.Personality</Borland.Personality>
+    <Borland.ProjectType />
+    <BorlandProject>
+<BorlandProject><Delphi.Personality><Parameters><Parameters Name="UseLauncher">False</Parameters><Parameters Name="LoadAllSymbols">True</Parameters><Parameters Name="LoadUnspecifiedSymbols">False</Parameters></Parameters><VersionInfo><VersionInfo Name="IncludeVerInfo">False</VersionInfo><VersionInfo Name="AutoIncBuild">False</VersionInfo><VersionInfo Name="MajorVer">1</VersionInfo><VersionInfo Name="MinorVer">0</VersionInfo><VersionInfo Name="Release">0</VersionInfo><VersionInfo Name="Build">0</VersionInfo><VersionInfo Name="Debug">False</VersionInfo><VersionInfo Name="PreRelease">False</VersionInfo><VersionInfo Name="Special">False</VersionInfo><VersionInfo Name="Private">False</VersionInfo><VersionInfo Name="DLL">False</VersionInfo><VersionInfo Name="Locale">1033</VersionInfo><VersionInfo Name="CodePage">1252</VersionInfo></VersionInfo><VersionInfoKeys><VersionInfoKeys Name="CompanyName"></VersionInfoKeys><VersionInfoKeys Name="FileDescription"></VersionInfoKeys><VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="InternalName"></VersionInfoKeys><VersionInfoKeys Name="LegalCopyright"></VersionInfoKeys><VersionInfoKeys Name="LegalTrademarks"></VersionInfoKeys><VersionInfoKeys Name="OriginalFilename"></VersionInfoKeys><VersionInfoKeys Name="ProductName"></VersionInfoKeys><VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys><VersionInfoKeys Name="Comments"></VersionInfoKeys></VersionInfoKeys><Source><Source Name="MainSource">ProLan.dpr</Source></Source><Excluded_Packages></Excluded_Packages></Delphi.Personality><ModelSupport>False</ModelSupport></BorlandProject></BorlandProject>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Borland.Delphi.Targets" />
+  <ItemGroup>
+    <DelphiCompile Include="ProLan.dpr">
+      <MainSource>MainSource</MainSource>
+    </DelphiCompile>
+    <DCCReference Include="dyacclex-1.4\prolan\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\prola\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\prol\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\pro\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\pr\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\p\prolanyacc.pas" />
+    <DCCReference Include="dyacclex-1.4\test\prolanyacc.pas" />
+    <DCCReference Include="UAdvFrm.pas">
+      <Form>AdvFrm</Form>
+      <DesignClass>TExeFrm</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UAniFrm.pas">
+      <Form>AniFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UBase.pas" />
+    <DCCReference Include="UBasFrm.pas">
+      <Form>BasFrm</Form>
+      <DesignClass>TExeFrm</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UBasPLFrm.pas">
+      <Form>BasPLFrame</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UCard.pas">
+      <Form>CardForm</Form>
+    </DCCReference>
+    <DCCReference Include="UCodeFrm.pas">
+      <Form>CodeFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UExeFrm.pas">
+      <Form>ExeFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UGrammar.pas" />
+    <DCCReference Include="UHeap.pas" />
+    <DCCReference Include="UMainForm.pas">
+      <Form>MainForm</Form>
+    </DCCReference>
+    <DCCReference Include="UPageFrm.pas">
+      <Form>PageFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UPlFrm.pas">
+      <Form>PlFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UPrefDlg.pas">
+      <Form>PrefDlg</Form>
+    </DCCReference>
+    <DCCReference Include="UPushDown.pas" />
+    <DCCReference Include="URunFrm.pas">
+      <Form>RunFrm</Form>
+      <DesignClass>TFrame</DesignClass>
+    </DCCReference>
+    <DCCReference Include="UTuring.pas" />
+  </ItemGroup>
+</Project>
