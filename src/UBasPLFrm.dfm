@@ -60,7 +60,7 @@ object BasPLFrame: TBasPLFrame
     Height = 89
     Align = alBottom
     Lines.Strings = (
-      'Le'#237'r'#225's:')
+      'Description:')
     TabOrder = 2
     OnChange = TntMemo1Change
   end

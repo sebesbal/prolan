@@ -3,9 +3,9 @@ object CardForm: TCardForm
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
-  Caption = 'N'#233'vjegy'
-  ClientHeight = 98
-  ClientWidth = 311
+  Caption = 'About Prolan'
+  ClientHeight = 315
+  ClientWidth = 384
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -14,17 +14,17 @@ object CardForm: TCardForm
   Font.Style = []
   OldCreateOrder = False
   DesignSize = (
-    311
-    98)
+    384
+    315)
   PixelsPerInch = 120
   TextHeight = 17
   object Label1: TLabel
-    Left = 21
-    Top = 61
-    Width = 161
+    Left = 24
+    Top = 262
+    Width = 136
     Height = 18
     Cursor = crHandPoint
-    Caption = 'bsebestyen@freemail.hu'
+    Caption = 'sebesbal@gmail.com'
     Color = clBlue
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clNavy
@@ -38,20 +38,31 @@ object CardForm: TCardForm
   object Memo1: TMemo
     Left = 10
     Top = 10
-    Width = 232
-    Height = 44
+    Width = 359
+    Height = 223
     BevelInner = bvNone
     BevelOuter = bvNone
     BorderStyle = bsNone
     Lines.Strings = (
-      'K'#233'sz'#237'tette: Sebesty'#233'n Bal'#225'zs'
+      'With Prolan you you can simulate different automatons '
+      '(eg. pushdown automaton, Turing machine) and formal '
+      'grammars. To describe these structures you can use a '
+      'simple C like language, or fill out forms.'
+      ''
+      'I wrote this application several years ago for my BSc '
+      'thesis, and now (2016) I'#39've translated the UI to English. '
+      'The full user and developer documentation are remained '
+      'in Hungarian (attached to the application). Feel free to '
+      'translate it... , or let me know if you are interested in it.'
+      ''
+      'Created by Sebesty'#233'n Bal'#225'zs'
       'ELTE IK, 2010. Budapest')
     ReadOnly = True
     TabOrder = 1
   end
   object Button1: TButton
-    Left = 203
-    Top = 55
+    Left = 278
+    Top = 274
     Width = 98
     Height = 33
     Anchors = [akRight, akBottom]

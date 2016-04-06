@@ -51,6 +51,7 @@ inherited AdvFrm: TAdvFrm
       ExplicitWidth = 305
       ExplicitHeight = 629
       inherited TabSheet1: TTabSheet
+        Caption = 'Programmed grammar'
         ExplicitLeft = 4
         ExplicitTop = 27
         ExplicitWidth = 297
@@ -58,17 +59,36 @@ inherited AdvFrm: TAdvFrm
         inherited ListView1: TTntListView
           Width = 297
           Height = 598
+          Columns = <
+            item
+              Caption = 'ID'
+              Width = 30
+            end
+            item
+              Caption = 'Rule'
+              Width = 100
+            end
+            item
+              Caption = #963
+              Width = 80
+            end
+            item
+              Caption = #966
+              Width = 80
+            end>
           ExplicitWidth = 297
           ExplicitHeight = 598
         end
       end
       inherited TabSheet2: TTabSheet
+        Caption = 'Definition'
         ExplicitLeft = 4
         ExplicitTop = 27
         ExplicitWidth = 436
         ExplicitHeight = 254
         inherited TntMemo1: TTntMemo
-          Height = 254
+          Width = 297
+          Height = 598
           ExplicitHeight = 254
         end
       end
@@ -87,12 +107,11 @@ inherited AdvFrm: TAdvFrm
     inherited PageControl1: TPageControl
       Width = 459
       Height = 629
-      ActivePage = RunFrm1.TabSheet1
+      ActivePage = RunFrm1.TabSheet3
       ExplicitWidth = 459
       ExplicitHeight = 629
       inherited TabSheet2: TTabSheet
-        ExplicitWidth = 451
-        ExplicitHeight = 598
+        Caption = 'List'
         inherited TntSplitter1: TTntSplitter
           Width = 451
           ExplicitWidth = 189
@@ -100,27 +119,22 @@ inherited AdvFrm: TAdvFrm
         inherited lvList: TTntListView
           Width = 451
           Height = 482
-          ExplicitWidth = 451
-          ExplicitHeight = 482
         end
         inherited AniFrm1: TAniFrm
           Width = 451
-          ExplicitWidth = 451
           inherited pnlAni: TLanAnimation
             Width = 451
             ExplicitWidth = 455
           end
           inherited Panel1: TPanel
             Width = 451
-            ExplicitWidth = 451
             inherited ToolBar1: TToolBar
               Width = 451
-              ExplicitWidth = 451
             end
           end
           inherited ImageList1: TImageList
             Bitmap = {
-              494C010104000800280010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+              494C0101040008002C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
               0000000000003600000028000000400000002000000001002000000000000020
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
@@ -394,32 +408,38 @@ inherited AdvFrm: TAdvFrm
         end
       end
       inherited TabSheet1: TTabSheet
+        Caption = 'Tree'
         ExplicitLeft = 4
         ExplicitTop = 27
-        ExplicitWidth = 513
-        ExplicitHeight = 516
+        ExplicitWidth = 451
+        ExplicitHeight = 598
         inherited TreeView1: TTntTreeView
           Width = 451
           Height = 569
+          ExplicitWidth = 451
+          ExplicitHeight = 569
         end
         inherited ToolBar1: TToolBar
           Width = 451
+          ExplicitWidth = 451
         end
       end
       inherited TabSheet3: TTabSheet
+        Caption = 'Language'
         ExplicitLeft = 4
         ExplicitTop = 27
         ExplicitWidth = 513
         ExplicitHeight = 516
         inherited lvLang: TTntListView
-          Height = 516
+          Width = 451
+          Height = 598
           ExplicitHeight = 516
         end
       end
     end
     inherited ImageList1: TImageList
       Bitmap = {
-        494C010103000800280010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C0101030008002C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000001000000001002000000000000010
         000000000000000000000000000000000000000000000000000000000000FEFE
         FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3

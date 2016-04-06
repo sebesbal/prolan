@@ -38,14 +38,14 @@
     <DelphiCompile Include="LanAniPack.dpk">
       <MainSource>MainSource</MainSource>
     </DelphiCompile>
-    <DCCReference Include="$(SystemRoot)\system32\dbrtl.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\rtl.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\TntUnicodeVcl.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\vcl.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\vclactnband.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\vcldb.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\vclie.dcp" />
-    <DCCReference Include="$(SystemRoot)\system32\vclx.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\dbrtl.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\rtl.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\TntUnicodeVcl.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\vcl.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\vclactnband.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\vcldb.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\vclie.dcp" />
+    <DCCReference Include="C:\Users\Gazda\Desktop\vclx.dcp" />
     <DCCReference Include="UAniString.pas" />
     <DCCReference Include="UTntNiceGrid.pas" />
   </ItemGroup>

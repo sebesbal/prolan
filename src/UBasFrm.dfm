@@ -24,9 +24,11 @@ inherited BasFrm: TBasFrm
     inherited PageControl1: TPageControl
       Width = 249
       Height = 354
+      ActivePage = runf.TabSheet3
       ExplicitWidth = 249
       ExplicitHeight = 354
       inherited TabSheet2: TTabSheet
+        Caption = 'List'
         ExplicitWidth = 241
         ExplicitHeight = 323
         inherited TntSplitter1: TTntSplitter
@@ -56,7 +58,7 @@ inherited BasFrm: TBasFrm
           end
           inherited ImageList1: TImageList
             Bitmap = {
-              494C010104000800240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+              494C010104000800280010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
               0000000000003600000028000000400000002000000001002000000000000020
               0000000000000000000000000000000000000000000000000000000000000000
               0000000000000000000000000000000000000000000000000000000000000000
@@ -330,14 +332,35 @@ inherited BasFrm: TBasFrm
         end
       end
       inherited TabSheet1: TTabSheet
+        Caption = 'Tree'
+        ExplicitLeft = 4
+        ExplicitTop = 27
+        ExplicitWidth = 513
+        ExplicitHeight = 516
+        inherited TreeView1: TTntTreeView
+          Width = 241
+          Height = 294
+        end
         inherited ToolBar1: TToolBar
-          ExplicitWidth = 241
+          Width = 241
+        end
+      end
+      inherited TabSheet3: TTabSheet
+        Caption = 'Language'
+        ExplicitLeft = 4
+        ExplicitTop = 27
+        ExplicitWidth = 513
+        ExplicitHeight = 516
+        inherited lvLang: TTntListView
+          Width = 241
+          Height = 323
+          ExplicitHeight = 516
         end
       end
     end
     inherited ImageList1: TImageList
       Bitmap = {
-        494C010103000800300010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010103000800340010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000001000000001002000000000000010
         000000000000000000000000000000000000000000000000000000000000FEFE
         FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3

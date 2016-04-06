@@ -87,6 +87,18 @@ object MainForm: TMainForm
       inherited StatusBar1: TStatusBar
         Top = 54
         Width = 1157
+        Panels = <
+          item
+            Text = 'Ln:'
+            Width = 50
+          end
+          item
+            Text = 'Col:'
+            Width = 50
+          end
+          item
+            Width = 50
+          end>
         ExplicitTop = 54
         ExplicitWidth = 1157
       end
@@ -94,7 +106,7 @@ object MainForm: TMainForm
     inherited ImageList1: TImageList
       Top = 248
       Bitmap = {
-        494C010105000C00B40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010105000C00BC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000002000000001002000000000000020
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -389,7 +401,7 @@ object MainForm: TMainForm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010106009000AC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106009000B40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3
@@ -665,9 +677,9 @@ object MainForm: TMainForm
     Left = 216
     Top = 240
     object Fille1: TMenuItem
-      Caption = 'F'#225'jl'
+      Caption = 'File'
       object j2: TMenuItem
-        Caption = #218'j'
+        Caption = 'New'
         object jNyelvtan2: TMenuItem
           Action = PageFrame1.ActionNewGram
         end
@@ -686,21 +698,26 @@ object MainForm: TMainForm
       end
       object Open1: TMenuItem
         Action = PageFrame1.FileOpen1
+        Caption = 'Open...'
       end
       object N1: TMenuItem
         Caption = '-'
       end
       object ActionSave1: TMenuItem
         Action = PageFrame1.ActionSave
+        Caption = 'Save'
       end
       object SaveAs1: TMenuItem
         Action = PageFrame1.ActionSaveAs
+        Caption = 'Save As...'
       end
       object ActionClose1: TMenuItem
         Action = PageFrame1.ActionClose
+        Caption = 'Close'
       end
       object ActionCloseAll1: TMenuItem
         Action = PageFrame1.ActionCloseAll
+        Caption = 'Close All'
       end
       object N2: TMenuItem
         Caption = '-'
@@ -711,39 +728,44 @@ object MainForm: TMainForm
       end
     end
     object Szerkeszts1: TMenuItem
-      Caption = 'Szerkeszt'#233's'
+      Caption = 'Edit'
       object Kivgs1: TMenuItem
         Action = EditCut1
+        Caption = 'Cut'
       end
       object Msols1: TMenuItem
         Action = EditCopy1
+        Caption = 'Copy'
       end
       object Beilleszts1: TMenuItem
         Action = EditPaste1
+        Caption = 'Paste'
       end
       object N3: TMenuItem
         Caption = '-'
       end
       object Sorbeszrs1: TMenuItem
         Action = InsertLine
+        Caption = 'Insert Line'
       end
       object Sortrls1: TMenuItem
         Action = DeleteLine
+        Caption = 'Delete Line'
       end
     end
     object Belltsok1: TMenuItem
-      Caption = 'Be'#225'll'#237't'#225'sok'
+      Caption = 'Options'
       OnClick = Belltsok1Click
     end
     object Sg1: TMenuItem
-      Caption = 'S'#250'g'#243
+      Caption = 'Help'
       OnClick = Sg1Click
       object ProlanHelp1: TMenuItem
-        Caption = 'K'#233'zik'#246'nyv'
+        Caption = 'Manual'
         OnClick = ProlanHelp1Click
       end
       object Nvjegy1: TMenuItem
-        Caption = 'N'#233'vjegy'
+        Caption = 'About'
         OnClick = Nvjegy1Click
       end
     end

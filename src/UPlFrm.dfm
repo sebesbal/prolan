@@ -16,11 +16,7 @@ object PlFrm: TPlFrm
     TabOrder = 0
     object TabSheet1: TTabSheet
       Hint = 'A nyelvtan szab'#225'lyai, az automata '#225'llapotai'
-      Caption = 'Programozott nyelvtan'
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      Caption = 'Programmed grammar'
       object ListView1: TTntListView
         Left = 0
         Top = 0
@@ -37,7 +33,7 @@ object PlFrm: TPlFrm
             Width = 30
           end
           item
-            Caption = 'Szab'#225'ly'
+            Caption = 'Rule'
             Width = 100
           end
           item
@@ -59,17 +55,13 @@ object PlFrm: TPlFrm
     end
     object TabSheet2: TTabSheet
       Hint = 'A pontos matematikai defin'#237'ci'#243
-      Caption = 'Defin'#237'ci'#243
+      Caption = 'Definition'
       ImageIndex = 1
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object TntMemo1: TTntMemo
         Left = 0
         Top = 0
         Width = 436
-        Height = 257
+        Height = 254
         Align = alClient
         BevelInner = bvNone
         BevelOuter = bvNone

@@ -3,7 +3,7 @@ object PrefDlg: TPrefDlg
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'Be'#225'll'#237't'#225'sok'
+  Caption = 'Options'
   ClientHeight = 438
   ClientWidth = 486
   Color = clBtnFace
@@ -25,233 +25,204 @@ object PrefDlg: TPrefDlg
     Top = 0
     Width = 486
     Height = 393
-    ActivePage = Korlatok
+    ActivePage = TabSheet2
     Align = alTop
     OwnerDraw = True
     TabOrder = 3
     OnDrawTab = PageControl1DrawTab
     object Korlatok: TTabSheet
-      Caption = #193'ltal'#225'nos'
+      Caption = 'General'
       ImageIndex = 1
+      ExplicitLeft = 8
+      ExplicitTop = 32
       object Bevel1: TBevel
         Left = 13
-        Top = 88
+        Top = 96
         Width = 441
         Height = 9
         Shape = bsTopLine
       end
-      object StaticText3: TStaticText
-        Left = 18
-        Top = 39
-        Width = 441
-        Height = 35
-        AutoSize = False
-        Caption = 
-          'A lista n'#233'zetben elrejti a determinisztikus l'#233'p'#233'seket. Csak az e' +
-          'ls'#337' '#233's utols'#243' l'#233'p'#233's marad meg, valamint azok, melyekben van v'#225'la' +
-          'szt'#225'si lehet'#337's'#233'g.'
-        TabOrder = 0
-      end
-      object CheckBox2: TCheckBox
-        Left = 18
-        Top = 13
-        Width = 217
-        Height = 13
-        Caption = 'Determinisztikus l'#233'p'#233'sek elrejt'#233'se'
-        TabOrder = 1
-      end
       object GroupBox1: TGroupBox
-        Left = 3
-        Top = 144
+        Left = 5
+        Top = 159
         Width = 470
-        Height = 213
-        Caption = 'Fels'#337' korl'#225'tok'
-        TabOrder = 2
-        object GroupBox2: TGroupBox
-          Left = 15
-          Top = 126
-          Width = 441
-          Height = 64
-          Caption = 'Nyelv n'#233'zet'
-          TabOrder = 0
-          object edTime: TLabeledEdit
-            Left = 88
-            Top = 24
-            Width = 114
-            Height = 24
-            EditLabel.Width = 79
-            EditLabel.Height = 16
-            EditLabel.Caption = 'Id'#337'limit (ms):'
-            LabelPosition = lpLeft
-            TabOrder = 0
-          end
-          object edDb: TLabeledEdit
-            Left = 307
-            Top = 24
-            Width = 115
-            Height = 24
-            EditLabel.Width = 90
-            EditLabel.Height = 16
-            EditLabel.Caption = 'Tal'#225'latok (db):'
-            LabelPosition = lpLeft
-            TabOrder = 1
-          end
-        end
-        object edLength: TLabeledEdit
-          Left = 322
-          Top = 31
-          Width = 115
+        Height = 73
+        Caption = 'Tree view'
+        TabOrder = 0
+        object edTreeLim: TLabeledEdit
+          Left = 372
+          Top = 23
+          Width = 79
           Height = 24
-          EditLabel.Width = 294
+          EditLabel.Width = 57
           EditLabel.Height = 16
-          EditLabel.Caption = 'Mondatforma, verem, szalag maxim'#225'lis hossza:'
+          EditLabel.Caption = 'Max. size'
           LabelPosition = lpLeft
+          TabOrder = 0
+        end
+      end
+      object GroupBox6: TGroupBox
+        Left = 3
+        Top = 16
+        Width = 470
+        Height = 137
+        Caption = 'List view'
+        TabOrder = 1
+        object CheckBox1: TCheckBox
+          Left = 10
+          Top = 52
+          Width = 255
+          Height = 24
+          Caption = 'Avoid exit if there is other choice.'
+          TabOrder = 0
+        end
+        object CheckBox2: TCheckBox
+          Left = 10
+          Top = 24
+          Width = 407
+          Height = 18
+          Caption = 'Hide the step if there is no choice (hide deterministic steps).'
           TabOrder = 1
         end
-        object edListLim: TLabeledEdit
-          Left = 322
-          Top = 63
-          Width = 115
+        object edAniTime: TLabeledEdit
+          Left = 184
+          Top = 88
+          Width = 81
           Height = 24
-          EditLabel.Width = 176
+          EditLabel.Width = 165
           EditLabel.Height = 16
-          EditLabel.Caption = 'Lista n'#233'zet, l'#233'p'#233'ssz'#225'm (db):'
+          EditLabel.Caption = 'Duration of one step (ms):'
           LabelPosition = lpLeft
           TabOrder = 2
         end
-        object edTreeLim: TLabeledEdit
-          Left = 322
-          Top = 95
-          Width = 115
+        object edListLim: TLabeledEdit
+          Left = 368
+          Top = 88
+          Width = 81
           Height = 24
-          EditLabel.Width = 159
+          EditLabel.Width = 57
           EditLabel.Height = 16
-          EditLabel.Caption = 'Fa n'#233'zet, elemsz'#225'm (db):'
+          EditLabel.Caption = 'Max. size'
           LabelPosition = lpLeft
           TabOrder = 3
         end
       end
-      object edAniTime: TLabeledEdit
-        Left = 326
-        Top = 112
-        Width = 114
+      object GroupBox2: TGroupBox
+        Left = 3
+        Top = 238
+        Width = 472
+        Height = 64
+        Caption = 'Language view'
+        TabOrder = 2
+        object edTime: TLabeledEdit
+          Left = 178
+          Top = 24
+          Width = 89
+          Height = 24
+          EditLabel.Width = 94
+          EditLabel.Height = 16
+          EditLabel.Caption = 'Time limit (ms):'
+          LabelPosition = lpLeft
+          TabOrder = 0
+        end
+        object edDb: TLabeledEdit
+          Left = 372
+          Top = 24
+          Width = 79
+          Height = 24
+          EditLabel.Width = 57
+          EditLabel.Height = 16
+          EditLabel.Caption = 'Max. size'
+          LabelPosition = lpLeft
+          TabOrder = 1
+        end
+      end
+      object edLength: TLabeledEdit
+        Left = 375
+        Top = 319
+        Width = 77
         Height = 24
-        EditLabel.Width = 230
+        EditLabel.Width = 185
         EditLabel.Height = 16
-        EditLabel.Caption = 'Anim'#225'c'#243', egy l'#233'p'#233's id'#337'tartama (ms):'
+        EditLabel.Caption = 'Max. lenght of sentential form'
         LabelPosition = lpLeft
         TabOrder = 3
       end
     end
     object TabSheet1: TTabSheet
-      Caption = 'Programozott nyelvtan'
+      Caption = 'Grammars'
       Highlighted = True
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
-      object Bevel2: TBevel
-        Left = 13
-        Top = 215
-        Width = 441
-        Height = 9
-        Shape = bsTopLine
-      end
-      object CheckBox1: TCheckBox
-        Left = 13
-        Top = 224
-        Width = 144
-        Height = 19
-        Caption = 'Zs'#225'kutc'#225'k elker'#252'l'#233'se'
-        TabOrder = 0
-      end
       object rgList: TRadioGroup
         Left = 13
-        Top = 90
-        Width = 217
-        Height = 44
-        Caption = 'Lista'
-        Columns = 3
+        Top = 40
+        Width = 144
+        Height = 84
+        Caption = 'List'
         Items.Strings = (
-          'Legbal'
-          'Legjobb'
-          'V'#233'letlen')
-        TabOrder = 1
+          'Leftmost'
+          'Rightmost'
+          'Random')
+        TabOrder = 0
       end
       object rgLang: TRadioGroup
-        Left = 237
+        Left = 311
         Top = 40
-        Width = 217
-        Height = 43
-        Caption = 'Nyelv'
-        Columns = 3
+        Width = 143
+        Height = 84
+        Caption = 'Language'
         Items.Strings = (
-          'Legbal'
-          'Legjobb'
-          'Mind')
-        TabOrder = 2
+          'Leftmost'
+          'Rightmost'
+          'All')
+        TabOrder = 1
       end
       object rgTree: TRadioGroup
-        Left = 13
+        Left = 163
         Top = 40
-        Width = 217
-        Height = 43
-        Caption = 'Fa'
-        Columns = 3
+        Width = 142
+        Height = 84
+        Caption = 'Tree'
         Items.Strings = (
-          'Legbal'
-          'Legjobb'
-          'Mind')
-        TabOrder = 3
+          'Leftmost'
+          'Rightmost'
+          'All')
+        TabOrder = 2
       end
       object StaticText1: TStaticText
         Left = 13
         Top = 15
-        Width = 441
+        Width = 140
         Height = 19
         AutoSize = False
-        Caption = 'Nyelvtani szab'#225'ly bal oldal'#225't melyik poz'#237'ci'#243'ra illessze?'
-        TabOrder = 4
-      end
-      object StaticText2: TStaticText
-        Left = 13
-        Top = 250
-        Width = 441
-        Height = 39
-        AutoSize = False
-        Caption = 
-          'Elker'#252'li azokat a konfigur'#225'ci'#243'kat, melyekb'#337'l egyetlen l'#233'p'#233's tehe' +
-          't'#337', '#233's az elutas'#237't'#243' '#225'llapotba vezet.'
-        TabOrder = 5
+        Caption = 'Type of derivation'
+        TabOrder = 3
       end
       object StaticText5: TStaticText
-        Left = 13
+        Left = 21
         Top = 145
-        Width = 441
+        Width = 396
         Height = 62
         AutoSize = False
         Caption = 
-          'Tipp: A Nyelv n'#233'zetben a Legbal (ill. Legjobb) opci'#243' haszn'#225'lat'#225'v' +
-          'al jelent'#337's teljes'#237'tm'#233'nyn'#246'veked'#233's '#233'rhet'#337' el.'#13#10'Ezt megadhatjuk pl' +
-          '. a #pragma leftmost utas'#237't'#225'ssal is.'
-        TabOrder = 6
+          'Hint: Language generation is much faster with the Leftmost (or R' +
+          'ightmost) option. You can force this setting from code with "#pr' +
+          'agma leftmost".'
+        TabOrder = 4
       end
     end
     object TabSheet2: TTabSheet
-      Caption = 'T-g'#233'p, VA'
+      Caption = 'T-machine, PDA'
       ImageIndex = 3
       ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
+      ExplicitTop = 32
       object edDbInput: TLabeledEdit
         Left = 189
         Top = 104
         Width = 114
-        Height = 22
-        EditLabel.Width = 108
+        Height = 24
+        EditLabel.Width = 103
         EditLabel.Height = 16
-        EditLabel.Caption = 'Bemenet hossza:'
+        EditLabel.Caption = 'Max input length'
         LabelPosition = lpLeft
         TabOrder = 0
       end
@@ -259,10 +230,10 @@ object PrefDlg: TPrefDlg
         Left = 189
         Top = 136
         Width = 114
-        Height = 22
-        EditLabel.Width = 180
+        Height = 24
+        EditLabel.Width = 95
         EditLabel.Height = 16
-        EditLabel.Caption = 'Konfigur'#225'ci'#243' / bemenet (db):'
+        EditLabel.Caption = 'Max step count'
         LabelPosition = lpLeft
         TabOrder = 1
       end
@@ -270,24 +241,18 @@ object PrefDlg: TPrefDlg
         Left = 15
         Top = 18
         Width = 422
-        Height = 79
+        Height = 55
         AutoSize = False
         Caption = 
-          'T-g'#233'p '#233's veremautomata eset'#233'n a program k'#252'l'#246'nb'#246'z'#337' bemenetekre fu' +
-          'ttatja le az automat'#225't, '#233's vizsg'#225'lja hogy termin'#225'l-e. Al'#225'bb mega' +
-          'dhat'#243' a vizsg'#225'lt bemenetek maxim'#225'lis hossza (_-t'#243'l k'#252'l'#246'nb'#246'z'#337' kar' +
-          'akterek sz'#225'ma), valamint hogy egy bemenetre legfeljebb h'#225'ny konf' +
-          'igur'#225'ci'#243't vizsg'#225'ljon:'
+          'For a Turing Machine or PDA the application generates all possib' +
+          'le inputs with the chosen maximal length, and tries to accept th' +
+          'is input within the chosen maximal step count.'
         TabOrder = 2
       end
     end
     object Konyvt: TTabSheet
-      Caption = 'K'#246'nyvt'#225'rak'
+      Caption = 'Libraries'
       ImageIndex = 2
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       DesignSize = (
         478
         362)
@@ -297,7 +262,7 @@ object PrefDlg: TPrefDlg
         Width = 473
         Height = 288
         Anchors = [akLeft, akTop, akRight, akBottom]
-        ItemHeight = 14
+        ItemHeight = 16
         TabOrder = 0
         OnClick = ListBox1Click
       end
@@ -325,7 +290,7 @@ object PrefDlg: TPrefDlg
           Left = 2
           Top = 2
           Width = 437
-          Height = 22
+          Height = 24
           Anchors = [akLeft, akTop, akRight]
           TabOrder = 0
         end
@@ -352,18 +317,14 @@ object PrefDlg: TPrefDlg
       end
     end
     object TabSheet3: TTabSheet
-      Caption = 'St'#237'lusok'
+      Caption = 'Styles'
       ImageIndex = 4
-      ExplicitLeft = 0
-      ExplicitTop = 0
-      ExplicitWidth = 0
-      ExplicitHeight = 0
       object GroupBox3: TGroupBox
         Left = 3
         Top = 3
         Width = 470
         Height = 62
-        Caption = 'Ablak'
+        Caption = 'Window'
         TabOrder = 0
         object TntLabel1: TTntLabel
           Left = 128
@@ -377,7 +338,7 @@ object PrefDlg: TPrefDlg
           Top = 22
           Width = 89
           Height = 28
-          Caption = 'Bet'#369't'#237'pus...'
+          Caption = 'Font...'
           TabOrder = 0
           OnClick = Button5Click
         end
@@ -387,7 +348,7 @@ object PrefDlg: TPrefDlg
         Top = 72
         Width = 470
         Height = 62
-        Caption = 'K'#243'dszerkeszt'#337
+        Caption = 'Editor'
         TabOrder = 1
         object TntLabel2: TTntLabel
           Left = 128
@@ -401,7 +362,7 @@ object PrefDlg: TPrefDlg
           Top = 22
           Width = 89
           Height = 28
-          Caption = 'Bet'#369't'#237'pus...'
+          Caption = 'Font...'
           TabOrder = 0
           OnClick = Button6Click
         end
@@ -411,7 +372,7 @@ object PrefDlg: TPrefDlg
         Top = 141
         Width = 470
         Height = 61
-        Caption = 'Anim'#225'ci'#243
+        Caption = 'Animation'
         TabOrder = 2
         object TntLabel3: TTntLabel
           Left = 128
@@ -431,7 +392,7 @@ object PrefDlg: TPrefDlg
           Top = 22
           Width = 89
           Height = 28
-          Caption = 'Bet'#369't'#237'pus...'
+          Caption = 'Font...'
           TabOrder = 0
           OnClick = Button7Click
         end

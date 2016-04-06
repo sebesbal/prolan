@@ -24,19 +24,15 @@ type
     GroupBox2: TGroupBox;
     edTime: TLabeledEdit;
     edDb: TLabeledEdit;
-    CheckBox1: TCheckBox;
     rgList: TRadioGroup;
     rgLang: TRadioGroup;
     rgTree: TRadioGroup;
     StaticText1: TStaticText;
-    StaticText2: TStaticText;
-    Bevel2: TBevel;
     edLength: TLabeledEdit;
     TabSheet2: TTabSheet;
     edDbInput: TLabeledEdit;
     edKonfp: TLabeledEdit;
     StaticText4: TStaticText;
-    StaticText3: TStaticText;
     CheckBox2: TCheckBox;
     GroupBox1: TGroupBox;
     edAniTime: TLabeledEdit;
@@ -59,6 +55,8 @@ type
     Bevel1: TBevel;
     StaticText5: TStaticText;
     edTreeLim: TLabeledEdit;
+    CheckBox1: TCheckBox;
+    GroupBox6: TGroupBox;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure PageControl1DrawTab(Control: TCustomTabControl; TabIndex: Integer;

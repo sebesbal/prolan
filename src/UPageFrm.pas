@@ -464,8 +464,8 @@ end;
 
 procedure TPageFrm.SetCursor(Line, Col: Integer);
 begin
-  StatusBar1.Panels[0].Text := 'Sor: ' + IntToStr(Line);
-  StatusBar1.Panels[1].Text := 'Oszl: ' + IntToStr(Col);
+  StatusBar1.Panels[0].Text := 'Ln: ' + IntToStr(Line);
+  StatusBar1.Panels[1].Text := 'Col: ' + IntToStr(Col);
 end;
 
 procedure TPageFrm.SetFileName(const Value: WideString);

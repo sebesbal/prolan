@@ -38,11 +38,11 @@ object PageFrm: TPageFrm
       Height = 19
       Panels = <
         item
-          Text = 'Sor:'
+          Text = 'Ln:'
           Width = 50
         end
         item
-          Text = 'Oszl.:'
+          Text = 'Col:'
           Width = 50
         end
         item
@@ -54,7 +54,7 @@ object PageFrm: TPageFrm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010105000C006C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000C00740010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
