@@ -40,11 +40,12 @@ void Oszt(nterm X, nterm Y)
 	all Q = X;
 }
 
-// X := X*Y, Y := Y
-void Szor(nterm X, nterm Y)
+// X := X*Y, Y := Y, X > 0, Y > 0
+void mul(nterm X, nterm Y)
 {
 	nterm Z, V, A, B;
 	all Y = A B;
+	A = eps;
 	while (A = eps) 
 	{
 		all X = Z V;	

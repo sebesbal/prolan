@@ -1,0 +1,35 @@
+/* ----------------------------------------------
+		L(G) = {a^(2^n) | n > 0}
+*/
+
+#pragma leftmost
+start S;
+nterm Z;
+term a;
+
+void pelda1()
+{
+	f1, f2, f3;
+	f1: if (S = Z Z)	f1; 	else f2;
+	f2: if (Z = S)		f2; 	else f1, f3;
+	f3: if (S = a)		f3;	else exit;
+}
+
+void pelda2()
+{
+	some { all S = Z Z; all Z = S; }
+	all S = a;
+}
+
+void pelda3()
+[
+	{ all S = Z Z; all Z = S; }
+	all S = a;
+]
+
+void main()
+{
+	pelda1();
+	//pelda2();
+	//pelda3();
+}
