@@ -1,0 +1,55 @@
+/*
+				TUTORIAL 2.
+				
+		- blocks
+		- macros
+		- include
+		- while
+		- all
+		
+On the end of the day, every command will be translated to grammar rules.
+Therefore every command manipulates the current sentential form (CSF).
+In other words, a Prolan program has only one variable (the CSF),
+and every command manipulates this variable. The program doesn't have other memory.
+There is no local variables, or variables at all, hence there is no stack, and no functions.
+
+What we have is macro. The syntax is like C functions, eg.:
+	void apple(nterm X, nterm Y) {...}
+The parameters are always nterm. Hence when you call the macro, you can pass only nterm's, not words or anything else (this restriction should be removed later).
+The compilation of the macro is just a macro substitution (Prolan copy-pastes the body with symbol substitutions).
+
+	
+*/
+
+// Force leftmost derivation (see Options/Grammars)
+// try to comment out this directive then watch the Tree view
+#pragma leftmost
+
+// include math macros
+#include "math.pla"
+
+// declare 'S' as start symbol
+start S;
+
+// declare 'a' as terminal symbol
+term a;
+
+// nA = "The number of A's in the current sentential form."
+// Precondition:  nA = 1
+// Postcondition: nA = nB!, nB = 0
+void fact(nterm A, nterm B)
+{
+	while (B = B)	   // while nB > 0
+	{
+		mul(A, B); // nA := nA * nB, nB is unchanged
+		B = eps;   // nB := nB - 1
+	}
+}
+
+void main()
+{
+	nterm X, N;
+	S = X N N N;	// nX := 1, nN := 3
+	fact(X, N);	// nX := 3!, nN := 0
+	all X = a;	// na := nX, nX := 0
+}

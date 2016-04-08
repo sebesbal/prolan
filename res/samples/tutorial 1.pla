@@ -1,0 +1,55 @@
+/*
+				TUTORIAL 1.
+				
+		- labels
+		- gotos
+		- conditionals
+		- grammar rules
+
+Prolan uses a simple C-like language to simulate different kind grammars
+and automatons. In this file I show an example for a simple formal grammar,
+but the language constructs (label, goto, if etc.) for automatons are the same.
+
+The rules of the grammar:
+	S -> S S
+	S -> a
+The generated language is:
+	L(G) = { a^n | n > 1 }
+	
+When you run the program (press F5 or use the play button at the top left corner),
+the following things happen:
+- In the central panel of the window appears the generated mathematical definition of
+  the programmed grammar (this definition can be very different from the code).
+  If you don't know programmed grammars (see wikipedia), just ignore this panel.
+- At the right of the window:
+	- List view: you can play around with one derivation's steps.
+		- Try to click on a row and modify the step.
+		- To generate another derivation press F5 again.
+		- Press the play button at List view then watch an animation about the derivation's steps.
+	- Tree view: browse the possible derivations.
+	- Language: check out the generated language.
+*/
+
+start S; // declare 'S' as start symbol
+term a;  // declare 'a' as terminal symbol
+
+// there must be exatly one main()
+void main()
+{	
+f1:	// f1 is a label like in C
+	f2, f3; // goto randomly f2 or f3.
+	
+	// S = S S represents the S -> S S rule.
+	// the logical value of the "S = S S" expression is:
+	//  = "this rule is executable on the current sentential form (CSF)"
+	//  = "there is an S in the CSF"
+	// So, the effect of this line:
+	// If there is an S in the CSF, replace it to S S, then goto f1
+f2:	if (S = S S) f1;
+
+	else exit; // abort the program
+	
+	// If there is an S in the CSF, replace it to "a S", then goto f1.
+	// Else exit
+f3:	if (S = a) f1; else exit;
+}
