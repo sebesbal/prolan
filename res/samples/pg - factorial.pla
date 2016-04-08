@@ -1,22 +1,32 @@
+// Force leftmost derivation (see Options/Grammars)
+// try to comment out this directive then watch the Tree view
 #pragma leftmost
-#include "matek.pla"
+
+// include math macros
+#include "math.pla"
+
+// declare 'S' as start symbol
 start S;
 
-// X = "X darabszáma a mondatformában"
-// X := N!,   N := 0
-// Elõfeltétel: X > 0,   N >= 0
+// declare 'a' as terminal symbol
+term a;
 
+// nA = "The number of A's in the current sentential form."
+// Precondition:  nA = 1
+// Postcondition: nA = nB!, nB = 0
 void fact(nterm A, nterm B)
 {
-	A = B;
-	all A = eps;
-	B = A;
-	while (B = eps) Szor(A, B);
+	while (B = B)	   // while nB > 0
+	{
+		mul(A, B); // nA := nA * nB, nB is unchanged
+		B = eps;   // nB := nB - 1
+	}
 }
 
 void main()
 {
 	nterm X, N;
-	S = X N N N;
-	fact(X, N);
+	S = X N N N;	// nX := 1, nN := 3
+	fact(X, N);	// nX := 3!, nN := 0
+	all X = a;	// na := nX, nX := 0
 }
