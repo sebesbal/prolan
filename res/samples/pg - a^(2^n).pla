@@ -7,49 +7,26 @@ start S;
 nterm Z;
 term a;
 
-void pelda1()
+void sample1()
 {
-	// goto label f1 or f2 or f3. ("random" goto)
 	f1, f2, f3;
-	
-	// S = Z Z is the S -> Z Z rule.
-	// the logical value of "S = Z Z" expression:
-	//  = "this rule is executable on the actual sentential form (ASF)"
-	//  = "there is an S in the ASF"
-	// So, the effect of this line:
-	// if there is an S in ASF, change it to Z Z, then goto f1
-	// else goto f2
 	f1: if (S = Z Z)	f1; 	else f2;
-	
-	// If there is a Z in the ASF, change it to S, then goto f2.
-	// Else goto f1 or f3
 	f2: if (Z = S)		f2; 	else f1, f3;
-	
-	// If there is an S in the ASF, change it to 'a', then goto f3
-	// Else goto exit. (abort the process)
 	f3: if (S = a)		f3;	else exit;
 }
 
-void pelda2()
+void sample2()
 {
-	// execute the block zero or several times
+	// execute the block randomly zero or several times
 	some
 	{
-		// change all S's to Z Z
-		// it's the same as
-		// f1: if (S = Z Z) goto f1;
-		//	or
-		// while (S = Z Z) { }
 		all S = Z Z;
-		
-		// changes all Z's to S
 		all Z = S;
 	}
-	// changes all S's to a
 	all S = a;
 }
 
-void pelda3()
+void sample3()
 [
 	{ all S = Z Z; all Z = S; }
 	all S = a;
@@ -57,7 +34,7 @@ void pelda3()
 
 void main()
 {
-	//pelda1();
-	pelda2();
-	//pelda3();
+	//sample1();
+	sample2();
+	//sample3();
 }

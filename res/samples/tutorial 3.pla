@@ -1,0 +1,43 @@
+/*
+				TUTORIAL 3.
+				
+		- leftmost derivation
+		- all
+*/
+
+// Examine only leftmost derivations. This speeds up the process, 
+// and in the most cases, generates the same language. Try to
+// comment out this directive, run example_2_1() again, then watch the views.
+#pragma leftmost
+
+start S;
+nterm Z;
+term a;
+
+// L(G) = {a^(2^n) | n > 0}
+void example_2_1()
+{
+	f1, f2, f3;
+f1:	if (S = Z Z)	f1; 	else f2;
+f2:	if (Z = S)	f2; 	else f1, f3;
+f3:	if (S = a)	f3;	else exit;
+}
+
+// Lines like f1, f2 and f3 are very frequent: replace every instance of a symbol to something,
+// then goto to the next line. The "all" command exactly does this.
+
+// L(G) = {a^(2^n) | n > 0}
+void example_2_2()
+{
+	f1, f2, f3;
+f1:	all S = Z Z;
+f2:	all Z = S;
+	f1, f3;
+f3:	all S = a;
+}
+
+void main()
+{
+	example_2_1();
+	//example_2_2();
+}
