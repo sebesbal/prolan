@@ -1,0 +1,31 @@
+/* -----------------------------------------
+		Turing machine
+	Decided language: palindromes
+-------------------------------------------*/
+
+#pragma turing
+term a, b;
+
+void f(term x)
+{
+	right(_);
+	if (_) accept;
+	while (! _) right;
+	left;
+	(x); left(_);
+}
+
+void main()
+{
+	input(a b a a b a a b a);
+	
+	while (! _)
+	{
+		if (a) f(a);
+		else if (b) f(b);
+		while (!_) left;
+		right;
+	}
+	
+	accept;
+}

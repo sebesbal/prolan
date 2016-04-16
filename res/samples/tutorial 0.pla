@@ -1,43 +1,41 @@
 /*
 				TUTORIAL 0.
 				
-		- "Hello world!"
+		- Basic functionality
 
-Prolan uses a simple C-like language to simulate different kind of grammars
-and automatons. In this file there is a programmed grammar what calculates the factorial
-of a number.
+With Prolan you can simulate different kind of grammars and automatons.
+There are two method:
+- You can fill out forms for simulating grammars, without coding.
+  Watch the samples or create a new grammar: File > New > Form...
+- For advanced use of grammars and for the automatons you can use a C-like language,
+  the other tutorial files discusses this topic.
 
-When you compile the program (press F5 or use the play button at the top left corner),
+The below code is a programmed grammar what generates strings with 2^n lengths.
+It's only for demonstrating the usage of Prolan.
+
+When you run the program (press F5 or use the play button at the top left corner),
 the following things happen:
-- In the central panel of the window appears the generated mathematical definition of
-  the programmed grammar.
+- In the central panel of the window appears the mathematical definition of
+  the programmed grammar (it's generated from the code).
 - At the right of the window:
-	- List view: you can play around with one derivation's steps.
-		- Try to click on a row and modify the step.
+	- List tab: you can play around with one derivation's steps.
+		- Try to click on a row and modify the step (not every step is modifiable).
+		- Watch the colored characters and guess out the meanings...
 		- To generate another derivation press F5 again.
-		- Press the play button at List view to "play" an animated derivation.
-	- Tree view: browse the possible derivations.
-	- Language view: check out the generated language.
+		- Click the play button at List view to "play" an animated derivation.
+	- Tree tab: browse the possible derivations.
+	- Language tab: check out the generated language.
 */
 
 #pragma leftmost
-#include "math.pla"
 start S;
+nterm A;
 term a;
-
-void fact(nterm A, nterm B)
-{
-	while (B = B)
-	{
-		mul(A, B);
-		B = eps;
-	}
-}
 
 void main()
 {
-	nterm X, N;
-	S = X N N N; // calculates 3!. change the number of N's and run again.
-	fact(X, N);
-	all X = a; // the result will be "a a a a a a"
+	f1, f2, f3;
+f1:	if (S = A A)	f1; 	else f2;
+f2:	if (A = S)	f2; 	else f1, f3;
+f3:	if (S = a)	f3;	else exit;
 }

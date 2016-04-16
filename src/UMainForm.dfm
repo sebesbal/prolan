@@ -87,18 +87,6 @@ object MainForm: TMainForm
       inherited StatusBar1: TStatusBar
         Top = 54
         Width = 1157
-        Panels = <
-          item
-            Text = 'Ln:'
-            Width = 50
-          end
-          item
-            Text = 'Col:'
-            Width = 50
-          end
-          item
-            Width = 50
-          end>
         ExplicitTop = 54
         ExplicitWidth = 1157
       end
@@ -106,7 +94,7 @@ object MainForm: TMainForm
     inherited ImageList1: TImageList
       Top = 248
       Bitmap = {
-        494C010105000C00BC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010105000C00C00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000002000000001002000000000000020
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -385,10 +373,20 @@ object MainForm: TMainForm
         Hint = 'Bet'#246'lt'#233's'
       end
       inherited ActionCompile: TAction
-        Hint = 'Futtat'#225's'
+        Caption = 'Run'
+        Hint = 'Run'
+        ShortCut = 116
       end
       inherited ActionSave: TAction
         Hint = 'Ment'#233's'
+      end
+      inherited ActionClose: TAction
+        Caption = 'Close'
+        Hint = 'Close'
+      end
+      inherited ActionCloseAll: TAction
+        Caption = 'Close all'
+        Hint = 'Close all'
       end
     end
     inherited PopupMenu1: TPopupMenu
@@ -401,7 +399,7 @@ object MainForm: TMainForm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010106009000B40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106009000B80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3
@@ -713,11 +711,9 @@ object MainForm: TMainForm
       end
       object ActionClose1: TMenuItem
         Action = PageFrame1.ActionClose
-        Caption = 'Close'
       end
       object ActionCloseAll1: TMenuItem
         Action = PageFrame1.ActionCloseAll
-        Caption = 'Close All'
       end
       object N2: TMenuItem
         Caption = '-'

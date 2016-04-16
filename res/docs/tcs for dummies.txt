@@ -1,0 +1,68 @@
+First of all: If you don't like tutorials, just try out the samples, and guess out what's going on. I think it's just a moderately difficult puzzle. And if it doesn't work anyway, read the manual...
+
+Prolan uses a C-like language to simulate different kind of grammars and automatons. I try to explain this system from a very practical aspect and avoid mathematical concepts. Instead definitions, I'll show you C code, from what you can understand the working principle of the concept. Nevertheless, some comments are inevitable (like in the real life).
+
+ This tutorial can be a "theoretical computer science for dummies". I think this approach can help students who just learn these math topics, but have some programming skills.
+
+1. Formal Grammars
+A formal grammar is a program for a very limited machine:
+- This machine has only a string as memory (call it M).
+- The machine can check whether a substring occurs in M, and if so, replace it with an other string.
+- A program is merely a set of replacing rules (eg.: "S"->"A", "A"->"cat", "A"->"dog").
+- Initially the content of M is "S".
+- During the run, the program tries to apply this rules randomly until there is no applicable rule left.
+- These non transferable strings are the results of the process (the generated "language" of the grammar).
+
+In our example the possible "runs" are: { "S"->"A"->"cat", "S"->"A"->"dog" }.
+So, the generated language is: { "cat", "dog" }
+
+That's it. It doesn't sound too much, but this system is Turing-complete, what means it calculates everything what is calculable.
+
+In Prolan, the form of a grammar rule is: A = c a t. 
+The code of the above grammar is:
+[
+	S = A;
+	A = c a t;
+	A = d o g;
+]
+
+2. Programmed Formal Grammars
+It's a formal grammar on caffeine.
+- The new machine has also has the rules, but it also has a set of states (eg. f1, f2, f3)
+- The current state of the machine specifies which rule will be tried to apply.
+- Depending on whether the rule is applicable or not, the machine jumps to other states.
+Example with Prolan code:
+
+goto f1, f2, f3;
+f1: if (S = A A)	goto f1; else goto f2;
+f2: if (A = S)		goto f2; else goto f1, f3;
+f3: if (S = a)		goto f3; else exit;
+
+Explanation:
+
+Randomly go to label f1, f2 or f3.
+f1: If there is S in M, replace it with A A, then go to f1. Otherwise go to f2.
+f2: If there is A in M, replace it with S, then go to f2. Otherwise go to f1 or f3.
+f3: If there is S in M, replace it with a, then go to f3. Otherwise exit.
+
+Some runs:
+- S->a
+- S->AA->aA->aa
+- S->AA->SA->SS->AAS->AAAA->aAAA->...->aaaa
+
+The generated language is: { a, a a, a a a a,... }. (the length is always 2^n)
+
+Notes:
+- Try to generate this language with a non programmed formal grammar with 3 rules. You can't do it. The programmed grammar is more powerful, it can do the same than non programmed grammars, but with fewer and simpler rules.
+- You can think about the "random goto" in two ways:
+	- It is really random, and if we start the program many times, every possible outcome will appear one day.
+	- The machine tries out every possibilities with a simple backtracking (that is what Prolan does in fact).
+- Rule application like S = A A is a logical expression: it's value is true if "S" occurs in M, otherwise false. So you can use "S = A A" as a bool.
+- We can simulate non programmed grammars with programmed grammars. Eg.:
+	f0: goto f1, f2, f3;
+	f1: if (S = A)			goto f0; else goto f0;
+	f2: if (A = d o g)		goto f0; else goto f0;
+	f3: if (A = c a t)		goto f0; else goto f0;
+	Se the brackets in the first example. It's a syntactic sugar for the above code.
+- As you can see, with if, goto, labels and the "=" operator we can construct any programmed (and non programmed) formal grammars.
+

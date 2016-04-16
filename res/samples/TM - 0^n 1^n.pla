@@ -1,0 +1,42 @@
+/* -----------------------------------------
+		Turing machine
+	Decided language: { 0^n 1^n | n >= 0 }
+-------------------------------------------*/
+
+// Declare this code as a TM
+#pragma turing
+
+// Tape alphabet symbols. The blank symbol is _.
+term 0, 1;
+
+void main()
+{
+	// Initial tape content. (used for List and Tree view, and skipped for the Language view)
+	input(0 0 1 1);
+	
+	while (!_) // while not reading _
+	{
+		// the first symbol must be 0 (otherwise exit)
+		(0);	
+
+		// delete it (write _ on it), then step right
+		right(_);
+		
+		// find the last non _ symbol
+		while (!_) right;
+		left;
+		
+		// the last symbol must be 1 (otherwise exit)
+		(1);
+		
+		// delete it then step left
+		left(_);
+		
+		// go back to the begining
+		while (!_) left;
+		right;
+	}	
+	
+	// go to the accept state
+	accept;
+}

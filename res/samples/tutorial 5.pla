@@ -1,0 +1,44 @@
+/*
+				TUTORIAL 5.
+				
+		- Macros
+		
+As you can see in the examples, we have only one variable (the M, see chapter 1.),
+and every command manipulates this variable. So, there are no other memory than M, 
+there is no stack, therefore no functions. What look like functions and local variables,
+in fact, are macros and local symbols. The macro parameter must be nterm or term,
+and the return value must be void or bool. (This syntax is a bit confusing, but at least
+simple (against the multiline C macros), and the restrictions should be removed later.)
+
+En example:
+*/
+
+// this macro duplicates the number of a symbol in M
+void duplicate(nterm A)
+{
+	nterm B;		// declare local symbol
+	all A = B B;		// replace all A with B B
+	all B = A;		// replace all B with A.
+}
+
+void main()
+{
+	start S;		// M := S
+	term a;
+	nterm X;
+	S = X X;		// M := X X
+	duplicate(X);		// M := X X X X
+	all X = a;		// M := a a a a
+}
+
+
+/*
+
+PS: A macro can't call itself (directly or indirectly), so you can't write code like this:
+void foo()
+{
+	foo();
+	...
+}
+
+*/

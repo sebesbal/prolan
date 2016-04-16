@@ -1,45 +1,58 @@
-/*
-				TUTORIAL 3.
-				
-		- macros
-		- local symbols
-		- while
-		- all
-		
-On the end of the day, every command will be translated to grammar rules.
-Therefore every command manipulates the current sentential form (CSF).
-In other words, a Prolan program has only one variable (the CSF),
-and every command manipulates this variable. The program doesn't have 
-other memory, hence there is no stack, and no functions.
+#pragma leftmost
+start S; term a, b;
 
-What we have is only macro. The syntax is like C functions, eg.:
-	void apple(nterm X, nterm Y) {...}
-But the compilation is just a macro substitution.
-The parameters are must be nterm (nonterminal symbol).
-Hence when you call the macro, you can pass only nterm's
-(this restriction should be removed later).
+/*
+				TUTORIAL 4.
+				
+		- Formal Grammars (hereinafter FG)
+		- try
+		- square brackets
+		
+FG is a special PG. It doesn't have labels and gotos.
+It has only replacing rules, and tries to apply them in random order. Eg.:
+[
+	S = S S;
+	S = a S b;
+	S = eps; // "eps" means empty string
+]
+
+Some possible runs:
+- S->aSb->ab
+- S->SS->...->abab
+- S->aSb->aSSb->aababb
+
+To simulate this behavior, we can write a PG:
 */
 
-start S; // CSF := S
-
-// this macro duplicates the number of a symbol in the CSF
-void duplicate(nterm A)
+void example_4_1()
 {
-	nterm B;		// declare local symbol
-	while (A = A)		// while there is A in CSF
-	{
-		A = B B;	// replace one A to B B
-	}
-	// replace all B's to A's. it's just a syntactic sugar for
-	// while (B = A) { }
-	all B = A;		
+f0:	f1, f2, f3;
+f1:	if (S = S S)	f0;	else f0;
+f2:	if (S = a S b)	f0;	else f0;
+f3:	if (S = eps)	f0;	else f0;
 }
+
+// The "try" is for avoid exit on the case of failed replacing:
+void example_4_2()
+{
+f0:	f1, f2, f3;
+f1:	try S = S S;		f0;
+f2:	try S = a S b;		f0;
+f3:	try S = eps;		f0;
+}
+
+// And finally, the most simpler equivalent form with square brackets.
+// It's an infinite loop what tries to execute a randomly choosen line.
+void example_4_3()
+[
+	S = S S;
+	S = a S b;
+	S = eps;
+]
 
 void main()
 {
-	term a;
-	nterm X;
-	S = X X;		// CSF := X X
-	duplicate(X);		// CSF := X X X X
-	all X = a;		// CSF := a a a a
+	example_4_1();
+	//example_4_2();
+	//example_4_3();
 }

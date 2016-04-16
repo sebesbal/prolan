@@ -1,9 +1,8 @@
 /* ----------------------------------------------
-		Reguláris kifejezés
-		Turing-géppel
+	Regular expressions with Turing Machine
 		
-& = konkatenáció
-x. = x-et olvas, majd jobbra lép a fejjel)	
+&  = acts like concatenation
+x. = writes x then step right
 -------------------------------------------------*/
 #pragma turing
 
@@ -11,13 +10,13 @@ term 0, 1, 2;
 
 void main()
 {
-	input(0 1 0 0);
+	input(0 1 0 1);
 
-	// a reguláris kifejezés
-	(eps | 1.) & (0.1.)* & (eps | 0.);
+	// regular expression: 1?(01)*0?
+	//(eps | 1.) & (0.1.)* & (eps | 0.);
 	
-	// másik példa:
-	//((0. | 1.) & 1.)* & (0. | eps);	
+	// ((0|1)1)*0?
+	((0. | 1.) & 1.)* & (0. | eps);	
 
-	(_); accept; // "magic"
+	(_); accept; // magic
 }

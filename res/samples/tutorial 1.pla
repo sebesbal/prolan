@@ -1,38 +1,58 @@
+// some magic, don't care with it now, jump to the title.
+#pragma leftmost // "Use leftmost derivation"
+// Always replace the leftmost occurrance. It has a huge impact on
+// the generated derivations. Try to comment out that line and run again.
+
+start S; // Sets the initial value of M ("start symbol").
+// It can be different from S, but is always S convenctionally.
+
+nterm A; // Declare A as "replaceable" character ("nonterminal symbol").
+
+term a; // Declare 'a' as "non replaceable" character ("terminal symbol").
+
 /*
 				TUTORIAL 1.
 				
-		- label
-		- goto
-		- if
-		- grammar rule
+		- Programmed Grammars (hereinafter PG)
 
-Now simulates a simple formal grammar with these rules:
-	S -> S S
-	S -> a
-The generated language is:
-	L(G) = { a^n | n > 1 }
+Prolan uses a simle C-like language to simulate different kind of grammars and automatons.
+I try to explain this system from a very practical aspect and avoid math or precise
+language specification. Rather I'll show you code, from what you can guess out the working
+principle of math concepts and Prolan. Nevertheless, some comments are inevitable
+(like in real life coding).
+
+In this chapter I explain the PG from the previous chapter. Imagine it:
+- There is a very limited machine, what has only a string as memory (call it M).
+- The starting value of M is "S".
+- One program of this machine consists of lines, what can manipulate M,
+  and can jump to other lines. For example:
 */
 
-start S; // declare 'S' as start symbol. 
-term a;  // declare 'a' as terminal symbol
-
-// there must be exatly one main()
 void main()
-{	
-f1:	// f1 is a label like in C
-	f2, f3; // goto randomly f2 or f3.
-	
-	// S = S S represents the S -> S S rule.
-	// the logical value of the "S = S S" expression is:
-	//  = "this rule is executable on the current sentential form (CSF)"
-	//  = "there is an S in the CSF"
-	// So, the effect of this line:
-	// If there is an S in the CSF, replace it to S S, then goto f1
-f2:	if (S = S S) f1;
-
-	else exit; // abort the program
-	
-	// If there is an S in the CSF, replace it to "a S", then goto f1.
-	// Else exit
-f3:	if (S = a) f1; else exit;
+{
+	f1, f2, f3;
+f1:	if (S = A A)	f1; 	else f2;
+f2:	if (A = S)	f2; 	else f1, f3;
+f3:	if (S = a)	f3;	else exit;
 }
+
+/*
+Explanation:
+Randomly go to label f1, f2 or f3.
+f1: If there is S in M, replace it with A A, then go to f1. Otherwise go to f2.
+f2: If there is A in M, replace it with S, then go to f2. Otherwise go to f1 or f3.
+f3: If there is S in M, replace it with a, then go to f3. Otherwise exit.
+
+Some possible runs ("derivation"):
+- M="S" -> M="a" // going forward skip the M=" "
+- S->AA->aA->aa
+- S->AA->SA->SS->AAS->AAAA->aAAA->...->aaaa
+
+You can check out this derivations after press F5 in the List and Tree view.
+
+The possible outcomes are: {a, aa, aaaa, aaaaaaaa, ...}
+This set is the "generated language" of the PG.
+Check out under the Language tab.
+
+Now you can easily understand the "magic" part on the top of the page.
+*/

@@ -1,43 +1,62 @@
 /*
 				TUTORIAL 3.
 				
-		- leftmost derivation
-		- all
+		- while, all, some
 */
 
-// Examine only leftmost derivations. This speeds up the process, 
-// and in the most cases, generates the same language. Try to
-// comment out this directive, run example_2_1() again, then watch the views.
 #pragma leftmost
-
 start S;
-nterm Z;
+nterm A;
 term a;
 
-// L(G) = {a^(2^n) | n > 0}
-void example_2_1()
+// Watch again our first example:
+void example_3_1()
 {
 	f1, f2, f3;
-f1:	if (S = Z Z)	f1; 	else f2;
-f2:	if (Z = S)	f2; 	else f1, f3;
+f1:	if (S = A A)	f1; 	else f2;
+f2:	if (A = S)	f2; 	else f1, f3;
 f3:	if (S = a)	f3;	else exit;
 }
 
 // Lines like f1, f2 and f3 are very frequent: replace every instance of a symbol to something,
-// then goto to the next line. The "all" command exactly does this.
+// then goto to the next line. The "all" command exactly does this:
 
-// L(G) = {a^(2^n) | n > 0}
-void example_2_2()
+void example_3_2()
 {
 	f1, f2, f3;
-f1:	all S = Z Z;
-f2:	all Z = S;
+f1:	all S = A A;	// replace all S with A A
+f2:	all A = S;	// replace all A with S
 	f1, f3;
-f3:	all S = a;
+f3:	all S = a;	// replace all S with a
+}
+
+// You can use while loops too:
+void example_3_3()
+{
+	while (true)
+	{
+		f1, f2;
+f1:		all S = A A;
+		all A = S;
+	}
+f2:	all S = a;
+}
+
+// The above code is equivalent with the below:
+void example_3_4()
+{
+	some
+	{
+		all S = A A;
+		all A = S;
+	}
+	all S = a;
 }
 
 void main()
 {
-	example_2_1();
-	//example_2_2();
+	example_3_1();
+	//example_3_2();
+	//example_3_3();
+	//example_3_4();
 }

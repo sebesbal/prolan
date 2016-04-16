@@ -1,7 +1,7 @@
 /*
 				TUTORIAL 2.
 				
-		- logical expression as command
+		- Logical expression as command
 */
 
 start S;
@@ -9,7 +9,7 @@ term a, b, c;
 nterm A, B, C;
 
 // L(G) = {a^n b^n c^n | n >= 1}
-void example_1_1()
+void example_2_1()
 {
 f0:	if (S = A B C) 	f1, f4; 	else exit;
 f1:	if (A = a A) 	f2; 		else exit;
@@ -20,17 +20,17 @@ f5:	if (B = b)	f6; 		else exit;
 f6:	if (C = c)	exit; 		else exit;
 }
 
-// As you see, "else exit" is very frequent.
-// Also very frequent, that after an if we want to goto to the next line.
-// eg.:
-// f2: if (B = b B) 	f3; else exit;
-// f3: ...
-// So, let this be the default behaviour for logical expressions as commands:
-// if it is true, just goto the next line, if it is false, exit.
-// Whit this rule, example_1_2() can be written much simpler:
-
-// L(G) = {a^n b^n c^n | n >= 1}
-void example_1_2()
+/*
+As you see, in this code "else exit" is very frequent.
+Also very frequent, that after an if we want to goto to the next line.
+eg.:
+f2: if (B = b B) 	f3; else exit;
+f3: ...
+So, let this be the default behaviour for logical expressions as commands:
+if it is true, just goto the next line, if it is false, exit.
+Whit this rule, example_1_2() can be written much simpler:
+*/
+void example_2_2()
 {
 	S = A B C;
 	f1, f4;
@@ -41,10 +41,10 @@ f1: 	A = a A;
 f4: 	A = a;
 	B = b;
       	C = c;
-}	
+}
 
 void main()
 {
-	example_1_1();
-	//example_1_2();
+	example_2_1();
+	//example_2_2();
 }
