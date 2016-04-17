@@ -1,0 +1,76 @@
+/* --------------------------------------------
+	Deterministic Pushdown Automaton (PDA)
+	
+	L = { 0^n 1^n | n >= 0 }
+
+
+We handle the PDA's stack as a string:
+The string's first symbol is the "topmost" symbol of the stack.
+The "=" operator is always applied to the first symbol. Eg.:
+
+A = B:	 if A is the topmost symbol on the stack, replace it with B.
+A = B A: if A is the topmost symbol on the stack, push a B to the stack.
+A = eps: if A is the topmost symbol on the stack, pop it.
+
+----------------------------------------------- */
+
+#pragma pushdown
+
+start Z;   // initial stack symbol
+term 0, 1; // the input alphabet
+
+void explicit1()
+{
+// In the q0 state...
+q0:	if      (_)   accept;		// if read blank, go to accepting state
+	else if (0)   { Z = 0 Z; q1; }	// if read 0 and Z is the topmost on the stack, push 0 then go to q1
+	else exit;
+
+// In the q1 state...
+q1:	if      (0)   { 0 = 0 0; q1; } // if read 0 and 0 is the topmost, push 0 then go to q1
+	else if (1)   { 0 = eps; q2; } // if read 1 and 0 is the topmost, pop it then go to q2
+	else exit;
+
+// In the q2 state...
+q2:	if      (1)   { 0 = eps; q2; } // if read 1 and 0 is the topmost, pop it then go to q2
+	else if (eps) { Z = eps; q0; } // skip reading, if Z is the topmost pop it then go to q0
+	else exit;
+}
+
+// this is equivalent to explicit1(), but simpler (state works like a switch).
+void explicit2() 
+{
+q0: 	state { 
+		_:   accept; 		// if read blank, go to accepting state
+		0:   { Z = 0 Z; q1; }	// if read 0 and Z is the topmost on the stack, push 0 then go to q1
+	}
+
+q1: 	state {
+		0:   { 0 = 0 0; q1; }
+		1:   { 0 = eps; q2; }
+	}
+
+q2:	state {
+		1:   { 0 = eps; q2; }
+		eps: { Z = eps; q0; }	
+	}
+}
+
+void simple()
+{
+	if    (_)     accept;	// if read blank, go to the accepting state
+              (0);    Z = 0 Z;	// read one 0 (otherwise exit), check Z is the topmost (otherwise exit), then push 0 to the stack
+	while (0)     0 = 0 0;	// while reads 0, check 0 is the topmost, and push 0 to the stack
+	while (1)     0 = eps;	// while reads 1, check 0 is the topmost, then pop it
+	      (eps);  Z = Z;	// skip reading, check Z is the topmost, and leave it
+	if    (_)     accept;	// if read blank, go to the accepting state
+	// if we are here, the input is rejected
+}
+
+void main() 
+{
+	input(0 0 1 1);
+	explicit1();
+	//explicit2();
+	//simple();
+}
