@@ -1,9 +1,9 @@
 /* ----------------------------------------------
-		MISS3 Lindemayer-rendszer
-		    x* - xxx nyelv
+		MISS3 Lindemayer-system
+		L(G) = {x^n | n != 3}
 				
-ábécé: {x}	
-helyettesítések: o(x) = { eps, xx, xxxxx }
+alphabet: {x}	
+rules: x-> eps, x->xx, x->xxxxx
 -------------------------------------------------*/
 
 #pragma lindenmayer

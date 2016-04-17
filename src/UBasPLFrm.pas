@@ -260,29 +260,29 @@ begin
   begin
     SG.Rows[0].Clear;
     SG.Rows[0].Add('ID');
-    SG.Rows[0].Add('Bal oldal');
-    SG.Rows[0].Add('Jobb oldal');
+    SG.Rows[0].Add('Left');
+    SG.Rows[0].Add('Right');
     SG.Rows[0].Add(gsig);
     SG.Rows[0].Add(gfi);
   end
   else
   begin
     SG.Rows[0].Clear;
-    SG.Rows[0].Add('Bal oldal');
-    SG.Rows[0].Add('Jobb oldal');
+    SG.Rows[0].Add('Left');
+    SG.Rows[0].Add('Right');
   end;
 //  TntMemo1.Lines.Clear;
 //  TntMemo1.Lines.Add('Leírás:');
-  TntMemo1.Text := 'Leírás:';
+  TntMemo1.Text := 'Description:';
 end;
 
 constructor TBasPLFrame.Create(AOwner: TComponent);
 begin
   inherited;
   ProgMode := true;
-  def.Cells[0, 0] := 'Start szimbólum';
-  def.Cells[1, 0] := 'Nemterminálisok';
-  def.Cells[2, 0] := 'Terminálisok';
+  def.Cells[0, 0] := 'Start symbol';
+  def.Cells[1, 0] := 'Nonterminals';
+  def.Cells[2, 0] := 'Terminals';
   def.HideSelection;
   sg.HideSelection;
 end;

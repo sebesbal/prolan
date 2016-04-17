@@ -11,7 +11,7 @@ start S;
 // declare 'a' as terminal symbol
 term a;
 
-// nA = "The number of A's in the current sentential form."
+// nA = "The number of A's in M."
 // Precondition:  nA = 1
 // Postcondition: nA = nB!, nB = 0
 void fact(nterm A, nterm B)

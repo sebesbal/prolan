@@ -9,7 +9,7 @@ object RunFrm: TRunFrm
     Top = 0
     Width = 521
     Height = 547
-    ActivePage = TabSheet3
+    ActivePage = TabSheet2
     Align = alClient
     ParentShowHint = False
     ShowHint = True
@@ -38,12 +38,12 @@ object RunFrm: TRunFrm
         Align = alClient
         Columns = <
           item
-            Caption = 'Mondatforma'
+            Caption = 'Sentential form'
             MinWidth = 10
             Width = 250
           end
           item
-            Caption = 'Szab'#225'ly'
+            Caption = 'Rule'
             MinWidth = 10
             Width = 250
           end>
@@ -145,7 +145,7 @@ object RunFrm: TRunFrm
         end
         inherited ImageList1: TImageList
           Bitmap = {
-            494C010104000800380010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+            494C010104000800400010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
             0000000000003600000028000000400000002000000001002000000000000020
             0000000000000000000000000000000000000000000000000000000000000000
             0000000000000000000000000000000000000000000000000000000000000000
@@ -422,7 +422,7 @@ object RunFrm: TRunFrm
         Top = 119
         Width = 59
         Height = 21
-        Caption = 'Tov'#225'bb'
+        Caption = 'More'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
         Font.Height = -11
@@ -495,6 +495,10 @@ object RunFrm: TRunFrm
     object TabSheet3: TTabSheet
       Caption = 'Language'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object lvLang: TTntListView
         Left = 0
         Top = 0
@@ -521,7 +525,7 @@ object RunFrm: TRunFrm
     Left = 192
     Top = 96
     Bitmap = {
-      494C010103000800380010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103000800400010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3

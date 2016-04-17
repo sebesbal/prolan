@@ -17,6 +17,10 @@ object PlFrm: TPlFrm
     object TabSheet1: TTabSheet
       Hint = 'A nyelvtan szab'#225'lyai, az automata '#225'llapotai'
       Caption = 'Programmed grammar'
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object ListView1: TTntListView
         Left = 0
         Top = 0
@@ -57,6 +61,10 @@ object PlFrm: TPlFrm
       Hint = 'A pontos matematikai defin'#237'ci'#243
       Caption = 'Definition'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object TntMemo1: TTntMemo
         Left = 0
         Top = 0

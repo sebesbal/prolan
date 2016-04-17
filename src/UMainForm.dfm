@@ -94,7 +94,7 @@ object MainForm: TMainForm
     inherited ImageList1: TImageList
       Top = 248
       Bitmap = {
-        494C010105000C00C00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010105000C00C80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000002000000001002000000000000020
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -399,7 +399,7 @@ object MainForm: TMainForm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010106009000B80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106009000C00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3
@@ -680,18 +680,23 @@ object MainForm: TMainForm
         Caption = 'New'
         object jNyelvtan2: TMenuItem
           Action = PageFrame1.ActionNewGram
+          Caption = 'Form - Formal Grammar'
         end
         object jProgramozottNyelvtan1: TMenuItem
           Action = PageFrame1.ActionNewTablePNY
+          Caption = 'Form - Programmed Grammar'
         end
         object ProgramPNY1: TMenuItem
           Action = PageFrame1.ActionNewProgGram
+          Caption = 'Program - Programmed Grammar'
         end
         object ProgramTG1: TMenuItem
           Action = PageFrame1.ActionNewProgTG
+          Caption = 'Program - Turing Machine'
         end
         object ProgramVA1: TMenuItem
           Action = PageFrame1.ActionNewProgVA
+          Caption = 'Program - PDA'
         end
       end
       object Open1: TMenuItem

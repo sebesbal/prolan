@@ -805,12 +805,12 @@ begin
       lvList.Columns.Clear;
       with lvList.Columns.Add do
       begin
-        Caption := 'Mondatforma';
+        Caption := 'Sentential form';
         Width := (lvList.ClientWidth - 50) div 2;
       end;
       with lvList.Columns.Add do
       begin
-        Caption := 'Szabály';
+        Caption := 'Rule';
         Width := (lvList.ClientWidth - 50) div 2;
       end;
     end;
@@ -820,17 +820,17 @@ begin
       lvList.Columns.Clear;
       with lvList.Columns.Add do
       begin
-        Caption := 'Állapot';
+        Caption := 'State';
         Width := 50;
       end;
       with lvList.Columns.Add do
       begin
-        Caption := 'Szalag';
+        Caption := 'Tape';
         Width := 300;
       end;
       with lvList.Columns.Add do
       begin
-        Caption := ' Olv. Ír Lép Áll.';
+        Caption := ' Read Write Step State';
         Width := 150;
       end;
     end;
@@ -840,7 +840,7 @@ begin
       lvList.Columns.Clear;
       with lvList.Columns.Add do
       begin
-        Caption := 'Állapot';
+        Caption := 'State';
         Width := 50;
       end;
       with lvList.Columns.Add do
@@ -850,12 +850,12 @@ begin
       end;
       with lvList.Columns.Add do
       begin
-        Caption := 'Verem';
+        Caption := 'Stack';
         Width := 100;
       end;
       with lvList.Columns.Add do
       begin
-        Caption := 'Olv. Pop  Push  Áll.';
+        Caption := 'Read Pop  Push  State';
         Width := 150;
       end;
     end;

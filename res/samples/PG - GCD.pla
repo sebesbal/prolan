@@ -1,0 +1,79 @@
+/* ----------------------------------------------
+		Programmed Grammar
+	for computing greatest common divisor (GCD)
+-------------------------------------------------*/
+#pragma leftmost
+start S;
+term a, b;
+
+// nX = "The number of X's in M."
+// nX := nY; nY is unchanged
+void let(nterm X, nterm Y)
+{
+	nterm Z;
+	all X = eps;
+	all Y = Z X;
+	all Z = Y;
+}
+
+// nX := nX - min(nX, nY)
+// nY := nY - min(nX, nY)
+void minus(nterm X, nterm Y)
+{
+	all (X = X) && (Y = eps) && (X = eps);
+}
+
+// nX := max(nX, nY)
+// nY := min(nX, nY)
+void sort(nterm X, nterm Y)
+{
+	nterm Z;
+	all (X = X) && (Y = eps) && (X = Z);
+	if (! X = X) all (Y = X);
+	all Z = X Y;
+}
+
+// nX := [nX/nY]
+// nY := nX mod nY
+void div(nterm X, nterm Y)
+{
+	nterm Q, Z;
+	Y = eps;
+	while (X = Q)
+	{
+		let(Z, Y);
+		minus(X, Z);
+	}
+	if (Z = eps)
+	{
+		Q = eps;
+		all (Z = eps) && (Y = eps);
+	}
+	else all Y = eps;
+	all Q = X;
+}
+
+// nX := gcd(nX, nY)
+// nY := 0
+void gcd(nterm X, nterm Y)
+{
+	nterm Z;
+	sort(X, Y);
+	let(Z, Y);
+	while (Y = Y)
+	{
+		div(X, Y);
+		let(X, Z);
+		let(Z, Y);
+	}
+	all Z = eps;
+}
+
+void main()
+{
+	nterm A, B;
+	S = A A A A	// nA := 4
+	    B B;	// nB := 2
+	gcd(A, B);	// nA := gcd(4, 2) = 2
+	all A = a; 	// na := 2
+}
