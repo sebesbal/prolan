@@ -320,15 +320,21 @@ begin
 end;
 
 procedure TPageFrm.AfterConstruction;
+var s: string;
 begin
   inherited;
   FList := TObjectList.Create(false);
+  s := ExpandFileName(GetCurrentDir + '\..\res\samples\');
+  if (not directoryexists(s)) then
+    s := ExpandFileName(GetCurrentDir + '\samples\');
+
+  FileOpen1.Dialog.InitialDir := s
 end;
 
 procedure TPageFrm.ApplicationEvents1Idle(Sender: TObject; var Done: Boolean);
 begin
   if (Current <> nil) and Current.Modified then
-    StatusBar1.Panels[2].Text := 'Módosított'
+    StatusBar1.Panels[2].Text := 'Modified'
   else
     StatusBar1.Panels[2].Text := '          ';
 end;

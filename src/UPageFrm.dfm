@@ -54,7 +54,7 @@ object PageFrm: TPageFrm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010105000C007C0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010105000C00800010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -331,7 +331,7 @@ object PageFrm: TPageFrm
     Top = 240
     object FileOpen1: TFileOpen
       Category = 'File'
-      Caption = 'Megnyit'#225's...'
+      Caption = 'Open...'
       Dialog.DefaultExt = 'prl'
       Dialog.Filter = 'ProLan Files|*.prl|All Files|*.*'
       Hint = 'Open|Opens an existing file'
@@ -354,7 +354,7 @@ object PageFrm: TPageFrm
     end
     object ActionSaveAs: TAction
       Category = 'File'
-      Caption = 'Ment'#233's m'#225'sk'#233'nt...'
+      Caption = 'Save as...'
       ImageIndex = 2
       ShortCut = 16467
       OnExecute = ActionSaveAsExecute
@@ -372,7 +372,7 @@ object PageFrm: TPageFrm
       OnExecute = ActionNewPGramExecute
     end
     object ActionClose: TAction
-      Caption = 'Bez'#225'r'#225's'
+      Caption = 'Close'
       ShortCut = 16499
       OnExecute = ActionCloseExecute
     end
@@ -399,7 +399,7 @@ object PageFrm: TPageFrm
       OnExecute = ActionNewProgVAExecute
     end
     object ActionFullView: TAction
-      Caption = 'Teljes k'#233'p'
+      Caption = 'Full view'
       OnExecute = ActionFullViewExecute
     end
   end

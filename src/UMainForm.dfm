@@ -94,7 +94,7 @@ object MainForm: TMainForm
     inherited ImageList1: TImageList
       Top = 248
       Bitmap = {
-        494C010105000C00C80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010105000C00D40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000002000000001002000000000000020
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -369,8 +369,7 @@ object MainForm: TMainForm
       inherited FileOpen1: TFileOpen
         Dialog.DefaultExt = ''
         Dialog.Filter = 'ProLan Files|*.pla; *.gr|All Files|*.*'
-        Dialog.InitialDir = 'samples'
-        Hint = 'Bet'#246'lt'#233's'
+        Hint = 'Open'
       end
       inherited ActionCompile: TAction
         Caption = 'Run'
@@ -378,10 +377,12 @@ object MainForm: TMainForm
         ShortCut = 116
       end
       inherited ActionSave: TAction
-        Hint = 'Ment'#233's'
+        Hint = 'Save'
+      end
+      inherited ActionSaveAs: TAction
+        Hint = 'Save as'
       end
       inherited ActionClose: TAction
-        Caption = 'Close'
         Hint = 'Close'
       end
       inherited ActionCloseAll: TAction
@@ -399,7 +400,7 @@ object MainForm: TMainForm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010106009000C00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106009000CC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3
@@ -701,7 +702,6 @@ object MainForm: TMainForm
       end
       object Open1: TMenuItem
         Action = PageFrame1.FileOpen1
-        Caption = 'Open...'
       end
       object N1: TMenuItem
         Caption = '-'
@@ -712,7 +712,6 @@ object MainForm: TMainForm
       end
       object SaveAs1: TMenuItem
         Action = PageFrame1.ActionSaveAs
-        Caption = 'Save As...'
       end
       object ActionClose1: TMenuItem
         Action = PageFrame1.ActionClose
@@ -724,7 +723,7 @@ object MainForm: TMainForm
         Caption = '-'
       end
       object Kilps1: TMenuItem
-        Caption = 'Kil'#233'p'#233's'
+        Caption = 'Exit'
         OnClick = Kilps1Click
       end
     end
@@ -732,26 +731,21 @@ object MainForm: TMainForm
       Caption = 'Edit'
       object Kivgs1: TMenuItem
         Action = EditCut1
-        Caption = 'Cut'
       end
       object Msols1: TMenuItem
         Action = EditCopy1
-        Caption = 'Copy'
       end
       object Beilleszts1: TMenuItem
         Action = EditPaste1
-        Caption = 'Paste'
       end
       object N3: TMenuItem
         Caption = '-'
       end
       object Sorbeszrs1: TMenuItem
         Action = InsertLine
-        Caption = 'Insert Line'
       end
       object Sortrls1: TMenuItem
         Action = DeleteLine
-        Caption = 'Delete Line'
       end
     end
     object Belltsok1: TMenuItem
@@ -789,29 +783,29 @@ object MainForm: TMainForm
     Top = 312
     object EditCut1: TEditCut
       Category = 'Edit'
-      Caption = 'Kiv'#225'g'#225's'
+      Caption = 'Cut'
       ShortCut = 16472
     end
     object EditCopy1: TEditCopy
       Category = 'Edit'
-      Caption = 'M'#225'sol'#225's'
+      Caption = 'Copy'
       ShortCut = 16451
     end
     object EditPaste1: TEditPaste
       Category = 'Edit'
-      Caption = 'Beilleszt'#233's'
+      Caption = 'Paste'
       ShortCut = 16470
     end
     object InsertLine: TAction
       Category = 'Edit'
-      Caption = 'Sor besz'#250'r'#225's'
+      Caption = 'Insert line'
       ShortCut = 16457
       OnExecute = InsertLineExecute
       OnUpdate = InsertLineUpdate
     end
     object DeleteLine: TAction
       Category = 'Edit'
-      Caption = 'Sor t'#246'rl'#233's'
+      Caption = 'Delete line'
       ShortCut = 16460
       OnExecute = DeleteLineExecute
       OnUpdate = DeleteLineUpdate

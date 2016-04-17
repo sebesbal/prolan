@@ -8,7 +8,7 @@ There are two method:
 - You can fill out forms for simulating grammars, without coding.
   Watch the samples or create a new grammar: File > New > Form...
 - For advanced use of grammars and for the automatons you can use a C-like language,
-  the other tutorial files discusses this topic.
+  the other tutorial files discuss this topic.
 
 The below code is a programmed grammar what generates strings with 2^n lengths.
 It's only for demonstrating the usage of Prolan.

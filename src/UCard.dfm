@@ -4,7 +4,7 @@ object CardForm: TCardForm
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'About Prolan'
-  ClientHeight = 315
+  ClientHeight = 90
   ClientWidth = 384
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
@@ -15,12 +15,12 @@ object CardForm: TCardForm
   OldCreateOrder = False
   DesignSize = (
     384
-    315)
+    90)
   PixelsPerInch = 120
   TextHeight = 17
   object Label1: TLabel
     Left = 24
-    Top = 262
+    Top = 55
     Width = 136
     Height = 18
     Cursor = crHandPoint
@@ -39,22 +39,11 @@ object CardForm: TCardForm
     Left = 10
     Top = 10
     Width = 359
-    Height = 223
+    Height = 39
     BevelInner = bvNone
     BevelOuter = bvNone
     BorderStyle = bsNone
     Lines.Strings = (
-      'With Prolan you you can simulate different automatons '
-      '(eg. pushdown automaton, Turing machine) and formal '
-      'grammars. To describe these structures you can use a '
-      'simple C like language, or fill out forms.'
-      ''
-      'I wrote this application several years ago for my BSc '
-      'thesis, and now (2016) I'#39've translated the UI to English. '
-      'The full user and developer documentation are remained '
-      'in Hungarian (attached to the application). Feel free to '
-      'translate it... , or let me know if you are interested in it.'
-      ''
       'Created by Sebesty'#233'n Bal'#225'zs'
       'ELTE IK, 2010. Budapest')
     ReadOnly = True
@@ -62,12 +51,13 @@ object CardForm: TCardForm
   end
   object Button1: TButton
     Left = 278
-    Top = 274
+    Top = 49
     Width = 98
     Height = 33
     Anchors = [akRight, akBottom]
     Caption = 'OK'
     TabOrder = 0
     OnClick = Button1Click
+    ExplicitTop = 274
   end
 end
