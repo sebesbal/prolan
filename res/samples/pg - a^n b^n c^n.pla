@@ -1,12 +1,13 @@
 /* ----------------------------------------------
- 		L(G) = {a^n b^n c^n | n > 0}
-*/
+		Programed Grammar
+		L(G) = {a^n b^n c^n | n > 0}
+------------------------------------------------*/
 
 start S;
 term a, b, c;
 nterm A, B, C;
 
-void pelda1()
+void sample1()
 {
 f0: if (S = A B C) 	f1, f4; 	else exit;
 f1: if (A = a A) 	f2; 		else exit;
@@ -17,7 +18,7 @@ f5: if (B = b) 		f6; 		else exit;
 f6: if (C = c) 		exit; 		else exit;
 }
 
-void pelda2()
+void sample2()
 {
 		S = A B C;
 		f1, f4;
@@ -30,7 +31,7 @@ void pelda2()
 	      	C = c;
 }	
 
-void pelda3()
+void sample3()
 {
 		S = A B C;
 		some { 
@@ -45,7 +46,7 @@ void pelda3()
 
 void main()
 {
-	pelda1();
-	//pelda2();
-	//pelda3();
+	sample1();
+	//sample2();
+	//sample3();
 }

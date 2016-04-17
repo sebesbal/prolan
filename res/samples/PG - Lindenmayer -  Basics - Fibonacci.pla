@@ -1,0 +1,44 @@
+/* ----------------------------------------------
+		Lindemayer-system
+		- Introduction
+		- Fibonacci words
+			
+The Lindenmayer system (L-System) is very similar to formal grammars. 
+The main difference is: the grammar rules are not randomly applied,
+but every possible rule is applied at once. For example:
+
+alphabet: {A, B}
+rules: A->B; B->AB
+start: A
+
+The derivation is deterministic (not random):
+A->B->AB->BAB->ABBAB->BABABBAB
+
+We call this words Fibonacci words, because the lengths
+form a Fibonacci sequence: 1, 1, 2, 3, 5, 8,...
+
+We can simulate L-System with PG.
+I can't explain the method better than the code itself:
+-------------------------------------------------*/
+
+#pragma lindenmayer
+
+start A; nterm B; // collection 1.
+nterm A2, B2;     // collection 2.
+term a, b;
+
+void main() 
+[ // <- square brackets
+	{
+		// the real work:
+		all A = B2;
+		all B = A2 B2;
+	
+		// write back to collection 1.
+		all A2 = A;
+		all B2 = B;
+	}
+	
+	// terminate
+	{ all A = a; all B = b; } 
+]

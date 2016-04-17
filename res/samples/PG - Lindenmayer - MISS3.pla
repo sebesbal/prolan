@@ -1,0 +1,24 @@
+/* ----------------------------------------------
+		MISS3 Lindemayer-rendszer
+		    x* - xxx nyelv
+				
+ábécé: {x}	
+helyettesítések: o(x) = { eps, xx, xxxxx }
+-------------------------------------------------*/
+
+#pragma lindenmayer
+
+start X;
+nterm Y;
+term x;
+
+void main() 
+[
+	{
+		all X = eps
+		  | X = Y Y
+		  | X = Y Y Y Y Y;
+		all Y = X;
+	}
+    	all X = x;
+]

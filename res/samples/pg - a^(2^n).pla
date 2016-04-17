@@ -1,17 +1,18 @@
 /* ----------------------------------------------
-		L(G) = {a^(2^n) | n > 0}
-*/
+		Programed Grammar
+		L(G) = {a^(2^n) | n >= 0}
+------------------------------------------------*/
 
 #pragma leftmost
 start S;
-nterm Z;
+nterm A;
 term a;
 
 void sample1()
 {
 	f1, f2, f3;
-	f1: if (S = Z Z)	f1; 	else f2;
-	f2: if (Z = S)		f2; 	else f1, f3;
+	f1: if (S = A A)	f1; 	else f2;
+	f2: if (A = S)		f2; 	else f1, f3;
 	f3: if (S = a)		f3;	else exit;
 }
 
@@ -20,15 +21,15 @@ void sample2()
 	// execute the block randomly zero or several times
 	some
 	{
-		all S = Z Z;
-		all Z = S;
+		all S = A A;
+		all A = S;
 	}
 	all S = a;
 }
 
 void sample3()
 [
-	{ all S = Z Z; all Z = S; }
+	{ all S = A A; all A = S; }
 	all S = a;
 ]
 

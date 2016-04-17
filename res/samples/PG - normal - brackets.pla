@@ -1,0 +1,19 @@
+/* ----------------------------------------------
+		Formal Grammar
+		L(G) = Dyck language.
+
+If 'a' is replaced with '(', and 'b' with ')',
+we get correctly nested sequence of brackets.
+------------------------------------------------*/
+
+#pragma grammar
+
+start S;
+term a, b;
+
+void main()
+[
+	S = S S;
+	S = eps;
+	S = a S b;
+]
