@@ -1,6 +1,7 @@
 /* -----------------------------------------
-		Turing machine
-	Decided language: { 0^n 1^n | n >= 0 }
+		Turing Machine
+		
+	L = { 0^n 1^n | n >= 0 }
 -------------------------------------------*/
 
 // Declare this code as a TM
@@ -32,11 +33,11 @@ void main()
 		// delete it then step left
 		left(_);
 		
-		// go back to the begining
+		// go back to the start
 		while (!_) left;
 		right;
 	}	
 	
-	// go to the accept state
+	// go to the accepting state
 	accept;
 }
