@@ -5,6 +5,9 @@
 		L = Palindromes
 				
 Press F5 multiple times and watch the List view.
+
+Scripting PDA's with language constructions like some, all etc.,
+is a little buggy, and needs further development.
 -------------------------------------------------*/
 
 #pragma epushdown // empty stack acceptance 
@@ -17,29 +20,36 @@ void push(term x)
 	Z = x | 0 = x 0 | 1 = x 1;	
 }
 
-void skip() 
-{
-	Z = eps | 0 = 0 | 1 = 1;
-}
-
 void pop(term x)
 {
 	x = eps;
 }
 
+// Skipping the stack operation.
+// After every input reading there must be a stack operation,
+// so use this macro if you don't want to do anything with the stack.
+// (this should be automatic later)
+void skip() 
+{
+	Z = Z | 0 = 0 | 1 = 1;
+}
+
 void main()
 {
-	input(0 1 1 0);
+	input(1 1 1);
 	
-	// push some symbol from the input to the stack
+	// push some symbols from the input to the stack
 	// then guess the center, and jump to next
 	[ state {
-		0: < push(0); next; >
-		1: < push(1); next; >
-		eps: next;
+		0: push(0);
+		1: push(1);
+		eps: { skip(); next; }
 	} ]
 	
-next:	skip();
+next:	
+	// maybe pop one symbol from the stack and discard it
+	// (to handle palindromes with odd length)
+	< pop(0); pop(1); Z=eps; {} >
 	
 	// empty the stack, make sure that the content is
 	// the same (in reverse order) as the remaining of the input

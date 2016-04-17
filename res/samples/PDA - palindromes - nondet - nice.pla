@@ -1,0 +1,52 @@
+/* ----------------------------------------------
+	Nondeterministic PDA with
+	Empty Stack Acceptance
+	
+		L = Palindromes
+---------------------------------------------*/
+
+#pragma epushdown
+start Z;
+term 0, 1;
+
+void sample1()
+{
+q0: 	state 
+	{ 
+		0: { Z = 0 | 0 = 0 0 | 1 = 0 1;		q0; }
+		0: { Z = eps | 0 = 0 | 1 = 1;		q1; }
+		1: { Z = 1 | 0 = 1 0 | 1 = 1 1;		q0; }
+		1: { Z = eps | 0 = 0 | 1 = 1;		q1; }
+		eps: { Z = eps | 0 = 0 | 1 = 1;		q1; }
+	}
+q1: 	state 
+	{
+		0: { 0 = eps; q1; }
+		1: { 1 = eps; q1; }
+	}
+}
+
+// The same without epsilon transition.
+// Doesn't accept epsilon as input.
+void sample2()
+{
+q0: 	state 
+	{ 
+		0: { Z = 0 | 0 = 0 0 | 1 = 0 1;		q0, q1; }
+		0: { Z = eps | 0 = 0 | 1 = 1;		q1; 	}
+		1: { Z = 1 | 0 = 1 0 | 1 = 1 1;		q0, q1; }
+		1: { Z = eps | 0 = 0 | 1 = 1;		q1; 	}
+	}
+q1: 	state 
+	{
+		0: { 0 = eps; q1; }
+		1: { 1 = eps; q1; }
+	}
+}
+
+void main() 
+{
+	input(0 1 1 0);
+	sample1();
+	//sample2();
+}

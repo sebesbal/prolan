@@ -1,0 +1,36 @@
+/* ----------------------------------------------
+	Deterministic PDA
+	
+	L = Dyck
+---------------------------------------------*/
+start Z;
+term 0, 1; // 0=(   1=)
+
+void main()
+{
+	input(0 1 0 0 1 0 1 1);
+	
+/*
+	// accept with final state
+	#pragma pushdown
+q0:	state
+	{
+		0: { Z = 0 Z | 0 = 0 0; q0; }
+		1: { 0 = eps; q0; }
+		eps: { Z = eps; q1; }
+	}
+q1:	state
+	{
+		_: accept;	
+	}
+*/
+
+	// accept with empty stack
+	#pragma epushdown
+q0:	state
+	{
+		0: { Z = 0 Z | 0 = 0 0; q0; }
+		1: { 0 = eps; q0; }
+		eps: { Z = eps; q0; }
+	}
+}
