@@ -1029,27 +1029,27 @@ begin
   M := TList.Create;
 
   L.Clear;
-  L.Add('Bemenet:' + #13#10#9 + FInput.ToString + #13#10);
+  L.Add('Initial tape content:' + #13#10#9 + FInput.ToString + #13#10);
 
   M.Assign(FStates);
   M.Add(FAccept); M.Add(FExit);
-  L.Add('Állapotok:' + #13#10#9 + ListToStr2(M) + #13#10);
+  L.Add('States:' + #13#10#9 + ListToStr2(M) + #13#10);
 
-  L.Add('Kezdõ állapot:' + #13#10#9 + FStartState.Name + #13#10);
+  L.Add('Start state:' + #13#10#9 + FStartState.Name + #13#10);
 
-  L.Add('Elfogadó állapot:' + #13#10#9 + FAccept.Name + #13#10);
+  L.Add('Accepting state:' + #13#10#9 + FAccept.Name + #13#10);
 
-  L.Add('Elutasító állapot:' + #13#10#9 + FExit.Name + #13#10);
+  L.Add('Rejecting state:' + #13#10#9 + FExit.Name + #13#10);
 
   N.Clear;
   GetInputAlphabet(N);
-  L.Add('Bemenõ jelek ábécéje:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Input symbols:' + #13#10#9 + ListToStr2(N) + #13#10);
 
   N.Clear;
   GetTapeAlphabet(N);
-  L.Add('Szalagábécé:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Tape alphabet:' + #13#10#9 + ListToStr2(N) + #13#10);
 
-  L.Add('Állapotátmenetek:');
+  L.Add('Transition function:');
   for I := 0 to FStates.Count - 1 do
     f(TETState(FStates[I]));
   N.Free;

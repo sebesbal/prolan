@@ -830,7 +830,7 @@ begin
       end;
       with lvList.Columns.Add do
       begin
-        Caption := ' Read Write Step State';
+        Caption := '  Re. Wr.  Step State';
         Width := 150;
       end;
     end;

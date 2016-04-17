@@ -1,0 +1,71 @@
+/* -----------------------------------------
+ 	Nondeterministic Turing Machine
+
+	L = {u u | u<{0, 1}+}
+	
+Press F5 multiple times and watch the List view.
+-------------------------------------------*/
+
+#pragma turing
+term 0, 1;
+nterm x, K;
+
+// Goes back to the first non blank symbol.
+void back()
+{
+	while (!_) left;
+	right;
+	while (x) right;
+}
+
+// Replace the first symbol with 'x', then
+// guesses the center (the first symbol of the second "u"),
+// and replace it with K.
+void f(term a)
+{
+	right(x);
+	if (_) exit;
+
+begin:	if (_) exit;
+	else if (a)
+	{
+		print;
+		< // jumps to a random line in the block
+			{ right; begin; }
+			end;
+		>
+	}	
+	else { right; begin; }
+end:	left(K);
+	back();
+}
+
+// Finds the first 'a' on both sides of K, and replace with 'x'
+void g(term a)
+{
+	right(x);
+	while (0 || 1) right;
+	(K); right;
+	while (x) right;
+	(a);
+	left(x);
+}
+
+void main()
+{
+	input(0 0 1 0 0 1);
+	
+	if (0) f(0);
+	else if (1) f(1);
+	
+	while (0 || 1)
+	{
+		if (0) g(0);
+		else if (1) g(1);
+		back();
+	}
+	(K); right;
+	while(x) right;
+	(_);
+	accept;
+}

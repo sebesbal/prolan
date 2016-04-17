@@ -1,0 +1,31 @@
+/* ----------------------------------------------
+	Regular expressions with Turing Machine
+		
+&  = acts like concatenation
+x. = writes x then step right
+-------------------------------------------------*/
+
+#pragma turing
+term 0, 1, 2;
+
+// regular expression: 1?(01)*0?
+void sample1()
+{
+	input(0 1 0 1);
+	(eps | 1.) & (0.1.)* & (eps | 0.);
+	(_); accept; // magic
+}
+
+// regular expression: ((0|1)1)*0?
+void sample2()
+{
+	input(0 1 1 1);
+	((0. | 1.) & 1.)* & (0. | eps);
+	(_); accept; // magic
+}
+
+void main()
+{
+	sample1();
+	//sample2();
+}

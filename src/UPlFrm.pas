@@ -81,7 +81,7 @@ begin
   case M of
     ptGrammar:
     begin
-      TabSheet1.Caption := 'Programozott Nyelvtan';
+      TabSheet1.Caption := 'Programmed Grammar';
       ListView1.Columns.Clear;
       with ListView1.Columns.Add do
       begin
@@ -90,7 +90,7 @@ begin
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Szabály';
+        Caption := 'Rule';
         Width := 100;
       end;
       with ListView1.Columns.Add do
@@ -107,61 +107,61 @@ begin
     
     ptTuring:
     begin
-      TabSheet1.Caption := 'Turing-gép';
+      TabSheet1.Caption := 'Turing Machine';
       ListView1.Columns.Clear;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Állapot';
+        Caption := 'State';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Olvas';
+        Caption := 'Read';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Ír';
+        Caption := 'Write';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Lép';
+        Caption := 'Step';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Új Áll.';
+        Caption := 'New State';
         Width := d;
       end;
     end;
     ptPushDown, ptEPushDown:
     begin
-      TabSheet1.Caption := 'Veremautomata';
+      TabSheet1.Caption := 'PDA';
       ListView1.Columns.Clear;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Állapot';
+        Caption := 'State';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Olvas';
+        Caption := 'Read';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Veremki';
+        Caption := 'Pop';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Verembe';
+        Caption := 'Push';
         Width := d;
       end;
       with ListView1.Columns.Add do
       begin
-        Caption := 'Új Áll.';
+        Caption := 'New State';
         Width := d;
       end;
     end;

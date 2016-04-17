@@ -1,0 +1,54 @@
+/* -----------------------------------------
+	Deterministic Turing Machine
+	
+	L = {u K u | u < {0,1}* }
+-------------------------------------------*/
+
+
+term 0, 1, K;
+nterm x;
+
+#pragma turing
+
+// Finds the first 'a' on both sides of K, and replace with 'x'
+void f(term a)
+{
+	right(x);
+	while (0 || 1) right;
+	(K); right;
+	while (x) right;
+	(a);
+	left(x);
+}
+
+void main()
+{
+	// test input
+	input(0 1 K 0 1);
+
+	// checks whether there is only one K
+	while (0 || 1) right;
+	(K); right;
+	while (0 || 1) right;
+	(_); left;
+	while (0 || 1 || K) left;
+	right;
+	
+	while (0 || 1)
+	{
+		//replace one symbol from both sides of K
+		if (0) f(0);
+		else if (1) f(1);
+		
+		// goes back to the start
+		while (! _) left;
+		right;
+		while (x) right;
+	}
+	
+	// checks whether the result is in good form
+	(K); right;
+	while(x) right;
+	(_); 
+	accept;
+}
