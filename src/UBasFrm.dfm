@@ -1,7 +1,6 @@
 inherited BasFrm: TBasFrm
   Width = 625
   Height = 354
-  Hint = 'Az '#246'sszes lehets'#233'ges levezet'#233's f'#225'ja'
   ExplicitWidth = 625
   ExplicitHeight = 354
   object Splitter1: TSplitter

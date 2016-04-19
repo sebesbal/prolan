@@ -15,7 +15,6 @@ object PlFrm: TPlFrm
     Align = alClient
     TabOrder = 0
     object TabSheet1: TTabSheet
-      Hint = 'A nyelvtan szab'#225'lyai, az automata '#225'llapotai'
       Caption = 'Programmed grammar'
       ExplicitLeft = 0
       ExplicitTop = 0
@@ -58,7 +57,6 @@ object PlFrm: TPlFrm
       end
     end
     object TabSheet2: TTabSheet
-      Hint = 'A pontos matematikai defin'#237'ci'#243
       Caption = 'Definition'
       ImageIndex = 1
       ExplicitLeft = 0

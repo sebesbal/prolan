@@ -190,35 +190,35 @@ begin
   M := TList.Create;
 
   L.Clear;
-  L.Add('Bemenet:' + #13#10#9 + FInput.ToString + #13#10);
+  L.Add('Input:' + #13#10#9 + FInput.ToString + #13#10);
 
-  L.Add('Állapotok:' + #13#10#9 + ListToStr2(FStates) + #13#10);
+  L.Add('States:' + #13#10#9 + ListToStr2(FStates) + #13#10);
 
-  L.Add('Kezdõ állapot:' + #13#10#9 + FStartState.Name + #13#10);
+  L.Add('Start state:' + #13#10#9 + FStartState.Name + #13#10);
 
   case GetPushDownKind(M) of
     skInvalid:
     begin
       L.Clear;
-      L.Add('Érvénytelen veremautomata!');
+      L.Add('Invalid automaton!');
       exit;
     end;
     skEmpty:
-      L.Add('Üres veremmel felismerõ' + #13#10);
+      L.Add('Empty stack acceptance' + #13#10);
     skAccept:
-      L.Add('Végállapottal felismerõ automata. Végállapotok:' + #13#10#9 + ListToStr2(M) + #13#10);
+      L.Add('Final state acceptance. Accepting states:' + #13#10#9 + ListToStr2(M) + #13#10);
   end;
 
   N.Clear;
   GetInputAlphabet(N);
-  L.Add('Bemenõ jelek ábécéje:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Input alphabet:' + #13#10#9 + ListToStr2(N) + #13#10);
 
 //  N.AddObject(FStart.Name, FStart);
   N.Clear;
   GetTapeAlphabet(N);
-  L.Add('Veremábécé:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Stack alphabet:' + #13#10#9 + ListToStr2(N) + #13#10);
 
-  L.Add('Állapotátmenetek:');
+  L.Add('Transition relation:');
   for I := 0 to FStates.Count - 1 do
     f(TETState(FStates[I]));
   N.Free;

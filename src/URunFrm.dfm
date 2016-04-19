@@ -469,7 +469,7 @@ object RunFrm: TRunFrm
         object ToolButton1: TToolButton
           Left = 0
           Top = 0
-          Hint = '4 l'#233'p'#233's'
+          Hint = '4 steps'
           Caption = 'ToolButton1'
           ImageIndex = 0
           OnClick = ToolButton1Click
@@ -477,7 +477,7 @@ object RunFrm: TRunFrm
         object ToolButton2: TToolButton
           Left = 23
           Top = 0
-          Hint = '16 l'#233'p'#233's'
+          Hint = '16 steps'
           Caption = 'ToolButton2'
           ImageIndex = 1
           OnClick = ToolButton2Click
@@ -485,7 +485,7 @@ object RunFrm: TRunFrm
         object ToolButton3: TToolButton
           Left = 46
           Top = 0
-          Hint = '64 l'#233'p'#233's'
+          Hint = '64 steps'
           Caption = 'ToolButton3'
           ImageIndex = 2
           OnClick = ToolButton3Click

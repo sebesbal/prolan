@@ -801,16 +801,16 @@ var
 const
   ErrorMsg: array[0..10] of string =
   ( '',
-    'Hibás globális deklaráció',
-    'A szimbólum már deklarálva van',
-    'Ismeretlen szimbólum',
-    'Várt típus: betû',
-    'Várt szimbólum: eps',             //5
-    'Várt típus: függvénynév',
-    'Érvénytelen utasítás',
-    'Érvénytelen paraméter',
-    'Hiányzó visszatérési érték',
-    'Void függvénynek nem adható meg visszatérési érték'    //10
+    'Invalid global declaration',
+    'Symbol is already declared',
+    'Unknown symbol',
+    'Expected type: letter',
+    'Expected symbol: eps',             //5
+    'Expected type: macro name',
+    'Invalid command',
+    'Invalid parameter',
+    'Missing return',
+    'Invalid return'    //10
   );
 
 implementation
@@ -923,7 +923,7 @@ begin
       S := Text
     else
     begin
-      S := '[Szint. hiba] ' + FileName + '(' + IntToStr(Line) + '): ';
+      S := '[Syntax error] ' + FileName + '(' + IntToStr(Line) + '): ';
       if Code > 0 then
         S := S + ErrorMsg[Code];
       if Text <> '' then
@@ -949,7 +949,7 @@ var
     Result := R;
     FreeAndNil(EP);
     FreeAndNil(SP);
-    TSProgram.SError(-1, '[Szint. hiba]', '', 0);
+    TSProgram.SError(-1, '[Syntax error]', '', 0);
   end;
 begin
   SP := nil;
@@ -1571,7 +1571,7 @@ begin
 
   if L.Count = 0 then
   begin
-    S := '[Elõfordítás hiba]';
+    S := '[Preprocessing error]';
     SError(-1, S, P.FFileName, 0);
     LogF.Add(S + ' Count = 0');
     P.Free;
@@ -1585,9 +1585,9 @@ begin
   try
     P.Parse(L);
   except
-    S := '[Szint. hiba]';
+    S := '[Syntax error]';
     SError(-1, S, tempfile1, 0);
-    LogF.Add(S + 'Parser lefagyott');
+    LogF.Add(S + 'Parser error');
     P.Free;
     raise ESyntaxError.Create(S);
   end;
@@ -1602,16 +1602,16 @@ begin
     Lab := Bejar(Result);
     if Lab <> nil then
     begin
-      SError(7, '[Szint. hiba]', Lab.FFileName, Lab.FLineNo);
+      SError(7, '[Syntax error]', Lab.FFileName, Lab.FLineNo);
       Result.FErrorLine := Lab.FLineNo;
-      LogF.Add('Rossz címke :FError');
+      LogF.Add('Bab label :FError');
       P.Free;
       raise ESyntaxError.Create(P.FMessage);
     end;
   end
   else if not Result.FError and (Result.Count = 0) then
   begin
-    S := '[Szint. hiba]';
+    S := '[Syntax error]';
     SError(-1, S, P.FFileName, 0);
     LogF.Add(S + ' Count = 0');
     P.Free;
@@ -3454,8 +3454,8 @@ begin
         SetWindowPos(pdHandle, 0, 20, 20, 0, 0, SWP_NOZORDER or SWP_NOSIZE);
       end;
       F.CurrencyDecimals := 2;
-      SetLine(1, PWideChar(WideString('Nyelv generálása folyamatban.')), False, nil);
-      SetLine(2, PWideChar(WideString('Idõkorlát: ' + FloatToStr(GTimeLimit / 1000, F) + ' sec')), False, nil);
+      SetLine(1, PWideChar(WideString('Generating language...')), False, nil);
+      SetLine(2, PWideChar(WideString('Time limit: ' + FloatToStr(GTimeLimit / 1000, F) + ' sec')), False, nil);
     end;
 
     RunConfig;
@@ -3466,7 +3466,7 @@ begin
     FProgress.StopProgressDialog;
     ListView.SortType := stBoth;
     if ListView.Items.Count = 0 then
-      ListView.Items.Add.Caption := 'Nem találtam elemet';
+      ListView.Items.Add.Caption := 'No item found. This language may be empty.';
   finally
     MainForm.Enabled := true;
 //    MainForm.Show;

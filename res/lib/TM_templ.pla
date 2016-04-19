@@ -1,0 +1,13 @@
+/* ----------------------------------------------
+		Turing Machine
+-------------------------------------------------*/
+#pragma turing
+
+term a, b;
+
+void main()
+{
+	input(a a b b);
+	// Write here the commands...
+	accept;
+}

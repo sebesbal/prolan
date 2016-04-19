@@ -3,12 +3,12 @@ object MainForm: TMainForm
   Top = 0
   Action = PageFrame1.ActionClose
   Caption = 'ProLan 1.0'
-  ClientHeight = 845
-  ClientWidth = 1157
+  ClientHeight = 739
+  ClientWidth = 1012
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -14
+  Font.Height = -11
   Font.Name = 'Arial'
   Font.Style = []
   Menu = MainMenu1
@@ -17,12 +17,12 @@ object MainForm: TMainForm
   WindowState = wsMaximized
   OnClose = FormClose
   OnCreate = FormCreate
-  PixelsPerInch = 120
-  TextHeight = 16
+  PixelsPerInch = 96
+  TextHeight = 14
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 1157
+    Width = 1012
     Height = 22
     AutoSize = True
     Caption = 'ToolBar1'
@@ -57,44 +57,39 @@ object MainForm: TMainForm
   inline PageFrame1: TPageFrm
     Left = 0
     Top = 22
-    Width = 1157
-    Height = 823
+    Width = 1012
+    Height = 717
     Align = alClient
     TabOrder = 1
     ExplicitTop = 22
-    ExplicitWidth = 1157
-    ExplicitHeight = 823
+    ExplicitWidth = 1012
+    ExplicitHeight = 717
     inherited PG: TPageControl
-      Width = 1157
-      Height = 750
+      Width = 1012
+      Height = 653
       OnChange = PageFrame1PageControl1Change
-      ExplicitWidth = 1157
-      ExplicitHeight = 750
+      ExplicitWidth = 1012
+      ExplicitHeight = 653
     end
     inherited Panel1: TPanel
-      Top = 750
-      Width = 1157
-      Height = 73
-      ExplicitTop = 750
-      ExplicitWidth = 1157
-      ExplicitHeight = 73
+      Top = 653
+      Width = 1012
+      ExplicitTop = 653
+      ExplicitWidth = 1012
       inherited lbLog: TTntListBox
-        Width = 1157
-        Height = 54
-        ExplicitWidth = 1157
-        ExplicitHeight = 54
+        Width = 1012
+        ItemHeight = 14
+        ExplicitWidth = 1012
       end
       inherited StatusBar1: TStatusBar
-        Top = 54
-        Width = 1157
-        ExplicitTop = 54
-        ExplicitWidth = 1157
+        Width = 1012
+        ExplicitWidth = 1012
       end
     end
     inherited ImageList1: TImageList
       Top = 248
       Bitmap = {
-        494C010105000C00D40010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+        494C010105000C00D80010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
         0000000000003600000028000000400000002000000001002000000000000020
         0000000000000000000000000000000000000000000000000000000000000000
         0000000000000000000000000000000000000000000000000000000000000000
@@ -382,9 +377,6 @@ object MainForm: TMainForm
       inherited ActionSaveAs: TAction
         Hint = 'Save as'
       end
-      inherited ActionClose: TAction
-        Hint = 'Close'
-      end
       inherited ActionCloseAll: TAction
         Caption = 'Close all'
         Hint = 'Close all'
@@ -400,7 +392,7 @@ object MainForm: TMainForm
     Left = 256
     Top = 240
     Bitmap = {
-      494C010106009000CC0010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010106009000D00010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000002000000001002000000000000020
       000000000000000000000000000000000000000000000000000000000000FEFE
       FEFFF6F6F6FFE3E3E3FFC8C8C8FF9F9F9FFF989898FFBDBDBDFFDEDEDEFFF3F3
@@ -754,9 +746,10 @@ object MainForm: TMainForm
     end
     object Sg1: TMenuItem
       Caption = 'Help'
-      OnClick = Sg1Click
+      OnClick = Nvjegy1Click
       object ProlanHelp1: TMenuItem
         Caption = 'Manual'
+        Visible = False
         OnClick = ProlanHelp1Click
       end
       object Nvjegy1: TMenuItem

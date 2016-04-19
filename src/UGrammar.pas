@@ -215,21 +215,21 @@ begin
   I := N.IndexOf('eps');
   if I > -1 then
     N.Delete(I);
-  L.Add('Terminális jelek:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Terminals:' + #13#10#9 + ListToStr2(N) + #13#10);
 
   N.Clear;
   GetNTerms(N, true);
-  L.Add('Nemterminális jelek:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Add('Nonterminals:' + #13#10#9 + ListToStr2(N) + #13#10);
 
-  L.Add('Startszimbólum:' + #13#10#9 + FStart.Name + #13#10);
+  L.Add('Start symbol:' + #13#10#9 + FStart.Name + #13#10);
 
   N.Clear;
   K := L.Count;
-  L.Add('Szabályok:');
+  L.Add('Rules:');
   for I := 0 to Count - 1 do
     f(TEBasLine(Self[I]));
 
-  L.Insert(K, 'Címkék:' + #13#10#9 + ListToStr2(N) + #13#10);
+  L.Insert(K, 'Labels:' + #13#10#9 + ListToStr2(N) + #13#10);
 
   N.Free;
 end;

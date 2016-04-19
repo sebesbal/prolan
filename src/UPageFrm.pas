@@ -183,7 +183,7 @@ procedure TPageFrm.ActionNewProgGramExecute(Sender: TObject);
 var
   I: Integer;
 begin
-  I := AddAdvFromFile('lib/pnysablon.pla');
+  I := AddAdvFromFile('lib/PG_templ.pla');
   PG.Pages[I].Caption := NextMakroName;
   PG.ActivePageIndex := I;
   Current.Caption := PG.Pages[I].Caption;
@@ -196,7 +196,7 @@ procedure TPageFrm.ActionNewProgTGExecute(Sender: TObject);
 var
   I: Integer;
 begin
-  I := AddAdvFromFile('lib/turingsablon.pla');
+  I := AddAdvFromFile('lib/TM_templ.pla');
   PG.Pages[I].Caption := NextMakroName;
   PG.ActivePageIndex := I;
   Current.Caption := PG.Pages[I].Caption;
@@ -209,7 +209,7 @@ procedure TPageFrm.ActionNewProgVAExecute(Sender: TObject);
 var
   I: Integer;
 begin
-  I := AddAdvFromFile('lib/veremsablon.pla');
+  I := AddAdvFromFile('lib/PDA_templ.pla');
   PG.Pages[I].Caption := NextMakroName;
   PG.ActivePageIndex := I;
   Current.Caption := PG.Pages[I].Caption;
@@ -369,7 +369,7 @@ begin
   Result := false;
   with Frame[index] do
   if Modified then
-  case MessageDlg('Menti a változásokat: ' + FileName + '?', mtConfirmation, [mbYes, mbNo, mbCancel], 0) of
+  case MessageDlg('This file has been modified: ' + FileName + #10#13 + 'Would you like to save your changes?', mtConfirmation, [mbYes, mbNo, mbCancel], 0) of
     mrYes:
       begin
         if SaveDialog then
@@ -436,7 +436,7 @@ end;
 function TPageFrm.NextGramName: WideString;
 begin
   Inc(BasCount);
-  Result := 'nyelvtan' + IntToStr(BasCount);
+  Result := 'grammar' + IntToStr(BasCount);
   if CaptionUsed(Result) then
     Result := NextGramName;
 end;

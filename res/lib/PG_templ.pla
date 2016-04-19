@@ -1,0 +1,11 @@
+/* ----------------------------------------------
+		Programmed Grammar
+-------------------------------------------------*/
+start S;
+term a, b;
+nterm A, B;
+
+void main()
+{
+	// Write here the commands...
+}
